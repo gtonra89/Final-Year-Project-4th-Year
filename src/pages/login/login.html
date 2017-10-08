@@ -14,5 +14,16 @@
 
 
 <ion-content padding>
-
+  <ion-list>
+    <ion-item>
+      <ion-label floating>E-Mail</ion-label>
+      <ion-input type="email" [(ngModel)]="logData.email"></ion-input> <!--assigns email input to logindata.email -->
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input type="password" [(ngModel)]="logData.password"></ion-input> <!--assigns password input to logindata.email -->
+    </ion-item>
+  </ion-list>
+        <button full ion-button (click)="login()" [disabled]="!logData.email || !logData.password">Login</button>
+        <a href="#" (click)="signup()">Signup for an Account</a>
 </ion-content>
