@@ -10,18 +10,22 @@ import 'rxjs/add/operator/map';
 
   This provider class will be used to make HTTP requests to stats API
 */
+
 @Injectable()
 export class StatServiceProvider {
-   data: any;
+   data: any; //data is set to any data. Used for stats data
 
+//==== Constructor =============================
   constructor(public http: HttpClientModule) {
     console.log('Hello StatServiceProvider Provider');
+    // Just using our own data sample at first just to get things running
+    //json format
     this.data = [ 
       {name: 'Ronaldo', goals: 300, club: 'Real Madrid'},
       {name: 'Messi', goals: 300, club: 'Barcelona'}
     ];
   }
-
+// Load method will be used to get the api data and load it in
   load(){
     /*if(this.data){
       return Promise.resolve(this.data);
@@ -36,8 +40,7 @@ export class StatServiceProvider {
       });
     }); */
     if(this.data){
-
-    
+      //return the data
     return Promise.resolve(this.data);
     }
   }
