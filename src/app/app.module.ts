@@ -9,6 +9,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
+import { StatServiceProvider } from '../providers/stat-service/stat-service';
 
 var config = {
   apiKey: "AIzaSyCge-RN6-IkLdAbLkpkVkSnmkKpX1LkHkw",
@@ -42,7 +43,8 @@ var config = {
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    StatServiceProvider
   ]
 })
 export class AppModule {}
