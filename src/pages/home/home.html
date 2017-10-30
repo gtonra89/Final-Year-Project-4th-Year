@@ -14,9 +14,12 @@
 </ion-header>
 
 <ion-content padding text-align-centre>
-  Welcome to STATFLOW 
-  <br>
-  <p>
-    Serious about stats and sports development
-  </p>
+  <h2>Welcome to Statflow </h2>
+  <ion-list>
+    <!-- loop through each value in the data set  -->
+    <ion-item *ngFor="let p of players">
+      {{p.name}}
+      {{p.goals}}
+    </ion-item>
+  </ion-list>
 </ion-content>

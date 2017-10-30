@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import 'rxjs/add/operator/map';
 
 /*
@@ -12,9 +12,34 @@ import 'rxjs/add/operator/map';
 */
 @Injectable()
 export class StatServiceProvider {
+   data: any;
 
-  constructor(public http: Http) {
+  constructor(public http: HttpClientModule) {
     console.log('Hello StatServiceProvider Provider');
+    this.data = [ 
+      {name: 'Ronaldo', goals: 300, club: 'Real Madrid'},
+      {name: 'Messi', goals: 300, club: 'Barcelona'}
+    ];
+  }
+
+  load(){
+    /*if(this.data){
+      return Promise.resolve(this.data);
+    }
+    //dont have data yet..
+    return new Promise(resolve => {
+      this.http.get('https://randomuser.me/api/?results=10')
+      .map(res => res.json())
+      .subscribe(data => {
+        this.data = data.results;
+        resolve(this.data);
+      });
+    }); */
+    if(this.data){
+
+    
+    return Promise.resolve(this.data);
+    }
   }
 
 }
