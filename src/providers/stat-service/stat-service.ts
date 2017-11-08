@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+//import { HTTP } from '@ionic-native/http';
+import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 /*
@@ -11,38 +12,38 @@ import 'rxjs/add/operator/map';
   This provider class will be used to make HTTP requests to stats API
 */
 
+/*
+ * Issue with HTTP. ionic 3 is still using old Angular http module. 
+ * https://www.djamware.com/post/59924f9080aca768e4d2b12e/ionic-3-consuming-rest-api-using-new-angular-43-httpclient
+ * Install new http module for angular 4
+ */
 @Injectable()
 export class StatServiceProvider {
    data: any; //data is set to any data. Used for stats data
-
+   apiKey = 'e73247acc1634ff3835f66aaa3de7745';
 //==== Constructor =============================
-  constructor(public http: HttpClientModule) {
+  constructor(private http: Http) {
     console.log('Hello StatServiceProvider Provider');
     // Just using our own data sample at first just to get things running
     //json format
-    this.data = [ 
-      {name: 'Ronaldo', goals: 300, club: 'Real Madrid'},
-      {name: 'Messi', goals: 300, club: 'Barcelona'}
-    ];
+    this.data;
   }
 // Load method will be used to get the api data and load it in
   load(){
-    /*if(this.data){
-      return Promise.resolve(this.data);
-    }
+      //if(this.data){
+      //return Promise.resolve(this.data);
+    //} 
     //dont have data yet..
     return new Promise(resolve => {
-      this.http.get('https://randomuser.me/api/?results=10')
+      //API request
+      this.http.get('http://api.football-data.org/v1/teams/66')
       .map(res => res.json())
       .subscribe(data => {
-        this.data = data.results;
-        resolve(this.data);
+        this.data = data;
+        resolve(data);
       });
-    }); */
-    if(this.data){
-      //return the data
-    return Promise.resolve(this.data);
-    }
-  }
+    });
+    
+  } //end of load()
 
-}
+} //end of class

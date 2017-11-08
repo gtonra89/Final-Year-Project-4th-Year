@@ -10,7 +10,7 @@ import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
 import { StatServiceProvider } from '../providers/stat-service/stat-service';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpModule } from '@angular/http';
 
 var config = {
   apiKey: "AIzaSyCge-RN6-IkLdAbLkpkVkSnmkKpX1LkHkw",
@@ -30,7 +30,7 @@ var config = {
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
+    HttpModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(config),
     AngularFireAuthModule

@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar>
     <ion-title text-center>
-     Welcome To StatFlow
+     Statflow
     </ion-title>
     <ion-buttons end>
        
@@ -15,11 +15,10 @@
 
 <ion-content padding text-align-centre>
   <h2>Welcome to Statflow </h2>
-  <ion-list>
+  <ion-list >
     <!-- loop through each value in the data set  -->
-    <ion-item *ngFor="let p of players">
-      {{p.name}}
-      {{p.goals}}
+    <ion-item *ngFor="let team of teams">
+      {{team.name}}
     </ion-item>
   </ion-list>
 </ion-content>
