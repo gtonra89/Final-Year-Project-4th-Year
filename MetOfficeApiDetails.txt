@@ -1,0 +1,4 @@
+username == statflow
+met office api password == Statflow2018!
+
+Api Key = d6bc305a-b43e-46a1-9bcf-a80463c9e619
