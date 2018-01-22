@@ -29,7 +29,7 @@
               <a class="nav-link" href="/dashboard">dashboard</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
+              <a class="nav-link disabled" href="#">Patterns</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
@@ -54,8 +54,17 @@
           <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
         </div>
 
+        <form action="/temputure">
+          <div class="form-group">
+            
+            <input type="text" name="city" class="form-control"  placeholder="Enter city">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
         <div>
           <h1>The current temputure is: {{ temp }}</h1>
+          <iframe src="http://www.met.ie/widgets/3daysummary.asp" style=" border-width:0 " width="134" height="222" frameborder="0" scrolling="no"></iframe>
         </div>
   
       </main><!-- /.container -->
