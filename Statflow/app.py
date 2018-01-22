@@ -1,10 +1,54 @@
-from flask import Flask, render_template, request 
+from flask import Flask, render_template, request, url_for, redirect, g, request
 import requests
+<<<<<<< HEAD
+=======
+import json
+>>>>>>> 54dce65ea004ece64eb51885216234be1f7957f8
 
 # Pass in __name__ to help flask determine root path
 app = Flask(__name__) # create the application instance
 
+<<<<<<< HEAD
 
+=======
+# rethink imports
+import rethinkdb as r
+from rethinkdb.errors import RqlRuntimeError, RqlDriverError
+
+# rethink config
+RDB_HOST =  'localhost'
+RDB_PORT = 28015
+STATFLOW_DB = 'statflow'
+
+# db setup; only run once
+def dbSetup():
+    connection = r.connect(host=RDB_HOST, port=RDB_PORT)
+    try:
+        r.db_create(STATFLOW_DB).run(connection)
+        r.db(STATFLOW_DB).table_create('historic').run(connection)
+        print 'Database setup completed'
+    except RqlRuntimeError:
+        print 'Database already exists.'
+    finally:
+        connection.close()
+dbSetup()
+
+# open connection before each request
+@app.before_request
+def before_request():
+    try:
+        g.rdb_conn = r.connect(host=RDB_HOST, port=RDB_PORT, db=STATFLOW_DB)
+    except RqlDriverError:
+        abort(503, "Database connection could be established.")
+
+# close the connection after each request
+@app.teardown_request
+def teardown_request(exception):
+    try:
+        g.rdb_conn.close()
+    except AttributeError:
+        pass
+>>>>>>> 54dce65ea004ece64eb51885216234be1f7957f8
 
 # Routing/Mapping
 # @ signifies a decorator which is a way to wrap a function and modify its behaviour
