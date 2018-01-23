@@ -11,6 +11,24 @@
 
     <!-- Bootstrap style template -->
     <link rel="stylesheet" type="text/css" href={{ url_for('static', filename='style.css') }}>
+    
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 2px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
 </head>
   <body>
  
@@ -28,17 +46,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/dashboard">dashboard</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">Patterns</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="/HistoricData">Historic Data</a>
-            </li>
           </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
         </div>
       </nav>
   
@@ -49,17 +57,44 @@
           <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
         </div>
 
-        <!-- 
-        <form action="/temputure">
-          <div class="form-group">
-            
-            <input type="text" name="city" class="form-control"  placeholder="Enter city">
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-      -->
-        <div>
-          <iframe src="http://www.met.ie/widgets/3daysummary.asp" style=" border-width:0 " width="500" height="500" frameborder="0" scrolling="no"></iframe>
+        <div>   
+
+                <table>          
+                {% for selection in selection | sort(attribute='Year',)%}
+                <tr>
+                    <th>Year</th>
+                    <th>January</th>
+                    <th>Febuary</th>
+                    <th>March</th>
+                    <th>April</th>
+                    <th>May</th>
+                    <th>June</th>
+                    <th>July</th>
+                    <th>August</th>
+                    <th>September</th>
+                    <th>October</th>
+                    <th>November</th>
+                    <th>December</th>
+                    <th>Annual</th>
+                </tr>
+                <tr>
+                    <td>{{ selection.Year}}</td>
+                    <td>{{ selection.JAN}}  </td>
+                    <td>{{ selection.FEB}}  </td>
+                    <td>{{ selection.MAR}}  </td>
+                    <td>{{ selection.APR}}  </td>
+                    <td>{{ selection.MAY}}  </td>
+                    <td>{{ selection.JUN}}  </td>
+                    <td>{{ selection.JUL}}  </td>
+                    <td>{{ selection.AUG}}  </td>
+                    <td>{{ selection.SEP}}  </td>
+                    <td>{{ selection.OCT}}  </td>
+                    <td>{{ selection.NOV}}  </td>
+                    <td>{{ selection.DEC}}  </td>
+                    <td>{{ selection.ANNUAL}}  </td>
+                </tr>
+                {% endfor %}
+                </table>
         </div>
   
       </main><!-- /.container -->
