@@ -67,7 +67,7 @@ def temputure():
     #json_object = req.json()
     #temp = float(json_object['main']['temp'])
     
-    return render_template("index.html", temp=temp)
+    return render_template("index.html")
 
 @app.route('/dashboard') #connect a webpage. '/' is a root directory.
 def dashboard():
