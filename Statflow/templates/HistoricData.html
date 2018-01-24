@@ -11,7 +11,6 @@
 
     <!-- Bootstrap style template -->
     <link rel="stylesheet" type="text/css" href={{ url_for('static', filename='style.css') }}>
-    
 <style>
 table {
     font-family: arial, sans-serif;
@@ -20,7 +19,7 @@ table {
 }
 
 td, th {
-    border: 2px solid #dddddd;
+    border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
 }
@@ -46,53 +45,49 @@ tr:nth-child(even) {
             <li class="nav-item">
               <a class="nav-link" href="/dashboard">dashboard</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Patterns">Patterns</a>
+            </li>
           </ul>
         </div>
       </nav>
   
       <main role="main" class="container">
-  
-        <div class="starter-template">
-          <h1>Bootstrap starter template</h1>
-          <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-        </div>
-
-        <div>   
-
+   <div>
                 <table>          
-                {% for selection in selection | sort(attribute='Year',)%}
-                <tr>
-                    <th>Year</th>
-                    <th>January</th>
-                    <th>Febuary</th>
-                    <th>March</th>
-                    <th>April</th>
-                    <th>May</th>
-                    <th>June</th>
-                    <th>July</th>
-                    <th>August</th>
-                    <th>September</th>
-                    <th>October</th>
-                    <th>November</th>
-                    <th>December</th>
-                    <th>Annual</th>
-                </tr>
-                <tr>
-                    <td>{{ selection.Year}}</td>
-                    <td>{{ selection.JAN}}  </td>
-                    <td>{{ selection.FEB}}  </td>
-                    <td>{{ selection.MAR}}  </td>
-                    <td>{{ selection.APR}}  </td>
-                    <td>{{ selection.MAY}}  </td>
-                    <td>{{ selection.JUN}}  </td>
-                    <td>{{ selection.JUL}}  </td>
-                    <td>{{ selection.AUG}}  </td>
-                    <td>{{ selection.SEP}}  </td>
-                    <td>{{ selection.OCT}}  </td>
-                    <td>{{ selection.NOV}}  </td>
-                    <td>{{ selection.DEC}}  </td>
-                    <td>{{ selection.ANNUAL}}  </td>
-                </tr>
+                {% for selection in selection | sort(attribute='Year')%}
+                    <tr>
+                        <th>Year</th>
+                        <th>January</th>
+                        <th>Febuary</th>
+                        <th>March</th>
+                        <th>April</th>
+                        <th>May</th>
+                        <th>June</th>
+                        <th>July</th>
+                        <th>August</th>
+                        <th>September</th>
+                        <th>October</th>
+                        <th>November</th>
+                        <th>December</th>
+                        <th>Annual</th>
+                    </tr>
+                    <tr>
+                        <td>{{ selection.Year}}</td>
+                        <td>{{ selection.JAN}}</td>
+                        <td>{{ selection.FEB}}</td>
+                        <td>{{ selection.MAR}}</td>
+                        <td>{{ selection.APR}}</td>
+                        <td>{{ selection.MAY}}</td>
+                        <td>{{ selection.JUN}}</td>
+                        <td>{{ selection.JUL}}</td>
+                        <td>{{ selection.AUG}}</td>
+                        <td>{{ selection.SEP}}</td>
+                        <td>{{ selection.OCT}}</td>
+                        <td>{{ selection.NOV}}</td>
+                        <td>{{ selection.DEC}}</td>
+                        <td>{{ selection.ANNUAL}}</td>
+                    </tr>
                 {% endfor %}
                 </table>
         </div>

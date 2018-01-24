@@ -54,9 +54,8 @@ def main():
 
 @app.route('/HistoricData', methods=['GET'])
 def get_HistoricData():
-    selection = list(r.table('historic').run(g.rdb_conn))
-    ##print(selection)    
-
+    selection = list(r.table('historic').run(g.rdb_conn)) 
+    
     return render_template("HistoricData.html", selection=selection)
 
 @app.route('/temputure', methods=['POST']) #connect a webpage. '/' is a root directory.
@@ -67,7 +66,12 @@ def temputure():
     #json_object = req.json()
     #temp = float(json_object['main']['temp'])
     
-    return render_template("index.html")
+    return render_template("index.html", temp=temp)
+
+@app.route('/Patterns') #connect a webpage. '/' is a root directory.
+def Patterns():
+    return render_template("Patterns.html")
+
 
 @app.route('/dashboard') #connect a webpage. '/' is a root directory.
 def dashboard():
