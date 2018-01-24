@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <title>StatFlow</title>
+    
+    <!-- import plugin script -->   <script src='static/Chart.min.js'></script>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,6 +13,8 @@
 
     <!-- Bootstrap style template -->
     <link rel="stylesheet" type="text/css" href={{ url_for('static', filename='style.css') }}>
+    <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+
 <style>
 table {
     font-family: arial, sans-serif;
@@ -28,9 +32,12 @@ tr:nth-child(even) {
     background-color: #dddddd;
 }
 </style>
+
+
 </head>
   <body>
- 
+    
+    <!-- bar chart canvas element --><canvas id="chart" width="2000" height="2000"></canvas>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
         <a class="navbar-brand" href="#">Statflow</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,6 +61,41 @@ tr:nth-child(even) {
   
       <main role="main" class="container">
    <div>
+    <script>
+                // bar chart data
+               var barData = {
+               labels : [{% for selection in selection | sort(attribute='Year') %}
+                              {{selection.Year}},
+                          {% endfor %}],
+               datasets : [
+                  {
+                        fillColor: "rgba(151,187,205,0.2)",
+                        strokeColor: "rgba(151,187,205,1)",
+                        pointColor: "rgba(151,187,205,1)",
+                     data : [{% for selection in selection %}
+                                  {{selection.ANNUAL}},
+                                {% endfor %}]
+                  }
+                  ]
+               }
+                         // get bar chart canvas
+           var mychart = document.getElementById("chart").getContext("2d");
+         
+           steps = 1500
+           max = 1500
+           // draw bar chart
+           new Chart(mychart).Bar(barData, {
+                scaleOverride: true,
+                scaleSteps: steps,
+                scaleStepWidth: Math.ceil(max / steps),
+                scaleStartValue: 0,
+                scaleShowVerticalLines: true,
+                scaleShowGridLines : true,
+                barShowStroke : true,
+                scaleShowLabels: true
+           });
+ 
+    </script>
                 <table>          
                 {% for selection in selection | sort(attribute='Year')%}
                     <tr>
