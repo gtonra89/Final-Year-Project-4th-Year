@@ -39,101 +39,70 @@ tr:nth-child(even) {
     
     <!-- bar chart canvas element --><canvas id="chart" width="2000" height="2000"></canvas>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#">Statflow</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-  
-        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/dashboard">dashboard</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/Patterns">Patterns</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-  
+      <a class="navbar-brand" href="/">Statflow</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/dashboard">dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/HistoricData">Historic Data</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/temp">Current City Weather</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/fiveday">five day</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link" href="/map">Interactive Map</a>
+          </li>         
+        </ul>
+      </div>
+    </nav>
       <main role="main" class="container">
-   <div>
-    <script>
-                // bar chart data
-               var barData = {
-               labels : [{% for selection in selection | sort(attribute='Year') %}
-                              {{selection.Year}},
-                          {% endfor %}],
-               datasets : [
-                  {
-                        fillColor: "rgba(151,187,205,0.2)",
-                        strokeColor: "rgba(151,187,205,1)",
-                        pointColor: "rgba(151,187,205,1)",
-                     data : [{% for selection in selection %}
-                                  {{selection.ANNUAL}},
-                                {% endfor %}]
-                  }
-                  ]
-               }
-                         // get bar chart canvas
-           var mychart = document.getElementById("chart").getContext("2d");
-         
-           steps = 1500
-           max = 1500
-           // draw bar chart
-           new Chart(mychart).Bar(barData, {
-                scaleOverride: true,
-                scaleSteps: steps,
-                scaleStepWidth: Math.ceil(max / steps),
-                scaleStartValue: 0,
-                scaleShowVerticalLines: true,
-                scaleShowGridLines : true,
-                barShowStroke : true,
-                scaleShowLabels: true
-           });
- 
-    </script>
-                <table>          
-                {% for selection in selection | sort(attribute='Year')%}
-                    <tr>
-                        <th>Year</th>
-                        <th>January</th>
-                        <th>Febuary</th>
-                        <th>March</th>
-                        <th>April</th>
-                        <th>May</th>
-                        <th>June</th>
-                        <th>July</th>
-                        <th>August</th>
-                        <th>September</th>
-                        <th>October</th>
-                        <th>November</th>
-                        <th>December</th>
-                        <th>Annual</th>
-                    </tr>
-                    <tr>
-                        <td>{{ selection.Year}}</td>
-                        <td>{{ selection.JAN}}</td>
-                        <td>{{ selection.FEB}}</td>
-                        <td>{{ selection.MAR}}</td>
-                        <td>{{ selection.APR}}</td>
-                        <td>{{ selection.MAY}}</td>
-                        <td>{{ selection.JUN}}</td>
-                        <td>{{ selection.JUL}}</td>
-                        <td>{{ selection.AUG}}</td>
-                        <td>{{ selection.SEP}}</td>
-                        <td>{{ selection.OCT}}</td>
-                        <td>{{ selection.NOV}}</td>
-                        <td>{{ selection.DEC}}</td>
-                        <td>{{ selection.ANNUAL}}</td>
-                    </tr>
-                {% endfor %}
-                </table>
-        </div>
-  
+        <table>          
+          {% for selection in selection | sort(attribute='Year')%}
+              <tr>
+                  <th>Year</th>
+                  <th>January</th>
+                  <th>Febuary</th>
+                  <th>March</th>
+                  <th>April</th>
+                  <th>May</th>
+                  <th>June</th>
+                  <th>July</th>
+                  <th>August</th>
+                  <th>September</th>
+                  <th>October</th>
+                  <th>November</th>
+                  <th>December</th>
+                  <th>Annual</th>
+              </tr>
+              <tr>
+                  <td>{{ selection.Year}}</td>
+                  <td>{{ selection.Month.JAN}}</td>
+                  <td>{{ selection.Month.FEB}}</td>
+                  <td>{{ selection.Month.MAR}}</td>
+                  <td>{{ selection.Month.APR}}</td>
+                  <td>{{ selection.Month.MAY}}</td>
+                  <td>{{ selection.Month.JUN}}</td>
+                  <td>{{ selection.Month.JUL}}</td>
+                  <td>{{ selection.Month.AUG}}</td>
+                  <td>{{ selection.Month.SEP}}</td>
+                  <td>{{ selection.Month.OCT}}</td>
+                  <td>{{ selection.Month.NOV}}</td>
+                  <td>{{ selection.Month.DEC}}</td>
+                  <td>{{ selection.Month.ANNUAL}}</td>
+              </tr>
+          {% endfor %}
+          </table>
       </main><!-- /.container -->
 
     <!-- Optional JavaScript -->

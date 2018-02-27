@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <title>StatFlow</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS CRN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <!-- Bootstrap style template -->
+    <link rel="stylesheet" type="text/css" href={{ url_for('static', filename='style.css') }}>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+
+</head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="/">Statflow</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/dashboard">dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/HistoricData">Historic Data</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/temp">Current City Weather</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/fiveday">five day</a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link" href="/map">Interactive Map</a>
+            </li>         
+          </ul>
+        </div>
+      </nav>
+  
+      <main role="main" class="container">
+        <form align="center" action="{{ url_for('temp') }}" method="POST">
+            <select name="city">
+                {% for doc in selection | sort(attribute='name')%}
+                <option  value="{{doc.name}}" SELECTED>{{doc.name}}</option>
+                {% endfor %}
+            </select>  <input name="text" type="submit">
+        </form>
+<!--  
+       <div class="starter-template">
+          <h1> Results For : {{cityname}}</h1>
+          <h1> The current pressure is : {{ pressure }} </h1>
+          <h1> The current temperature is : {{ temp }} </h1>
+          <h1> The current humidity is : {{ humidity }} </h1>
+          <h1> The current min temp is : {{ temp_min }} </h1>
+          <h1> The current max temp is : {{ temp_max }} </h1>
+        </div>
+-->
+
+<br><br>
+<div id="container" style="min-width: 310px;  height: 400px; margin: 0 auto"></div>
+<table id="datatable" cellspacing="10">
+    <thead>
+        <tr>
+            <th> Data</th>
+            <th>  Current Temperature </th>
+            <th>  Minimum Temperature  </th>
+            <th>  Maximum Temperature  </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>  Degrees °C  </th>
+            <td>  {{temp}}  </td>
+            <td>  {{temp_min}}  </td>
+            <td>  {{temp_max}}  </td>
+        </tr>
+    </tbody>
+</table>        
+<script>
+  Highcharts.chart('container', {
+    data: {
+        table: 'datatable'
+    },
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Current Temperature Data for  {{cityname}}'
+    },
+    yAxis: {
+        allowDecimals: false,
+        title: {
+            text: 'Units'
+        }
+    },
+    tooltip: {
+        formatter: function () {
+            return '<b>' + this.series.name + '</b><br/>' +
+                this.point.y + ' ' + this.point.name.toLowerCase();
+        }
+    }
+});
+</script>
+
+<div id="container2" style="min-width: 310px; max-width: 600px; height: 300px; margin: 0 auto"></div>
+<table id="datatableB" cellspacing="10">
+                <thead>
+                    <tr>
+                        <th>  %  </th>
+                        <th>  Humidity  </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>    </th>
+                        <td>  {{humidity}}  </td> 
+                    </tr>
+                </tbody>
+</table> 
+
+<script>
+Highcharts.chart('container2', {
+
+data: {
+            table: 'datatableB'
+},
+chart: {
+    type: 'gauge',
+    plotBackgroundColor: null,
+    plotBackgroundImage: null,
+    plotBorderWidth: 0,
+    plotShadow: false
+},
+title: {
+    text: 'Humidity % for {{cityname}}'
+},
+pane: {
+    startAngle: 0,
+    endAngle: 360,
+    background: [{
+        backgroundColor: {
+            linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 },
+            stops: [
+                [0, '#FFF'],
+                [1, '#333']
+            ]
+        },
+        borderWidth: 0,
+        outerRadius: '109%'
+    }, {
+        backgroundColor: {
+            linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 },
+            stops: [
+                [0, '#333'],
+                [1, '#FFF']
+            ]
+        },
+        borderWidth: 1,
+        outerRadius: '107%'
+    }, {
+        // default background
+    }, {
+        backgroundColor: '#DDD',
+        borderWidth: 0,
+        outerRadius: '105%',
+        innerRadius: '103%'
+    }]
+},
+yAxis: {
+    min: 0,
+    max: 100,
+
+    minorTickInterval: 'auto',
+    minorTickWidth: 1,
+    minorTickLength: 10,
+    minorTickPosition: 'inside',
+    minorTickColor: '#666',
+
+    tickPixelInterval: 30,
+    tickWidth: 2,
+    tickPosition: 'inside',
+    tickLength: 10,
+    tickColor: '#666',
+    labels: {
+        step: 2,
+        rotation: 'auto'
+    },
+    title: {
+        text: '% humidity'
+    },
+    plotBands: [{
+        from: 0,
+        to: 33,
+        color: '#55BF3B' // green
+    }, {
+        from: 34,
+        to: 66,
+        color: '#DDDF0D' // yellow
+    }, {
+        from: 67,
+        to: 100,
+        color: '#DF5353' // red
+    }]
+},
+series: [{
+    name: 'Humidity',
+    data: ['{{humidity}}'],
+    tooltip: {
+        valueSuffix: ' %'
+    }
+}]
+});
+</script>
+<br><br>
+<div id="container3" style="min-width: 310px; max-width: 600px; height: 300px; margin: 0 auto"></div>
+<table id="datatableC" cellspacing="10">
+                <thead>
+                    <tr>
+                        <th>  hPa  </th>
+                        <th>  Pressure  </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>    </th>
+                        <td>  {{pressure}}  </td> 
+                    </tr>
+                </tbody>
+</table> 
+
+<script>
+
+Highcharts.chart('container3', {
+
+data: {
+            table: 'datatableC'
+},
+chart: {
+    type: 'gauge',
+    plotBackgroundColor: null,
+    plotBackgroundImage: null,
+    plotBorderWidth: 0,
+    plotShadow: false
+},
+title: {
+    text: 'Pressure/hPa for {{cityname}}'
+},
+pane: {
+    startAngle: 0,
+    endAngle: 360,
+    background: [{
+        backgroundColor: {
+            linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 },
+            stops: [
+                [0, '#FFF'],
+                [1, '#333']
+            ]
+        },
+        borderWidth: 0,
+        outerRadius: '109%'
+    }, {
+        backgroundColor: {
+            linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 },
+            stops: [
+                [0, '#333'],
+                [1, '#FFF']
+            ]
+        },
+        borderWidth: 1,
+        outerRadius: '107%'
+    }, {
+        // default background
+    }, {
+        backgroundColor: '#DDD',
+        borderWidth: 0,
+        outerRadius: '105%',
+        innerRadius: '103%'
+    }]
+},
+yAxis: {
+    min: 950,
+    max: 1070,
+
+    minorTickInterval: 'auto',
+    minorTickWidth: 1,
+    minorTickLength: 10,
+    minorTickPosition: 'inside',
+    minorTickColor: '#666',
+
+    tickPixelInterval: 30,
+    tickWidth: 2,
+    tickPosition: 'inside',
+    tickLength: 10,
+    tickColor: '#666',
+    labels: {
+        step: 2,
+        rotation: 'auto'
+    },
+    title: {
+        text: 'hPa'
+    },
+    plotBands: [{
+        from: 950,
+        to: 990,
+        color: '#55BF3B' // green
+    }, {
+        from: 991,
+        to: 1030,
+        color: '#DDDF0D' // yellow
+    }, {
+        from: 1031,
+        to: 1070,
+        color: '#DF5353' // red
+    }]
+},
+series: [{
+    name: 'Pressure',
+    data: ['{{pressure}}'],
+    tooltip: {
+        valueSuffix: 'hPa'
+    }
+}]
+});
+</script>  
+</main>
+    </body>
+</html>

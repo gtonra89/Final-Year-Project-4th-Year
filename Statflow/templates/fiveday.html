@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      
+      
+      <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+    <title>StatFlow</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS CRN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <!-- Bootstrap style template -->
+    <link rel="stylesheet" type="text/css" href={{ url_for('static', filename='style.css') }}>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+      <script src="https://code.highcharts.com/modules/exporting.js"></script>
+</head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="/">Statflow</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/dashboard">dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/HistoricData">Historic Data</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/temp">Current City Weather</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/fiveday">five day</a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link" href="/map">Interactive Map</a>
+            </li>         
+          </ul>
+        </div>
+      </nav>
+<script>
+
+       var json = {{json_object}};
+       obj = JSON.parse(json);
+       console.log(obj);
+</script>
+        <a class="weatherwidget-io" href="https://forecast7.com/en/53d27n9d06/galway/" onclick="return false;" data-label_1="GALWAY" data-label_2="WEATHER" data-theme="original" >GALWAY WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+      <main role="main" class="container">
+  
+        <div class="starter-template">
+          <ul id="navigation">
+            {% for j in json_object.list | sort(attribute='dt_txt') %}
+            <ol>date and time of information is : {{j.dt_txt}}</ol>
+            <ol>temp is :{{j.main.temp}}</ol>
+            <ol>temp min is : {{j.main.temp_min}}</ol>
+            <ol>temp max is : {{j.main.temp_max}}</ol>
+            <ol>pressure is : {{j.main.pressure}}</ol>
+            <ol>pressure is : {{j.main.pressure}}</ol>
+            <ol>sea level is : {{j.main.sea_level}}</ol>
+            <ol>ground level is : {{j.main.grnd_level}}</ol>
+            <ol>humidity is : {{j.main.humidity}}</ol>
+            <ol>wind speed is : {{j.wind.speed}}</ol>
+            <ol>wind degree is :{{j.wind.deg}}</ol>
+            <ol>the weather is : {{j.weather.0.description }}</ol>
+           
+            {% endfor %}
+          </ul>
+         
+        </div>
+
+
+          <script>
+          Highcharts.chart('container', {
+    chart: {
+        type: 'area'
+    },
+    title: {
+        text: '5 day temperature forecast'
+    },
+    subtitle: {
+        text: 'Source: statflow'
+    },
+    xAxis: {
+        categories: ['00:00 Midnight', '03:00 AM', '06:00 AM', '09:00 AM', '12:00 NOON', '15:00 PM', '18:00 PM', '21:00PM'],
+        tickmarkPlacement: 'on',
+        title: {
+            enabled: false
+        }
+    },
+    yAxis: {
+        title: {
+            text: 'temperature'
+        },
+        labels: {
+            formatter: function () {
+                return this.value / 250;
+            }
+        }
+    },
+    tooltip: {
+        split: true,
+        valueSuffix: 'Degrees °C'
+    },
+    plotOptions: {
+        area: {
+            stacking: 'normal',
+            lineColor: '#666666',
+            lineWidth: 1,
+            marker: {
+                lineWidth: 1,
+                lineColor: '#666666'
+            }
+        }
+    },
+  
+    series: [{
+        name: 'Day 1',
+        data: ["{% for j in json_object['list'] %}",
+                    "{{j.main.temp}}",
+                "{% endfor %}"
+        ]
+    },
+    {
+        name: 'Day 2',
+        data: [-10, 0, 11, 13, 22, 27, 17, 05]
+    }, 
+    {
+        name: 'Day 3',
+        data: [-16, -20, -27, 9, 5, 9, -8, -2]
+    }, 
+    {
+        name: 'Day 4',
+        data: [1, 3, 5, 15, 33, 18, 12, -1]
+    }, 
+    {
+        name: 'Day 5',
+        data: [10, 12, 25, 32, 24, 16.5, -5, -1]
+    }]
+});
+          </script>
+        </div>
+      </main><!-- /.container -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  </body>
+</html>

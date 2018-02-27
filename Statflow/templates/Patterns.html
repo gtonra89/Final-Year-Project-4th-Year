@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <script src="/assets/js/jquery-1.12.0.min.js"></script>
+<script src="/assets/js/Chart.min.js"></script>
     <title>StatFlow</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -42,22 +44,58 @@
       <main role="main" class="container">
   
         <div class="starter-template">
-          <h1>Bootstrap starter template</h1>
-          <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-        </div>
+         
 
-        <!-- 
-        <form action="/temputure">
-          <div class="form-group">
-            
-            <input type="text" name="city" class="form-control"  placeholder="Enter city">
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-      -->
-        <div>
-          <iframe src="http://www.met.ie/widgets/3daysummary.asp" style=" border-width:0 " width="500" height="500" frameborder="0" scrolling="no"></iframe>
-        </div>
+<canvas id="myLineChart" width="740" height="200"></canvas>
+
+<script>
+  function drawLineChart() {
+
+    // Add a helper to format timestamp data
+    Date.prototype.formatMMDDYYYY = function() {
+        return (this.getMonth() + 1) +
+        "/" +  this.getDate() +
+        "/" +  this.getFullYear();
+    }
+
+    var jsonData = $.ajax({
+      url: 'http://d.microbuilder.io:8080/test/temp',
+      dataType: 'json',
+    }).done(function (results) {
+
+      // Split timestamp and data into separate arrays
+      var labels = [], data=[];
+      results["packets"].forEach(function(packet) {
+        labels.push(new Date(packet.timestamp).formatMMDDYYYY());
+        data.push(parseFloat(packet.payloadString));
+      });
+
+      // Create the chart.js data structure using 'labels' and 'data'
+      var tempData = {
+        labels : labels,
+        datasets : [{
+            fillColor             : "rgba(151,187,205,0.2)",
+            strokeColor           : "rgba(151,187,205,1)",
+            pointColor            : "rgba(151,187,205,1)",
+            pointStrokeColor      : "#fff",
+            pointHighlightFill    : "#fff",
+            pointHighlightStroke  : "rgba(151,187,205,1)",
+            data                  : data
+        }]
+      };
+
+      // Get the context of the canvas element we want to select
+      var ctx = document.getElementById("myLineChart").getContext("2d");
+
+      // Instantiate a new chart
+      var myLineChart = new Chart(ctx).Line(tempData, {
+        //bezierCurve: false
+      });
+    });
+  }
+
+  drawLineChart();
+</script>
   
       </main><!-- /.container -->
 

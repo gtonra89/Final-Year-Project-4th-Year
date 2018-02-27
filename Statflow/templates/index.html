@@ -1,6 +1,9 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <script type="text/javascript" src="leaflet.js"></script>
+	<link rel="stylesheet" type="text/css" href="leaflet-openweathermap.css" />
+	<script type="text/javascript" src="leaflet-openweathermap.js"></script>
     <title>StatFlow</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -15,52 +18,52 @@
   <body>
  
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="/">Statflow</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-  
-        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/dashboard">dashboard</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/Patterns">Patterns</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/HistoricData">Historic Data</a>
-            </li>
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
-        </div>
-      </nav>
+      <a class="navbar-brand" href="/">Statflow</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/dashboard">dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/HistoricData">Historic Data</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/temp">Current City Weather</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/fiveday">five day</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link" href="/map">Interactive Map</a>
+          </li>         
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
   
       <main role="main" class="container">
   
         <div class="starter-template">
-          <h1>Bootstrap starter template</h1>
-          <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-        </div>
+          <script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
 
-        <!-- 
-        <form action="/temputure">
-          <div class="form-group">
-            
-            <input type="text" name="city" class="form-control"  placeholder="Enter city">
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-      -->
-        <div>
-          <iframe src="http://www.met.ie/widgets/3daysummary.asp" style=" border-width:0 " width="500" height="500" frameborder="0" scrolling="no"></iframe>
-        </div>
+<div id="container" style="min-width: 200px; max-width: 250px; height: 250px; margin: 0 auto"></div>
+</div>
+       
+        
+
+       
+ 
   
       </main><!-- /.container -->
 
