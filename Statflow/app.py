@@ -62,7 +62,7 @@ def main():
 
 @app.route('/HistoricData', methods=['GET'])
 def get_HistoricData():
-    selection = list(r.table('historic').run(g.rdb_conn)) 
+    selection = list(r.table('rainfall1').run(g.rdb_conn)) 
     
     return render_template("HistoricData.html", selection=selection)
 
