@@ -1,8 +1,9 @@
-from flask import Flask, render_template, request, url_for, redirect, g, request, jsonify, abort
-import requests
+from flask import Flask
+from flask import render_template, session, url_for, redirect, g, request, jsonify, abort
+import requests, bcrypt
 import json
 from flask_pymongo import PyMongo
-import urllib2
+#import urllib2
 from pprint import pprint
 import pytemperature
 # Pip install pymongo on your machine before running app
@@ -12,6 +13,8 @@ app = Flask(__name__) # create the application instance
 
 app.config['MONGO_DBNAME'] = 'weather'
 app.config['MONGO_URI'] = 'mongodb://statflow:statflow18@ds113738.mlab.com:13738/weather'
+
+mongo = PyMongo(app)
 
 #rethink imports
 import rethinkdb as r
@@ -57,8 +60,44 @@ def teardown_request(exception):
 # @ signifies a decorator which is a way to wrap a function and modify its behaviour
 @app.route('/') #connect a webpage. '/' is a root directory.
 def main():
+    if 'username' in session:
+        return render_template("index.html") 
+        
     
-   return render_template("index.html")
+
+@app.route('/register', methods=['POST', 'GET'])
+def register():
+    if request.method == 'POST':
+        users = mongo.db.users
+        existing_user = users.find_one({'name' : request.form['username']})
+
+        if existing_user is None:
+            hashpass = bcrypt.hashpw(request.form['pass'].encode('utf-8'), bcrypt.gensalt())
+            users.insert({'name' : request.form['username'], 'password' : hashpass})
+            session['username'] = request.form['username']
+            return redirect(url_for('main'))
+        
+        
+
+    return render_template('register.html')
+
+@app.route('/login', methods=['POST'])
+def login():
+    users = mongo.db.users
+    login_user = users.find_one({'name' : request.form['username']})
+
+    if login_user:
+        if bcrypt.hashpw(request.form['pass'].encode('utf-8'), login_user['password'].encode('utf-8')) == login_user['password'].encode('utf-8'):
+            session['username'] = request.form['username']
+            return redirect(url_for('main'))
+
+    return 'Invalid username/password combination'
+
+
+@app.route("/logout")
+def logout():
+    session['logged_in'] = False
+    return main()
 
 @app.route('/HistoricData', methods=['GET'])
 def get_HistoricData():
@@ -126,5 +165,6 @@ def data():
 
 
 if __name__ == "__main__":
+    app.secret_key = 'mysecret'
     app.run(debug=True) # Start the web app. debug=True means to auto refresh page after code changes 
 
