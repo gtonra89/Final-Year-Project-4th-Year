@@ -46,13 +46,16 @@
                       <a class="nav-link" href="#">Right</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="#">Log out</a>
+                      <a class="nav-link" href="/logout">Log out</a>
                   </li>
               </ul>
           </div>
     </nav>
   
       <main role="main" class="container">
+          {% block body %}{% endblock %}
+
+          <p>Logged in as: {{ user }}</p>
   
         <div class="starter-template">
           <script src="https://code.highcharts.com/highcharts.js"></script>
@@ -62,7 +65,7 @@
 <div id="container" style="min-width: 200px; max-width: 250px; height: 250px; margin: 0 auto"></div>
 </div>
 
-  {% block body %}{% endblock %}
+
        
         
 

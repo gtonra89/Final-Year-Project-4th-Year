@@ -61,7 +61,12 @@ def teardown_request(exception):
 @app.route('/') #connect a webpage. '/' is a root directory.
 def main():
     if 'username' in session:
-        return render_template("index.html") 
+        userid = session['username']
+        return render_template("index.html", user=userid)
+        print('you are logged in as ' + session['username'])
+        
+    else:
+        return render_template("login.html") 
         
     
 
@@ -72,32 +77,42 @@ def register():
         existing_user = users.find_one({'name' : request.form['username']})
 
         if existing_user is None:
-            hashpass = bcrypt.hashpw(request.form['pass'].encode('utf-8'), bcrypt.gensalt())
-            users.insert({'name' : request.form['username'], 'password' : hashpass})
+            #hashpass = bcrypt.hashpw(request.form['pass'].encode('utf-8'), bcrypt.gensalt())
+            #password = request.form['pass']
+            users.insert({'name' : request.form['username'], 'password' : request.form['pass']})
             session['username'] = request.form['username']
-            return redirect(url_for('main'))
+        return redirect(url_for('login'))
         
-        
-
     return render_template('register.html')
 
-@app.route('/login', methods=['POST'])
+@app.route('/login', methods=['GET','POST'])
 def login():
-    users = mongo.db.users
-    login_user = users.find_one({'name' : request.form['username']})
+    if request.method == 'POST':
+        users = mongo.db.users
+        login_user = users.find_one({'name' : request.form['username']})
 
+        if login_user:
+            if request.form['pass'] == login_user['password']:
+                session['username'] = request.form['username']
+                return redirect(url_for('main'))
+            else:
+                return 'wrong password'
+    return render_template('login.html')
+
+"""
     if login_user:
         if bcrypt.hashpw(request.form['pass'].encode('utf-8'), login_user['password'].encode('utf-8')) == login_user['password'].encode('utf-8'):
             session['username'] = request.form['username']
             return redirect(url_for('main'))
 
     return 'Invalid username/password combination'
-
+"""
 
 @app.route("/logout")
 def logout():
-    session['logged_in'] = False
-    return main()
+    # remove the username from the session if it is here
+    session.pop('username', None)
+    return redirect(url_for('main'))
 
 @app.route('/HistoricData', methods=['GET'])
 def get_HistoricData():
