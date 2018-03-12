@@ -133,7 +133,7 @@ def get_HistoricData():
         text1 = request.form['year']
         year = int(str(text1)) # convert to string and then int for year query
         s = (r.table('rainfall1').filter({'Year': year}).run(g.rdb_conn))
-        return render_template("HistoricData.html", s=s, selection=selection)
+        return render_template("HistoricData.html", s=s, selection=selection, year=year)
     
     return render_template("HistoricData1.html", selection=selection)
 
@@ -207,5 +207,5 @@ def data():
 if __name__ == "__main__":
     # In order to use sessions you have to set a secret key for encryption purposes as a user could hack into the contents of a cookie and modify if there was no secret key used for signing the cookies.
     app.secret_key = 'mysecret' 
-    app.run(debug=True) # Start the web app. debug=True means to auto refresh page after code changes instead of having to run the file after every change. 
+    app.run(debug=True, threaded=True) # Start the web app. debug=True means to auto refresh page after code changes instead of having to run the file after every change. 
 
