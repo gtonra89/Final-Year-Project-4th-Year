@@ -1,5 +1,5 @@
 from flask import Flask #Importing flask app
-from flask import render_template, session, url_for, redirect, g, request, jsonify, abort
+from flask import render_template, flash, session, url_for, redirect, g, request, jsonify, abort
 import requests, bcrypt
 import json
 from flask_pymongo import PyMongo # PyMongo allows us to work directly with the mongo database without defining a schema. It is a wrapper for mongodb library in flask 
@@ -64,7 +64,8 @@ def teardown_request(exception):
 def main():
     # if username is logged in
     if 'username' in session:
-        # render index page
+        # flash a message to user to indicate they are logged in.
+        flash("Logged in as " + session['username'])
         return render_template("index.html")
     else:
         return render_template("login.html") 
@@ -120,6 +121,8 @@ def login():
 def logout():
     # remove the username from the session if logout button is pressed
     session.pop('username', None)
+    # Flash a message to user to indicate they are logged out
+    flash("You are now logged out")
     return redirect(url_for('main')) # redirect to main route
 
 @app.route('/HistoricData', methods=['GET', 'POST'])
