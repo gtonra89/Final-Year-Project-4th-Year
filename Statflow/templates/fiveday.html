@@ -1,7 +1,35 @@
 <!doctype html>
 <html lang="en">
   <head>
-      
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+                <a class="navbar-brand" href="/">Statflow</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/dashboard">dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/HistoricData">Historic Data</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/temp">Current City Weather</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/fiveday">five day</a>
+                    </li> 
+                    <li class="nav-item">
+                      <a class="nav-link" href="/map">Interactive Map</a>
+                    </li>         
+                  </ul>
+                </div>
+              </nav>
+        
       
       <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
     <title>StatFlow</title>
@@ -20,72 +48,45 @@
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/highcharts-more.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link id="bs-css" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet"> 
+  <link id="bsdp-css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker3.min.css" rel="stylesheet"> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script> 
+  <link id="weather-css" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css" rel="stylesheet">
 </head>
   <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="/">Statflow</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/dashboard">dashboard</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/HistoricData">Historic Data</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/temp">Current City Weather</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/fiveday">five day</a>
-            </li> 
-            <li class="nav-item">
-              <a class="nav-link" href="/map">Interactive Map</a>
-            </li>         
-          </ul>
-        </div>
-      </nav>
-<script>
-
-       var json = {{json_object}};
-       obj = JSON.parse(json);
-       console.log(obj);
-</script>
-        <a class="weatherwidget-io" href="https://forecast7.com/en/53d27n9d06/galway/" onclick="return false;" data-label_1="GALWAY" data-label_2="WEATHER" data-theme="original" >GALWAY WEATHER</a>
-<script>
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-</script>
-
-<div id="openweathermap-widget-11"></div>
-<script src='//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js'></script><script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 11,cityid: '2964180',appid: '57b8dba81b17f308646a6cd7f37a03ad',units: 'metric',containerid: 'openweathermap-widget-11',  });  (function() {var script = document.createElement('script');script.async = true;script.charset = "utf-8";script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();</script>
-      <main role="main" class="container">
+    
+<main role="main" class="container">
   
-        <div class="starter-template">
-          <ul id="navigation">
-            {% for j in json_object.list | sort(attribute='dt_txt') %}
-            <ol>date and time of information is : {{j.dt_txt}}</ol>
-            <ol>temp is :{{j.main.temp}}</ol>
-            <ol>temp min is : {{j.main.temp_min}}</ol>
-            <ol>temp max is : {{j.main.temp_max}}</ol>
-            <ol>pressure is : {{j.main.pressure}}</ol>
-            <ol>pressure is : {{j.main.pressure}}</ol>
-            <ol>sea level is : {{j.main.sea_level}}</ol>
-            <ol>ground level is : {{j.main.grnd_level}}</ol>
-            <ol>humidity is : {{j.main.humidity}}</ol>
-            <ol>wind speed is : {{j.wind.speed}}</ol>
-            <ol>wind degree is :{{j.wind.deg}}</ol>
-            <ol>the weather is : {{j.weather.0.description }}</ol>
-           
-            {% endfor %}
-          </ul>
-         
-        </div>
-
+    {% for j in json_object.list | sort(attribute='dt_txt') %}
+    <div class="row"> 
+        <div class="col-md-6"> <div class="well"> <div class="row"> 
+            <div class="col-xs-9"> 
+                <b>Date:</b> {{j.dt_txt}}<br/> 
+                <b>Max Temperature:</b> {{ j.main.temp_max }}<br/> 
+                <b>Min Temperature:</b> {{j.main.temp_min}}<br/> 
+                <b>Summary:</b> {{j.weather.0.description }}<br/> 
+                <b>pressure is :</b> {{j.main.pressure}}<br/>
+                <b>wind speed is :</b> {{j.wind.speed}}<br/>
+                <b>wind degree is :</b>{{j.wind.deg}}<br/>
+                <b>sea level is :</b> {{j.main.sea_level}}<br/>
+                <b>ground level is :</b> {{j.main.grnd_level}}</br>
+                <b>humidity is :</b> {{j.main.humidity}}</br>
+            </div>
+    
+       <div class="col-xs-3"> 
+          <h1> {% if j.weather.0.main == "clear" %} <i class="wi wi-day-sunny"></i> 
+          {% elif j.weather.0.main == "Clear" %} <i class="wi wi-night-clear"></i> 
+          {% elif j.weather.0.main == "Rain" %} <i class="wi wi-rain"></i> 
+          {% elif j.weather.0.main == "Snow" %} <i class="wi wi-snow"></i>  
+          {% elif j.weather.0.main == "Wind" %} <i class="wi wi-windy"></i> 
+          {% elif j.weather.0.main == "Fog" %} <i class="wi wi-fog"></i> 
+          {% elif j.weather.0.main == "Clouds" %} <i class="wi wi-cloudy"></i>  
+          {% endif %} </h1> 
+    </div></div></div></div> </div>
+    {% endfor %}
+    
 
           <script>
 
