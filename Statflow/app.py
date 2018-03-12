@@ -104,7 +104,6 @@ def login():
         if bcrypt.hashpw(request.form['pass'].encode('utf-8'), login_user['password'].encode('utf-8')) == login_user['password'].encode('utf-8'):
             session['username'] = request.form['username']
             return redirect(url_for('main'))
-
     return 'Invalid username/password combination'
 """
 
@@ -114,11 +113,17 @@ def logout():
     session.pop('username', None)
     return redirect(url_for('main'))
 
-@app.route('/HistoricData', methods=['GET'])
+@app.route('/HistoricData', methods=['GET', 'POST'])
 def get_HistoricData():
-    selection = list(r.table('rainfall1').run(g.rdb_conn)) 
+    selection = (r.table('rainfall1').run(g.rdb_conn))
+
+    if request.method == 'POST':
+        text1 = request.form['year']
+        year = int(str(text1)) # convert to string and then int for year query
+        s = (r.table('rainfall1').filter({'Year': year}).run(g.rdb_conn))
+        return render_template("HistoricData.html", s=s, selection=selection)
     
-    return render_template("HistoricData.html", selection=selection)
+    return render_template("HistoricData1.html", selection=selection)
 
 
 @app.route('/Patterns') #connect a webpage. '/' is a root directory.
@@ -139,21 +144,28 @@ def a():
 def temp():
         selection = (r.table('citylist').filter({'country': 'IE'}).run(g.rdb_conn))
         if request.method == 'POST':
-            text = request.form['city']
-            
-            
-            cityname = str(text)
+            text = request.form['city'] #take input submitted 
+            cityname = str(text) #parse the text to a city name
+    
+            #make a call to the api using the cuty name from dropdown in the request
             re = requests.get('http://api.openweathermap.org/data/2.5/weather?q='+cityname+'&appid=9af800562857988900fdbb172d8962c7')
-            json_object = re.json()
-            
-            pressure = str(json_object['main']['pressure'])
+    
+            json_object = re.json() ## returns the json encoded value
+            #pprint(json_object) ## simple check to see the data
+    
+    		# assign variables from json objects needed below for returning to the html page for chart rendering 
+            pressure = str(json_object['main']['pressure']) 
             temp_c = pytemperature.k2c((json_object['main']['temp'])) # Kelvin to Celsius
             temp_min = pytemperature.k2c((json_object['main']['temp_min']))#kelvin to celius
             temp_max = pytemperature.k2c((json_object['main']['temp_max']))# kelvin to celius
             humidity = str(json_object['main']['humidity'])
+            windspeed = str(3.6 * (json_object['wind']['speed']))# converts from mps to kmh 
+           
+			# description = str(json_object['weather'][0]['description'])
+                       
             
-            
-            return render_template('temp.html', cityname=cityname, pressure=pressure, temp=temp_c, temp_min=temp_min, temp_max=temp_max, humidity=humidity, selection=selection)
+            return render_template('temp.html', cityname=cityname, pressure=pressure, temp=temp_c, temp_min=temp_min, 
+                                                temp_max=temp_max, humidity=humidity, selection=selection, windspeed=windspeed)
         
         return render_template('temp1.html', selection=selection)
 

@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -13,7 +14,11 @@
 
     <!-- Bootstrap style template -->
     <link rel="stylesheet" type="text/css" href={{ url_for('static', filename='style.css') }}>
-    <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+
+
 
 <style>
 table {
@@ -21,23 +26,15 @@ table {
     border-collapse: collapse;
     width: 100%;
 }
-
 td, th {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
 }
-
 tr:nth-child(even) {
     background-color: #dddddd;
 }
 </style>
-
-
-</head>
-  <body>
-    
-    <!-- bar chart canvas element --><canvas id="chart" width="2000" height="2000"></canvas>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
       <a class="navbar-brand" href="/">Statflow</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -66,49 +63,137 @@ tr:nth-child(even) {
         </ul>
       </div>
     </nav>
+</head>
+  <body>
       <main role="main" class="container">
-        <table>          
-          {% for selection in selection | sort(attribute='Year')%}
-              <tr>
-                  <th>Year</th>
-                  <th>January</th>
-                  <th>Febuary</th>
-                  <th>March</th>
-                  <th>April</th>
-                  <th>May</th>
-                  <th>June</th>
-                  <th>July</th>
-                  <th>August</th>
-                  <th>September</th>
-                  <th>October</th>
-                  <th>November</th>
-                  <th>December</th>
-                  <th>Annual</th>
-              </tr>
-              <tr>
-                  <td>{{ selection.Year}}</td>
-                  <td>{{ selection.Month.JAN}}</td>
-                  <td>{{ selection.Month.FEB}}</td>
-                  <td>{{ selection.Month.MAR}}</td>
-                  <td>{{ selection.Month.APR}}</td>
-                  <td>{{ selection.Month.MAY}}</td>
-                  <td>{{ selection.Month.JUN}}</td>
-                  <td>{{ selection.Month.JUL}}</td>
-                  <td>{{ selection.Month.AUG}}</td>
-                  <td>{{ selection.Month.SEP}}</td>
-                  <td>{{ selection.Month.OCT}}</td>
-                  <td>{{ selection.Month.NOV}}</td>
-                  <td>{{ selection.Month.DEC}}</td>
-                  <td>{{ selection.Month.ANNUAL}}</td>
-              </tr>
-          {% endfor %}
-          </table>
-      </main><!-- /.container -->
+              <form align="center" action="{{ url_for('get_HistoricData') }}" method="POST">
+                  <select class="dropbtn" name="year">
+                      {% for doc in selection | sort(attribute='Year', reverse=true)%}
+                      <option class="dropdown-content" value="{{doc.Year}}" SELECTED>{{doc.Year}}</option>
+                      {% endfor %}
+                  </select>  <input class="dropbtn" name="text" type="submit" value="Compare">
+              </form>
+  
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+<table id="data" cellspacing="10">
+        {% for s in s %}
+        
+    <thead>
+        <tr>
+                <th>January</th>
+                <th>Febuary</th>
+                <th>March</th>
+                <th>April</th>
+                <th>May</th>
+                <th>June</th>
+                <th>July</th>
+                <th>August</th>
+                <th>September</th>
+                <th>October</th>
+                <th>November</th>
+                <th>December</th>
+                <th>Annual</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+                <td>{{ s.Month.JAN }}</td>
+                <td>{{ s.Month.FEB }}</td>
+                <td>{{ s.Month.MAR }}</td>
+                <td>{{ s.Month.APR }}</td>
+                <td>{{ s.Month.MAY }}</td>
+                <td>{{ s.Month.JUN }}</td>
+                <td>{{ s.Month.JUL }}</td>
+                <td>{{ s.Month.AUG }}</td>
+                <td>{{ s.Month.SEP }}</td>
+                <td>{{ s.Month.OCT }}</td>
+                <td>{{ s.Month.NOV }}</td>
+                <td>{{ s.Month.DEC }}</td>
+                <td>{{ s.Month.ANNUAL }}</td>
+        </tr>
+    </tbody>
+    {% endfor %}
+</table>
+<script type=text/javascript>
+ 
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-  </body>
-</html>
+Highcharts.chart('container', {
+    data: {
+        table: 'data'
+    },
+    chart: {
+        zoomType: 'xy'
+    },
+    title: {
+        text: 'Average Monthly Temperature and Rainfall in Tokyo'
+    },
+    subtitle: {
+        text: 'Source: WorldClimate.com'
+    },
+    xAxis: [{
+        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+            'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec','Annual'],
+        crosshair: true
+    }],
+    yAxis: [{ // Primary yAxis
+        labels: {
+            format: '{value}°C',
+            style: {
+                color: Highcharts.getOptions().colors[1]
+            }
+        },
+        title: {
+            text: 'Temperature',
+            style: {
+                color: Highcharts.getOptions().colors[1]
+            }
+        }
+    }, { // Secondary yAxis
+        title: {
+            text: 'Rainfall',
+            style: {
+                color: Highcharts.getOptions().colors[0]
+            }
+        },
+        labels: {
+            format: '{value} mm',
+            style: {
+                color: Highcharts.getOptions().colors[0]
+            }
+        },
+        opposite: true
+    }],
+    tooltip: {
+        shared: true
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'left',
+        x: 120,
+        verticalAlign: 'top',
+        y: 100,
+        floating: true,
+        backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
+    },
+    series: [{
+        name: 'Rainfall',
+        type: 'column',
+        yAxis: 1,
+        data: [28.5, 12.2, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4, 15.5],
+        tooltip: {
+            valueSuffix: ' mm'
+        }
+    }
+    }]
+});
+            </script>
+                </main><!-- /.container -->
+
+                <!-- Optional JavaScript -->
+                <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+                <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+              </body>
+            </html>

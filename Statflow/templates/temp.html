@@ -20,9 +20,64 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <script src="https://code.highcharts.com/highcharts-more.js"></script>
-
+    <style>
+            table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+            
+            td, th {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+            
+            tr:nth-child(even) {
+                background-color: #dddddd;
+            }
+            .dropbtn {
+                background-color: #3498DB;
+                color: white;
+                padding: 16px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+            }
+            
+            .dropbtn:hover, .dropbtn:focus {
+                background-color: #2980B9;
+            }
+            
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+            
+            .dropdown-content {
+                display: all;
+                position: absolute;
+                background-color: #f1f1f1;
+                color: black;
+                min-width: 160px;
+                overflow: auto;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+            
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+            
+            .dropdown a:hover {background-color: #ddd}
+            
+            .show {display:block;}
+            </style>
 </head>
-  <body>
+  <body >
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
         <a class="navbar-brand" href="/">Statflow</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,25 +109,18 @@
   
       <main role="main" class="container">
         <form align="center" action="{{ url_for('temp') }}" method="POST">
-            <select name="city">
+            <select class="dropbtn" name="city">
                 {% for doc in selection | sort(attribute='name')%}
-                <option  value="{{doc.name}}" SELECTED>{{doc.name}}</option>
+                <option  class="dropdown-content" value="{{doc.name}}" SELECTED>{{doc.name}}</option>
                 {% endfor %}
-            </select>  <input name="text" type="submit">
+            </select>  <input class="dropbtn" name="text" type="submit">
         </form>
-<!--  
-       <div class="starter-template">
-          <h1> Results For : {{cityname}}</h1>
-          <h1> The current pressure is : {{ pressure }} </h1>
-          <h1> The current temperature is : {{ temp }} </h1>
-          <h1> The current humidity is : {{ humidity }} </h1>
-          <h1> The current min temp is : {{ temp_min }} </h1>
-          <h1> The current max temp is : {{ temp_max }} </h1>
-        </div>
--->
+
 
 <br><br>
 <div id="container" style="min-width: 310px;  height: 400px; margin: 0 auto"></div>
+
+
 <table id="datatable" cellspacing="10">
     <thead>
         <tr>
@@ -91,6 +139,11 @@
         </tr>
     </tbody>
 </table>        
+
+   
+
+
+
 <script>
   Highcharts.chart('container', {
     data: {
@@ -116,227 +169,283 @@
     }
 });
 </script>
+<div>
+        <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
 
-<div id="container2" style="min-width: 310px; max-width: 600px; height: 300px; margin: 0 auto"></div>
-<table id="datatableB" cellspacing="10">
-                <thead>
-                    <tr>
-                        <th>  %  </th>
-                        <th>  Humidity  </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th>    </th>
-                        <td>  {{humidity}}  </td> 
-                    </tr>
-                </tbody>
-</table> 
-
-<script>
-Highcharts.chart('container2', {
-
-data: {
+        <div style="width: 1000px; height: 400px; margin: 0 auto">
+            <div id="container2" style="width: 1000px; height: 400px; float: left"></div>
+        </div>
+        <table id="datatableB" cellspacing="10">
+            <thead>
+                <tr>
+                    <th>  %  </th>
+                    <th>  Humidity  </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>    </th>
+                    <td>  {{humidity}}  </td> 
+                </tr>
+            </tbody>
+    </table>
+    <script>
+        
+        var gaugeOptions = {
+        
+            chart: {
+                type: 'solidgauge'
+            },
+            title: null,
+        
+            pane: {
+                center: ['50%', '85%'],
+                size: '140%',
+                startAngle: -90,
+                endAngle: 90,
+                background: {
+                    backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || '#EEE',
+                    innerRadius: '60%',
+                    outerRadius: '100%',
+                    shape: 'arc'
+                }
+            },
+        
+            tooltip: {
+                enabled: false
+            },
+        
+            // the value axis
+            yAxis: {
+                stops: [
+                    [0.1, '#55BF3B'], // green
+                    [0.5, '#DDDF0D'], // yellow
+                    [0.9, '#DF5353'] // red
+                ],
+                lineWidth: 0,
+                minorTickInterval: null,
+                tickAmount: 2,
+                title: {
+                    y: -70
+                },
+                labels: {
+                    y: 16
+                }
+            },
+        
+            plotOptions: {
+                solidgauge: {
+                    dataLabels: {
+                        y: 5,
+                        borderWidth: 0,
+                        useHTML: true
+                    }
+                }
+            }
+        };
+    </script>
+     <div style="width: 1000px; height: 400px; margin: 0 auto">
+        <div id="container3" style="width: 1000px; height: 400px; float: left"></div>
+    </div>
+     
+    <script>
+    
+        // The humidity gauge
+        var chartSpeed = Highcharts.chart('container2', Highcharts.merge(gaugeOptions, {
+            yAxis: {
+                min: 0,
+                max: 100,
+                title: {
+                    text: 'humidity'
+                }
+            },
+            data: {
             table: 'datatableB'
-},
-chart: {
-    type: 'gauge',
-    plotBackgroundColor: null,
-    plotBackgroundImage: null,
-    plotBorderWidth: 0,
-    plotShadow: false
-},
-title: {
-    text: 'Humidity % for {{cityname}}'
-},
-pane: {
-    startAngle: 0,
-    endAngle: 360,
-    background: [{
-        backgroundColor: {
-            linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 },
-            stops: [
-                [0, '#FFF'],
-                [1, '#333']
-            ]
-        },
-        borderWidth: 0,
-        outerRadius: '109%'
-    }, {
-        backgroundColor: {
-            linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 },
-            stops: [
-                [0, '#333'],
-                [1, '#FFF']
-            ]
-        },
-        borderWidth: 1,
-        outerRadius: '107%'
-    }, {
-        // default background
-    }, {
-        backgroundColor: '#DDD',
-        borderWidth: 0,
-        outerRadius: '105%',
-        innerRadius: '103%'
-    }]
-},
-yAxis: {
-    min: 0,
-    max: 100,
-
-    minorTickInterval: 'auto',
-    minorTickWidth: 1,
-    minorTickLength: 10,
-    minorTickPosition: 'inside',
-    minorTickColor: '#666',
-
-    tickPixelInterval: 30,
-    tickWidth: 2,
-    tickPosition: 'inside',
-    tickLength: 10,
-    tickColor: '#666',
-    labels: {
-        step: 2,
-        rotation: 'auto'
-    },
-    title: {
-        text: '% humidity'
-    },
-    plotBands: [{
-        from: 0,
-        to: 33,
-        color: '#55BF3B' // green
-    }, {
-        from: 34,
-        to: 66,
-        color: '#DDDF0D' // yellow
-    }, {
-        from: 67,
-        to: 100,
-        color: '#DF5353' // red
-    }]
-},
-series: [{
-    name: 'Humidity',
-    data: ['{{humidity}}'],
-    tooltip: {
-        valueSuffix: ' %'
-    }
-}]
-});
-</script>
-<br><br>
-<div id="container3" style="min-width: 310px; max-width: 600px; height: 300px; margin: 0 auto"></div>
-<table id="datatableC" cellspacing="10">
-                <thead>
-                    <tr>
-                        <th>  hPa  </th>
-                        <th>  Pressure  </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th>    </th>
-                        <td>  {{pressure}}  </td> 
-                    </tr>
-                </tbody>
-</table> 
+            },
+        
+            credits: {
+                enabled: false
+            },
+        
+            series: [{
+                name: 'humidity',
+                data: ['{{humidity}}'],
+                dataLabels: {
+                    format: '<div style="text-align:center"><span style="font-size:25px;color:' +
+                        ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y}</span><br/>' +
+                           '<span style="font-size:12px;color:black">% humidity</span></div>'
+                },
+                tooltip: {
+                    valueSuffix: '%'
+                }
+            }]
+        
+        }));
+    
+    
+    </script>
+    <table id="datatableC" cellspacing="10">
+            <thead>
+                <tr>
+                    <th>  hPa  </th>
+                    <th>  Pressure  </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>   hpa </th>
+                    <td>  {{pressure }}  </td> 
+                </tr>
+            </tbody>
+        </table>
+    <script>
+        // The RPM gauge
+        var chartRpm = Highcharts.chart('container3', Highcharts.merge(gaugeOptions, {
+            yAxis: {
+                min: 960,
+                max: 1080,
+                title: {
+                    text: 'Pressure'
+                }
+            },
+            data: {
+            table: 'datatableC'
+            },
+            series: [{
+                name: 'pressure',
+                data: ['{{pressure}}'],
+                dataLabels: {
+                    format: '<div style="text-align:center"><span style="font-size:25px;color:' +
+                        ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y:.1f}</span><br/>' +
+                           '<span style="font-size:12px;color:black">hPa</span></div>'
+                },
+                tooltip: {
+                    valueSuffix: 'hPa'
+                }
+            }]
+        
+        }));
+        
+        </script>
+<br>
+<div id="container4" style="min-width: 1000px;  height: 400px; margin: 0 auto"></div>
+<table id="datatableD" cellspacing="10">
+        <thead>
+            <tr>
+                <th> Data</th>
+                <th>WindSpeed</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>  windspeed km/h  </th>
+                <td>  {{windspeed}}  </td>
+            </tr>
+        </tbody>
+    </table> 
+   
 
 <script>
-
-Highcharts.chart('container3', {
-
-data: {
-            table: 'datatableC'
-},
-chart: {
-    type: 'gauge',
-    plotBackgroundColor: null,
-    plotBackgroundImage: null,
-    plotBorderWidth: 0,
-    plotShadow: false
-},
-title: {
-    text: 'Pressure/hPa for {{cityname}}'
-},
-pane: {
-    startAngle: 0,
-    endAngle: 360,
-    background: [{
-        backgroundColor: {
-            linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 },
-            stops: [
-                [0, '#FFF'],
-                [1, '#333']
-            ]
-        },
-        borderWidth: 0,
-        outerRadius: '109%'
-    }, {
-        backgroundColor: {
-            linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 },
-            stops: [
-                [0, '#333'],
-                [1, '#FFF']
-            ]
-        },
-        borderWidth: 1,
-        outerRadius: '107%'
-    }, {
-        // default background
-    }, {
-        backgroundColor: '#DDD',
-        borderWidth: 0,
-        outerRadius: '105%',
-        innerRadius: '103%'
-    }]
-},
-yAxis: {
-    min: 950,
-    max: 1070,
-
-    minorTickInterval: 'auto',
-    minorTickWidth: 1,
-    minorTickLength: 10,
-    minorTickPosition: 'inside',
-    minorTickColor: '#666',
-
-    tickPixelInterval: 30,
-    tickWidth: 2,
-    tickPosition: 'inside',
-    tickLength: 10,
-    tickColor: '#666',
-    labels: {
-        step: 2,
-        rotation: 'auto'
-    },
-    title: {
-        text: 'hPa'
-    },
-    plotBands: [{
-        from: 950,
-        to: 990,
-        color: '#55BF3B' // green
-    }, {
-        from: 991,
-        to: 1030,
-        color: '#DDDF0D' // yellow
-    }, {
-        from: 1031,
-        to: 1070,
-        color: '#DF5353' // red
-    }]
-},
-series: [{
-    name: 'Pressure',
-    data: ['{{pressure}}'],
-    tooltip: {
-        valueSuffix: 'hPa'
-    }
-}]
-});
-</script>  
+        Highcharts.chart('container4', {
+        
+            chart: {
+                type: 'gauge',
+                plotBackgroundColor: null,
+                plotBackgroundImage: null,
+                plotBorderWidth: 0,
+                plotShadow: false
+            },
+            data: {
+            table: 'datatableD'
+            },
+            title: {
+                text: 'WindSpeed for : {{ cityname }}'
+            },
+        
+            pane: {
+                startAngle: -150,
+                endAngle: 150,
+                background: [{
+                    backgroundColor: {
+                        linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 },
+                        stops: [
+                            [0, '#FFF'],
+                            [1, '#333']
+                        ]
+                    },
+                    borderWidth: 0,
+                    outerRadius: '109%'
+                }, {
+                    backgroundColor: {
+                        linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 },
+                        stops: [
+                            [0, '#333'],
+                            [1, '#FFF']
+                        ]
+                    },
+                    borderWidth: 1,
+                    outerRadius: '107%'
+                }, {
+                    // default background
+                }, {
+                    backgroundColor: '#DDD',
+                    borderWidth: 0,
+                    outerRadius: '105%',
+                    innerRadius: '103%'
+                }]
+            },
+        
+            // the value axis
+            yAxis: {
+                min: 0,
+                max: 150,
+        
+                minorTickInterval: 'auto',
+                minorTickWidth: 1,
+                minorTickLength: 10,
+                minorTickPosition: 'inside',
+                minorTickColor: '#666',
+        
+                tickPixelInterval: 30,
+                tickWidth: 2,
+                tickPosition: 'inside',
+                tickLength: 10,
+                tickColor: '#666',
+                labels: {
+                    step: 2,
+                    rotation: 'auto'
+                },
+                title: {
+                    text: 'km/h'
+                },
+                plotBands: [{
+                    from: 0,
+                    to: 50,
+                    color: '#55BF3B' // green
+                }, {
+                    from: 51,
+                    to: 100,
+                    color: '#DDDF0D' // yellow
+                }, {
+                    from: 101,
+                    to: 150,
+                    color: '#DF5353' // red
+                }]
+            },
+        
+            series: [{
+                name: 'WindSpeed km/h',
+                data: ['{{ windspeed }}'],
+                tooltip: {
+                    valueSuffix: ' km/h'
+                }
+            }]
+        
+        })
+        </script>
+</div>
+<br><br><br>
 </main>
     </body>
 </html>
