@@ -1,8 +1,8 @@
-from flask import Flask
+from flask import Flask #Importing flask app
 from flask import render_template, session, url_for, redirect, g, request, jsonify, abort
 import requests, bcrypt
 import json
-from flask_pymongo import PyMongo
+from flask_pymongo import PyMongo # PyMongo allows us to work directly with the mongo database without defining a schema. It is a wrapper for mongodb library in flask 
 #import urllib2
 from pprint import pprint
 import pytemperature
@@ -11,10 +11,12 @@ import pytemperature
 # Pass in __name__ to help flask determine root path
 app = Flask(__name__) # create the application instance
 
-app.config['MONGO_DBNAME'] = 'weather'
+# Configurating our database with flask
+app.config['MONGO_DBNAME'] = 'weather' # 'weather' is our db name on mlab
+# URI (Uniform Resource Locator) is supplied by mlab. This identifies and locates where the database is on mlab
 app.config['MONGO_URI'] = 'mongodb://statflow:statflow18@ds113738.mlab.com:13738/weather'
 
-mongo = PyMongo(app)
+mongo = PyMongo(app) # Initialise connection to mongo database.
 
 #rethink imports
 import rethinkdb as r
@@ -60,43 +62,50 @@ def teardown_request(exception):
 # @ signifies a decorator which is a way to wrap a function and modify its behaviour
 @app.route('/') #connect a webpage. '/' is a root directory.
 def main():
+    # if username is logged in
     if 'username' in session:
-        userid = session['username']
-        return render_template("index.html", user=userid)
-        print('you are logged in as ' + session['username'])
-        
+        # render index page
+        return render_template("index.html")
     else:
         return render_template("login.html") 
         
-    
-
+# Registration
 @app.route('/register', methods=['POST', 'GET'])
 def register():
     if request.method == 'POST':
-        users = mongo.db.users
+        users = mongo.db.users # Accessing our users collections
+        # Checking to see if a username already exist in the users collection
         existing_user = users.find_one({'name' : request.form['username']})
 
+        # if theres no existing username
         if existing_user is None:
             #hashpass = bcrypt.hashpw(request.form['pass'].encode('utf-8'), bcrypt.gensalt())
             #password = request.form['pass']
+            # Add new user to users collection along with password
             users.insert({'name' : request.form['username'], 'password' : request.form['pass']})
+            # Activate a session using that username
             session['username'] = request.form['username']
+        # Once user is registered.. return login page for them to login
         return redirect(url_for('login'))
         
     return render_template('register.html')
 
+# Login
 @app.route('/login', methods=['GET','POST'])
 def login():
     if request.method == 'POST':
-        users = mongo.db.users
+        users = mongo.db.users # access the users collection in the database
+        # Checking to see if username exists
         login_user = users.find_one({'name' : request.form['username']})
 
-        if login_user:
+        if login_user: # if it does exist
+            # check to see if password is equal to password in the db 
             if request.form['pass'] == login_user['password']:
+                # if password is correct then activate user session using the username
                 session['username'] = request.form['username']
-                return redirect(url_for('main'))
+                return redirect(url_for('main')) # redirect to main route
             else:
-                return 'wrong password'
+                return 'wrong password' # Login failed
     return render_template('login.html')
 
 """
@@ -106,12 +115,12 @@ def login():
             return redirect(url_for('main'))
     return 'Invalid username/password combination'
 """
-
+# Login
 @app.route("/logout")
 def logout():
-    # remove the username from the session if it is here
+    # remove the username from the session if logout button is pressed
     session.pop('username', None)
-    return redirect(url_for('main'))
+    return redirect(url_for('main')) # redirect to main route
 
 @app.route('/HistoricData', methods=['GET', 'POST'])
 def get_HistoricData():
@@ -190,8 +199,10 @@ def data():
 
     return jsonify({'results' : result['data']})
 
-
+# only run the app whenever this file is called directly..
+# for more: https://stackoverflow.com/questions/419163/what-does-if-name-main-do
 if __name__ == "__main__":
-    app.secret_key = 'mysecret'
-    app.run(debug=True) # Start the web app. debug=True means to auto refresh page after code changes 
+    # In order to use sessions you have to set a secret key for encryption purposes as a user could hack into the contents of a cookie and modify if there was no secret key used for signing the cookies.
+    app.secret_key = 'mysecret' 
+    app.run(debug=True) # Start the web app. debug=True means to auto refresh page after code changes instead of having to run the file after every change. 
 
