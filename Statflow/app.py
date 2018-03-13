@@ -1,7 +1,7 @@
 from flask import Flask #Importing flask app
 from flask import render_template, flash, session, url_for, redirect, g, request, jsonify, abort
-import requests, bcrypt
-import json
+import requests, json
+from werkzeug.security import generate_password_hash, check_password_hash # Using werkzeug library to encrypt user passwords
 from flask_pymongo import PyMongo # PyMongo allows us to work directly with the mongo database without defining a schema. It is a wrapper for mongodb library in flask 
 #import urllib2
 from pprint import pprint
@@ -80,10 +80,10 @@ def register():
 
         # if theres no existing username
         if existing_user is None:
-            #hashpass = bcrypt.hashpw(request.form['pass'].encode('utf-8'), bcrypt.gensalt())
-            #password = request.form['pass']
+            # Generating sha256 hash from user password
+            hashpass = generate_password_hash(request.form['pass'], method='sha256')
             # Add new user to users collection along with password
-            users.insert({'name' : request.form['username'], 'password' : request.form['pass']})
+            users.insert({'name' : request.form['username'], 'password' : hashpass})
             # Activate a session using that username
             session['username'] = request.form['username']
         # Once user is registered.. return login page for them to login
@@ -100,8 +100,8 @@ def login():
         login_user = users.find_one({'name' : request.form['username']})
 
         if login_user: # if it does exist
-            # check to see if password is equal to password in the db 
-            if request.form['pass'] == login_user['password']:
+            # check to see if password hash is equal to password hash in the database
+            if check_password_hash(login_user['password'], request.form['pass']):
                 # if password is correct then activate user session using the username
                 session['username'] = request.form['username']
                 return redirect(url_for('main')) # redirect to main route
@@ -109,13 +109,6 @@ def login():
                 return 'wrong password' # Login failed
     return render_template('login.html')
 
-"""
-    if login_user:
-        if bcrypt.hashpw(request.form['pass'].encode('utf-8'), login_user['password'].encode('utf-8')) == login_user['password'].encode('utf-8'):
-            session['username'] = request.form['username']
-            return redirect(url_for('main'))
-    return 'Invalid username/password combination'
-"""
 # Login
 @app.route("/logout")
 def logout():
