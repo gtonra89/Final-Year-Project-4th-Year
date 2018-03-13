@@ -73,6 +73,7 @@ def main():
 # Registration
 @app.route('/register', methods=['POST', 'GET'])
 def register():
+    error = None
     if request.method == 'POST':
         users = mongo.db.users # Accessing our users collections
         # Checking to see if a username already exist in the users collection
@@ -87,13 +88,18 @@ def register():
             # Activate a session using that username
             session['username'] = request.form['username']
         # Once user is registered.. return login page for them to login
-        return redirect(url_for('login'))
+            return redirect(url_for('login'))
+        else:
+            error = 'Username already exists'
+            #return redirect(url_for('register'))
+            
         
-    return render_template('register.html')
+    return render_template('register.html', error=error)
 
 # Login
 @app.route('/login', methods=['GET','POST'])
 def login():
+    error = None # error variable set to None as default.
     if request.method == 'POST':
         users = mongo.db.users # access the users collection in the database
         # Checking to see if username exists
@@ -105,9 +111,15 @@ def login():
                 # if password is correct then activate user session using the username
                 session['username'] = request.form['username']
                 return redirect(url_for('main')) # redirect to main route
-            else:
-                return 'wrong password' # Login failed
-    return render_template('login.html')
+            # if password does not match then...
+            else: 
+                # error takes in a string message
+                error = 'Incorrect username/password'
+                #return 'wrong password' # Login failed
+        else:
+            error = 'Incorrect username/password'
+    # return login page and also pass in error message
+    return render_template('login.html', error=error)
 
 # Login
 @app.route("/logout")

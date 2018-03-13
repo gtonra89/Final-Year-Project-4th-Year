@@ -12,6 +12,13 @@
                     <label for="exampleInputPassword1">Password</label>
                     <input type="password" class="form-control" name="pass" placeholder="Password">
                 </div>
+                <!-- form validation -->
+                <!-- Using jinja here to display an error message if username or password is incorrect -->
+                {% if error %}
+                    <div class="alert alert-danger alert-dismissible" role="alert">
+                        {{ error }}
+                    </div>
+                {% endif %}
                 <button type="submit" class="btn btn-primary btn-block">Log In</button>
             </form>
             <br>
