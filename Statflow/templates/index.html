@@ -23,6 +23,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
+            {% if 'username' in session %}
           <li class="nav-item">
             <a class="nav-link" href="/dashboard">dashboard</a>
           </li>
@@ -38,16 +39,18 @@
           <li class="nav-item">
             <a class="nav-link" href="/map">Interactive Map</a>
           </li>
+          {% endif %}
         </div>
           <a class="navbar-brand" href="/">StatFlow</a>
           <div class="navbar-collapse collapse">
             <!-- Using jinja here to hide the logout link when user has logged out -->
               <ul class="navbar-nav ml-auto">
                 <!-- If username is active in the session then display the logout link otherwise blank.. -->
-                  {% if 'username' in session %}
+                {% if 'username' in session %}
                     <li class="nav-item"><a href="/logout">Logout<span class="sr-only">(current)</span></a></li>
-                  {% endif %}
+              {% endif %}
               </ul>
+              
           </div>
     </nav>
   
