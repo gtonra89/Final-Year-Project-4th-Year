@@ -933,3 +933,23 @@
 2018-04-10T10:54:31.097118428 3.679780s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 47.
 2018-04-10T10:54:31.119991225 3.702653s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: This server is Raft leader for term 16. Latest log index is 47.
 2018-04-10T10:54:31.416297729 3.998960s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 47. Latest log index is 142.
+2018-04-10T17:07:23.732021908 0.061750s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-04-10T17:07:23.734511335 0.064242s notice: Running on Linux 4.13.0-37-generic x86_64
+2018-04-10T17:07:23.734592963 0.064321s notice: Loading data from directory /home/garret/Desktop/fyp/rethinkdb_data
+2018-04-10T17:07:23.785933358 0.115662s info: Automatically using cache size of 2092 MB
+2018-04-10T17:07:23.786520779 0.116249s notice: Listening for intracluster connections on port 29015
+2018-04-10T17:07:23.874247768 0.203976s notice: Listening for client driver connections on port 28015
+2018-04-10T17:07:23.874418207 0.204146s notice: Listening for administrative HTTP connections on port 8080
+2018-04-10T17:07:23.874422455 0.204150s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-10T17:07:23.874425647 0.204153s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-10T17:07:23.874449690 0.204178s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-10T17:07:23.874453280 0.204181s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-04-10T17:07:23.874456603 0.204184s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-04-10T17:07:25.318144753 1.647873s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: Starting a new Raft election for term 17.
+2018-04-10T17:07:25.331153125 1.660882s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: Starting a new Raft election for term 17.
+2018-04-10T17:07:25.342875586 1.672605s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: This server is Raft leader for term 17. Latest log index is 50.
+2018-04-10T17:07:25.376186405 1.705915s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: This server is Raft leader for term 17. Latest log index is 49.
+2018-04-10T17:07:25.506053317 1.835782s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: Starting a new Raft election for term 25.
+2018-04-10T17:07:25.530658560 1.860387s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: This server is Raft leader for term 25. Latest log index is 73.
+2018-04-10T17:07:25.816882338 2.146611s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 48.
+2018-04-10T17:07:25.907226762 2.236955s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 48. Latest log index is 146.
