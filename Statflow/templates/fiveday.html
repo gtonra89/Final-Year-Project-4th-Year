@@ -1,35 +1,5 @@
 <!doctype html>
 <html lang="en">
-  <head>
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-                <a class="navbar-brand" href="/">Statflow</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-                  <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                      <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="/dashboard">dashboard</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="/HistoricData">Historic Data</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="/temp">Current City Weather</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="/fiveday">five day</a>
-                    </li> 
-                    <li class="nav-item">
-                      <a class="nav-link" href="/map">Interactive Map</a>
-                    </li>         
-                  </ul>
-                </div>
-              </nav>
-      <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
     <title>StatFlow</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -40,124 +10,85 @@
 
     <!-- Bootstrap style template -->
     <link rel="stylesheet" type="text/css" href={{ url_for('static', filename='style.css') }}>
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/highcharts-more.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link id="bs-css" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet"> 
   <link id="bsdp-css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker3.min.css" rel="stylesheet"> 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script> 
   <link id="weather-css" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css" rel="stylesheet">
 </head>
-  <body>
+  <body >
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="/">Statflow</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/dashboard">dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/HistoricData">Historic Data</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/temp">Current City Weather</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/fiveday">five day</a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link" href="/map">Interactive Map</a>
+            </li>         
+          </ul>
+        </div>
+      </nav>
+
 <main role="main" class="container">
-  
+    <form align="center" action="{{ url_for('fiveday') }}" method="POST">
+            <select class="dropbtn" name="cityID">
+                {% for cityID in selectionB | sort(attribute='name')%}
+                <option class="dropdown-content" value="{{cityID.name}}" SELECTED>{{cityID.name}}</option>
+                {% endfor %}
+            </select>  <input  class="dropbtn" name="text" type="submit">
+          </form>
+
+    <h2 align=middle >Current 5 Day Forecast for : {{cityname}}</h2>
+
     {% for j in json_object.list | sort(attribute='dt_txt') %}
+   <div class="col-lg-3">    
     <div class="row"> 
-        <div class="col-md-6"> <div class="well"> <div class="row"> 
-            <div class="col-xs-9"> 
-                <b>Date:</b> {{j.dt_txt}}<br/> 
-                <b>Max Temperature:</b> {{ j.main.temp_max }}<br/> 
-                <b>Min Temperature:</b> {{j.main.temp_min}}<br/> 
-                <b>Summary:</b> {{j.weather.0.description }}<br/> 
-                <b>pressure is :</b> {{j.main.pressure}}<br/>
-                <b>wind speed is :</b> {{j.wind.speed}}<br/>
-                <b>wind degree is :</b>{{j.wind.deg}}<br/>
-                <b>sea level is :</b> {{j.main.sea_level}}<br/>
-                <b>ground level is :</b> {{j.main.grnd_level}}</br>
-                <b>humidity is :</b> {{j.main.humidity}}</br>
+        <div class="col-md-12"> <div class="well"> <div class="row"> 
+            <div class="col-xs-12"> 
+                <b>Date&Time: {{j.dt_txt}}</b><br/><br/> 
+                <b>Max Temperature : {{ j.main.temp_max - 273.15}} °C </b><br/> 
+                <b>Min Temperature : {{j.main.temp_min - 273.15}} °C </b><br/> 
+                <b>Summary : {{j.weather.0.description }}</b><br/> 
+                <b>pressure is : {{j.main.pressure}} hPa</b><br/>
+                <b>wind speed is : {{j.wind.speed}} kmh</b><br/>
+                <b>wind degree is : {{j.wind.deg}}</b><br/>
+                <b>sea level is : {{j.main.sea_level}} hPa</b><br/>
+                <b>ground level is : {{j.main.grnd_level}} hPa</b></br>
+                <b>humidity is : {{j.main.humidity}} %</b></br>
             </div>
     
-       <div class="col-xs-3"> 
-          <h1> {% if j.weather.0.main == "clear" %} <i class="wi wi-day-sunny"></i> 
-          {% elif j.weather.0.main == "Clear" %} <i class="wi wi-night-clear"></i> 
+       <div class="col-lg-4"> 
+          <h1>
+          {% if j.weather.0.main == "Clear" %} <i class="wi wi-clear"></i>  
           {% elif j.weather.0.main == "Rain" %} <i class="wi wi-rain"></i> 
           {% elif j.weather.0.main == "Snow" %} <i class="wi wi-snow"></i>  
           {% elif j.weather.0.main == "Wind" %} <i class="wi wi-windy"></i> 
           {% elif j.weather.0.main == "Fog" %} <i class="wi wi-fog"></i> 
           {% elif j.weather.0.main == "Clouds" %} <i class="wi wi-cloudy"></i>  
           {% endif %} </h1> 
-    </div></div></div></div> </div>
+    </div></div></div></div></div></div>
     {% endfor %}
-    
-
-          <script>
-
-       Highcharts.chart('container', {
-
-title: {
-    text: 'blah'
-},
-
-subtitle: {
-    text: 'Source: thesolarfoundation.com'
-},
-
-yAxis: {
-    title: {
-        text: 'Number of Employees'
-    }
-},
-legend: {
-    layout: 'vertical',
-    align: 'right',
-    verticalAlign: 'middle'
-},
-
-plotOptions: {
-    series: {
-        label: {
-            connectorAllowed: false
-        },
-        pointStart: 2010
-    }
-},
-
-series: [{
-    name: 'Installation',
-    data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
-}, {
-    name: 'Manufacturing',
-    data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
-}, {
-    name: 'Sales & Distribution',
-    data: [11744, 17722, 16005, 19771, 20185, 24377, 32147, 39387]
-}, {
-    name: 'Project Development',
-    data: [null, null, 7988, 12169, 15112, 22452, 34400, 34227]
-}, {
-    name: 'Other',
-    data: [12908, 5948, 8105, 11248, 8989, 11816, 18274, 18111]
-}],
-
-responsive: {
-    rules: [{
-        condition: {
-            maxWidth: 500
-        },
-        chartOptions: {
-            legend: {
-                layout: 'horizontal',
-                align: 'center',
-                verticalAlign: 'bottom'
-            }
-        }
-    }]
-}
-
-});
-          </script>
         </div>
-      </main><!-- /.container -->
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
   </body>
 </html>

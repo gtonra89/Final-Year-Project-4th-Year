@@ -50,7 +50,10 @@
     </nav>
         <main role="main" class="container">
 
-            <div id="container" style="width:80%; height:400px;"></div>
+           <div align="center">
+            <iframe  width=100% height=1000 frameborder="1" scrolling="no" src="//plot.ly/~heanuea/10.embed"></iframe>
+            </p>            
+            </div>
           
         </main>
 
@@ -63,79 +66,7 @@
     <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="../../../../assets/js/vendor/popper.min.js"></script>
     <script src="../../../../dist/js/bootstrap.min.js"></script>
-    <script>
-        $(function () { 
-          Highcharts.chart('container', {
-            chart: {
-                type: 'column'
-            },
-            title: {
-                text: ' 2017 Monthly Average Rainfall'
-            },
-            subtitle: {
-                text: 'Source: Statflow'
-            },
-            xAxis: {
-                categories: [
-                    'Jan',
-                    'Feb',
-                    'Mar',
-                    'Apr',
-                    'May',
-                    'Jun',
-                    'Jul',
-                    'Aug',
-                    'Sep',
-                    'Oct',
-                    'Nov',
-                    'Dec'
-                ],
-                crosshair: true
-            },
-            yAxis: {
-                min: 0,
-                title: {
-                    text: 'Rainfall (mm)'
-                }
-            },
-            tooltip: {
-                headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-                    '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
-                footerFormat: '</table>',
-                shared: true,
-                useHTML: true
-            },
-            plotOptions: {
-                column: {
-                    pointPadding: 0.2,
-                    borderWidth: 0
-                }
-            },
-            series: 
-            [
-            {
-              data: [
-              53.3,
-              74.9,
-              106.3,
-              28.6,
-              63.2,
-              104.2,
-              127.8,
-              124.6,
-              145.2,
-              107.3,
-              102.6,
-              107.3
-               ]
-            }
-        ]
-        });
-      });
-    </script>
-<div>
-<iframe align="center" width="2000" height="1000" frameborder="0" scrolling="no" src="//plot.ly/~heanuea/10.embed"></iframe>
-</div>
+    
+
   </body>
 </html>

@@ -6,6 +6,8 @@ from flask_pymongo import PyMongo # PyMongo allows us to work directly with the 
 #import urllib2
 from pprint import pprint
 import pytemperature
+import time
+import re as res
 # Pip install pymongo on your machine before running app
 
 # Pass in __name__ to help flask determine root path
@@ -161,7 +163,7 @@ def a():
 def temp():
         selection = (r.table('citylist').filter({'country': 'IE'}).run(g.rdb_conn))
         if request.method == 'POST':
-            text = request.form['city'] #take input submitted 
+            text = request.form['city'] #take input submitted
             cityname = str(text) #parse the text to a city name
     
             #make a call to the api using the cuty name from dropdown in the request
@@ -186,18 +188,28 @@ def temp():
         
         return render_template('temp1.html', selection=selection)
 
-@app.route('/fiveday')
+@app.route('/fiveday', methods=['GET', 'POST'])
 def fiveday():
-    
-    r = requests.get('http://api.openweathermap.org/data/2.5/forecast?id=2964179&appid=9af800562857988900fdbb172d8962c7')
-    json_object = r.json()
-    #for j in json_object["list"]:
-     #   print(j["main"]["temp"])
+    selectionB = (r.table('citylist').filter({'country': 'IE'}).distinct().run(g.rdb_conn))
+    if request.method == 'POST':
+        text = request.form['cityID'] #take input submitted
+        cityname = str(text) #parse the text to a city name
+        #find the corrosponding city id by filtering
 
-    return render_template('fiveday.html', json_object=json_object)
+       
+        #selection1 = (r.table("citylist").filter(r.row["name"].eq(cityname)).order_by(r.desc("name")).pluck("id").run(g.rdb_conn))
+        selection1 = (r.table("citylist").filter({"name": cityname}).order_by(r.desc("name")).pluck("id").run(g.rdb_conn))          
+        #pprint(selection1)#testing the filtering works
+        s1 = str(selection1)
+        #pprint(s1)
+        result = res.sub('[^0-9]','', s1)
+        #pprint(result)        
+        re = requests.get('http://api.openweathermap.org/data/2.5/forecast?id='+result+'&appid=9af800562857988900fdbb172d8962c7')
+        json_object = re.json()
 
+        return render_template('fiveday.html', json_object=json_object, selectionB=selectionB, cityname=cityname)
 
-
+    return render_template('fiveday1.html', selectionB=selectionB)
 
 @app.route('/data')
 def data():
