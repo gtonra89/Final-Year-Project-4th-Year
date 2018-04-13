@@ -73,35 +73,76 @@
 
         {% block body %}
         <div class="box">
+        <h1 align="middle"> Galway Live weather feed Camera</h1>
         <iframe src="https://thecladdagh.com/camera3.php?autostart=true" 
                 id="camera1" 
                 frameborder="0" 
                 scrolling="no" 
                 width="50%" 
-                height="512" 
+                height="512"
+                allowfullscreen="" 
                 align="left"> 
         </iframe> 
-        </div>
-
-        <div class="box">    
         <iframe src="https://thecladdagh.com/camera4.php?autostart=true"
                 id="camera2" 
                 frameborder="0" 
                 scrolling="no" 
                 width="50%" 
                 height="512"
+                allowfullscreen=""                
                 align="right">
         </iframe>
+        <h2> Kerry Live weather feed &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; London Live weather feed</h2> 
+        <iframe src="https://www.youtube.com/embed/live_stream?channel=UCeLRJz-DXgTdOdRA68HNv8g&amp;autoplay=1"
+                width="50%" 
+                height="512"
+                frameborder="2"
+                scrolling="no"
+                align="left"
+                allowfullscreen="true">
+        </iframe>
+        <iframe src="https://www.youtube.com/embed/UrhCtz9iFJ0?autoplay=1" 
+                width="50%" 
+                height="512" 
+                frameborder="2"
+                align="right"
+                allowfullscreen="true">
+        </iframe>
+<h2> Venice Live weather feed &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Boston Live weather feed</h2> 
+        <iframe width="50%" 
+                height="512" 
+                src="https://www.youtube.com/embed/AujZrQr3Ih4?autoplay=1" 
+                frameborder="2"
+                align="right" 
+                allow="autoplay; encrypted-media" 
+                allowfullscreen>
+       </iframe> 
+       <iframe width="50%" 
+                height="512" 
+                src="https://www.youtube.com/embed/vPbQcM4k1Ys?autoplay=1" 
+                frameborder="2"
+                align="right"    
+                allow="autoplay; encrypted-media" 
+                allowfullscreen = "true" >
+        </iframe>
+        <br><br>
         </div>
-
+        <div class="box">       
         <a class="twitter-timeline" 
-            align="left" 
-            width="1000px" 
-            height="1000px"
+           align="left" 
+           width="50%" 
+           height="512"
+           href="https://twitter.com/OpenWeatherMap?ref_src=twsrc%5Etfw">Tweets by OpenWeatherMap
+               
+            <a class="twitter-timeline" 
+            align="right" 
+            width="50%" 
+            height="512"
             href="https://twitter.com/MetEireann?ref_src=twsrc%5Etfw">Tweets by MetEireann
+           </a>
         </a> 
         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
+        </div>
         {% endblock %}
   
       </main><!-- /.container -->
