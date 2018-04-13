@@ -23,6 +23,9 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="navbar-brand" href="/">StatFlow</a>
+          </li>
             {% if 'username' in session %}
           <li class="nav-item">
             <a class="nav-link" href="/dashboard">dashboard</a>
@@ -41,7 +44,7 @@
           </li>
           {% endif %}
         </div>
-          <a class="navbar-brand" href="/">StatFlow</a>
+         
           <div class="navbar-collapse collapse">
             <!-- Using jinja here to hide the logout link when user has logged out -->
               <ul class="navbar-nav ml-auto">
@@ -55,6 +58,7 @@
     </nav>
   
       <main role="main" class="container">
+       
         <!-- Using flash messages -->
         {% with messages = get_flashed_messages() %}
           {% if messages %}
@@ -67,7 +71,38 @@
           {% endif%}
         {% endwith %}
 
-        {% block body %}{% endblock %}
+        {% block body %}
+        <div class="box">
+        <iframe src="https://thecladdagh.com/camera3.php?autostart=true" 
+                id="camera1" 
+                frameborder="0" 
+                scrolling="no" 
+                width="50%" 
+                height="512" 
+                align="left"> 
+        </iframe> 
+        </div>
+
+        <div class="box">    
+        <iframe src="https://thecladdagh.com/camera4.php?autostart=true"
+                id="camera2" 
+                frameborder="0" 
+                scrolling="no" 
+                width="50%" 
+                height="512"
+                align="right">
+        </iframe>
+        </div>
+
+        <a class="twitter-timeline" 
+            align="left" 
+            width="1000px" 
+            height="1000px"
+            href="https://twitter.com/MetEireann?ref_src=twsrc%5Etfw">Tweets by MetEireann
+        </a> 
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+        {% endblock %}
   
       </main><!-- /.container -->
 

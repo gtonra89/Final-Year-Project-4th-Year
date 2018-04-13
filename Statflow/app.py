@@ -1,15 +1,20 @@
 from flask import Flask #Importing flask app
+
 from flask import render_template, flash, session, url_for, redirect, g, request, jsonify, abort
+
 import requests, json
-from werkzeug.security import generate_password_hash, check_password_hash # Using werkzeug library to encrypt user passwords
-from flask_pymongo import PyMongo # PyMongo allows us to work directly with the mongo database without defining a schema. It is a wrapper for mongodb library in flask 
-#import urllib2
-from pprint import pprint
+
+# Using werkzeug library to encrypt user passwords
+from werkzeug.security import generate_password_hash, check_password_hash 
+
+# PyMongo allows us to work directly with the mongo database without defining a schema. It is a wrapper for mongodb library in flask
+from flask_pymongo import PyMongo  
+
 import pytemperature
 import time
 import re as res
-# Pip install pymongo on your machine before running app
 
+# Pip install pymongo on your machine before running app
 # Pass in __name__ to help flask determine root path
 app = Flask(__name__) # create the application instance
 
