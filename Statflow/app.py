@@ -150,11 +150,6 @@ def get_HistoricData():
     return render_template("HistoricData1.html", selection=selection)
 
 
-@app.route('/Patterns') #connect a webpage. '/' is a root directory.
-def Patterns():
-    return render_template("Patterns.html")
-
-
 @app.route('/dashboard') #connect a webpage. '/' is a root directory.
 def dashboard():
     return render_template("dashboard.html")
@@ -166,16 +161,22 @@ def a():
 
 @app.route('/temp', methods=['GET', 'POST'])
 def temp():
+        #make inital call to db for citylist in the database
         selection = (r.table('citylist').filter({'country': 'IE'}).run(g.rdb_conn))
+        
+        #when a submit /post method is made on the page fall into the if statement 
         if request.method == 'POST':
             text = request.form['city'] #take input submitted
-            cityname = str(text) #parse the text to a city name
+
+            #parse the text to a city name
+            cityname = str(text) 
     
             #make a call to the api using the cuty name from dropdown in the request
             re = requests.get('http://api.openweathermap.org/data/2.5/weather?q='+cityname+'&appid=9af800562857988900fdbb172d8962c7')
-    
-            json_object = re.json() ## returns the json encoded value
-            #pprint(json_object) ## simple check to see the data
+
+            # returns the json encoded value    
+            json_object = re.json() 
+            
     
     		# assign variables from json objects needed below for returning to the html page for chart rendering 
             pressure = str(json_object['main']['pressure']) 
@@ -185,9 +186,9 @@ def temp():
             humidity = str(json_object['main']['humidity'])
             windspeed = str(3.6 * (json_object['wind']['speed']))# converts from mps to kmh 
            
-			# description = str(json_object['weather'][0]['description'])
+			
                        
-            
+            #pass back the data to the html page 
             return render_template('temp.html', cityname=cityname, pressure=pressure, temp=temp_c, temp_min=temp_min, 
                                                 temp_max=temp_max, humidity=humidity, selection=selection, windspeed=windspeed)
         
@@ -195,34 +196,35 @@ def temp():
 
 @app.route('/fiveday', methods=['GET', 'POST'])
 def fiveday():
+    #make inital call to db for citylist in the database
     selectionB = (r.table('citylist').filter({'country': 'IE'}).distinct().run(g.rdb_conn))
+    
+    #when a submit /post method is made on the page fall into the if statement    
     if request.method == 'POST':
         text = request.form['cityID'] #take input submitted
         cityname = str(text) #parse the text to a city name
+        
         #find the corrosponding city id by filtering
-
-       
-        #selection1 = (r.table("citylist").filter(r.row["name"].eq(cityname)).order_by(r.desc("name")).pluck("id").run(g.rdb_conn))
         selection1 = (r.table("citylist").filter({"name": cityname}).order_by(r.desc("name")).pluck("id").run(g.rdb_conn))          
-        #pprint(selection1)#testing the filtering works
+        
+        #parse the data from database to string
         s1 = str(selection1)
-        #pprint(s1)
+        
+        # get rid of any non numeric chars
         result = res.sub('[^0-9]','', s1)
-        #pprint(result)        
+        
+        #make call to the api to get the 5 day forcast details       
         re = requests.get('http://api.openweathermap.org/data/2.5/forecast?id='+result+'&appid=9af800562857988900fdbb172d8962c7')
+        
+        #convert to json notation        
         json_object = re.json()
-
+        
+        #pass back the data to the html page 
         return render_template('fiveday.html', json_object=json_object, selectionB=selectionB, cityname=cityname)
 
     return render_template('fiveday1.html', selectionB=selectionB)
 
-@app.route('/data')
-def data():
-    rainfall = mongo.db.rainfall
 
-    result = rainfall.find_one({'name' : 'rainfall'}, {'year': 2017})
-
-    return jsonify({'results' : result['data']})
 
 # only run the app whenever this file is called directly..
 # for more: https://stackoverflow.com/questions/419163/what-does-if-name-main-do

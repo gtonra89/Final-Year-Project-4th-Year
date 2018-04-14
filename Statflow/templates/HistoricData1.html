@@ -116,7 +116,9 @@ tr:nth-child(even) {
     </nav>
 </head>
   <body>
+      
       <main role="main" class="container">
+               <h2 align="middle">Please Choose a Year to see the Historic Rainfall of Ireland</h2><br>
               <form align="center" action="{{ url_for('get_HistoricData') }}" method="POST">
                   <select class="dropbtn" name="year">
                       {% for doc in selection | sort(attribute='Year', reverse=true)%}
@@ -124,42 +126,7 @@ tr:nth-child(even) {
                       {% endfor %}
                   </select>  <input class="dropbtn" name="text" type="submit" value="Submit">
               </form>
-              <table>          
-                    {% for selection in selection | sort(attribute='Year')%}
-                        <tr>
-                            <th>Year</th>
-                            <th>January</th>
-                            <th>Febuary</th>
-                            <th>March</th>
-                            <th>April</th>
-                            <th>May</th>
-                            <th>June</th>
-                            <th>July</th>
-                            <th>August</th>
-                            <th>September</th>
-                            <th>October</th>
-                            <th>November</th>
-                            <th>December</th>
-                            <th>Annual</th>
-                        </tr>
-                        <tr>
-                            <td>{{ selection.Year}}</td>
-                            <td>{{ selection.Month.JAN}}</td>
-                            <td>{{ selection.Month.FEB}}</td>
-                            <td>{{ selection.Month.MAR}}</td>
-                            <td>{{ selection.Month.APR}}</td>
-                            <td>{{ selection.Month.MAY}}</td>
-                            <td>{{ selection.Month.JUN}}</td>
-                            <td>{{ selection.Month.JUL}}</td>
-                            <td>{{ selection.Month.AUG}}</td>
-                            <td>{{ selection.Month.SEP}}</td>
-                            <td>{{ selection.Month.OCT}}</td>
-                            <td>{{ selection.Month.NOV}}</td>
-                            <td>{{ selection.Month.DEC}}</td>
-                            <td>{{ selection.Month.ANNUAL}}</td>
-                        </tr>
-                    {% endfor %}
-                    </table>
+           
                 </main><!-- /.container -->
 
                 <!-- Optional JavaScript -->
