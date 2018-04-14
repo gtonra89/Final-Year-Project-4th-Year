@@ -119,7 +119,9 @@ tr:nth-child(even) {
     </nav>
 </head>
   <body>
+     
       <main role="main" class="container">
+              <h2 align="middle">Please Choose a Year to see the Historic Rainfall of Ireland</h2><br>
               <form align="center" action="{{ url_for('get_HistoricData') }}" method="POST">
                   <select class="dropbtn" name="year">
                       {% for doc in selection | sort(attribute='Year', reverse=true)%}
