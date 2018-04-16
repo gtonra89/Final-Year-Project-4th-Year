@@ -8,8 +8,6 @@ import smtplib
 from email.MIMEMultipart import MIMEMultipart
 from email.MIMEText import MIMEText
  
- 
-
 
 # Using werkzeug library to encrypt user passwords
 from werkzeug.security import generate_password_hash, check_password_hash 
