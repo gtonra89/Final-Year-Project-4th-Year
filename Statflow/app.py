@@ -165,7 +165,7 @@ def team():
 @app.route('/contact', methods=['GET', 'POST']) #connect a webpage. '/' is a root directory.
 def contact():
    
-    """if request.method == 'POST':
+    if request.method == 'POST':
         fromaddr = request.form['email']
         text1 = request.form['message']
         toaddr = "statflow18@gmail.com"
@@ -183,7 +183,7 @@ def contact():
         server.quit()
         flash('Your email was successfully sent')
         return render_template("contact.html")
-    """
+ 
     return render_template("contact.html")
 
 
