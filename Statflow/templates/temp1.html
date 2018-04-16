@@ -4,21 +4,39 @@
     
     <title>StatFlow</title>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <title>STATFLOW- Services</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+    <meta name="author" content="">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Bootstrap CSS CRN -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+	<link href="static/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="static/css/templatemo_misc.css" rel="stylesheet">
+	<link href="static/css/templatemo_style.css" rel="stylesheet">
 
-    <!-- Bootstrap style template -->
-    <link rel="stylesheet" type="text/css" href={{ url_for('static', filename='style.css') }}>
+	<script src="static/js/jquery-1.11.1.min.js"></script> 
+	<script src="static/js/jquery.lightbox.js"></script>
+	<script src="static/js/templatemo_custom.js"></script>
+
     <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/series-label.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
+            crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" 
+            integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" 
+            crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" 
+            integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" 
+            crossorigin="anonymous">
+    </script>
   
     <style>
         table {
@@ -75,48 +93,89 @@
         .dropdown a:hover {background-color: #ddd}
         
         .show {display:block;}
+        
+        #map-canvas {
+            width: 100%;
+            height: 70%;
+            position: relative;
+            top: 350px;     
+            right: 110px;
+        }
+        #h1{
+            font-size: 20px;
+            font-weight: 600;
+            color: white;
+            text-transform: uppercase;
+            width: 100%;
+            height: 70%;
+            position: relative;
+            top: 0px;     
+            left: 100px;
+        }
         </style>
 </head>
   <body>
  
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="/">Statflow</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/dashboard">dashboard</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/HistoricData">Historic Data</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/temp">Current City Weather</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/fiveday">five day</a>
-            </li> 
-            <li class="nav-item">
-              <a class="nav-link" href="/map">Interactive Map</a>
-            </li>         
-          </ul>
+    <div class="container">
+        <div class="menu">
+			<div class="hexagon_container" id="logo">
+				<div class="hexagon hexagon2">
+					<div class="hexagon-in1">
+						<a href="/">
+							<div class="hexagon-in2">
+								<h2>HOME</h2>             	 	
+							</div>
+						</a>
+					</div>
+				</div>					
+			</div>
+			<div class="hexagon_container" id="team">
+				<div class="hexagon hexagon2">
+					<div class="hexagon-in1">
+						<a href="/team">
+							<div class="hexagon-in2">
+								<i class="fa fa-user"></i>
+								<h2>OUR TEAM</h2>             	 	
+							</div>
+						</a>
+					</div>
+				</div>				
+			</div>
+            
+			<div class="hexagon_container" id="services">
+				<div class="hexagon hexagon2">
+					<div class="hexagon-in1">
+						<div class="hexagon-in2 active">
+                        <a href="/services">
+							<i class="fa fa-cogs"></i>
+							<h2>BACK TO SERVICES</h2>             	 	
+						</div>
+					</div>
+				</div>
+			</div>		
+			<div class="hexagon_container" id="contact">
+				<div class="hexagon hexagon2">
+					<div class="hexagon-in1">
+						<a href="/contact">
+							<div class="hexagon-in2">
+								<i class="fa fa-envelope"></i>
+								<h2>CONTACT</h2>             	 	
+							</div>
+						</a>
+					</div>
+				</div>						
+			</div>		
         </div>
-      </nav>
-      <main role="main" class="container">
-
+      <div id="map-canvas">
+            <h2 id = "h1">Please Choose a City/Town to see the Current weather Status</h2>
           <form align="center" action="{{ url_for('temp') }}" method="POST">
-            <select class="dropbtn" name="city">
+             <br><br><br><select class="dropbtn" name="city">
                 {% for doc in selection | sort(attribute='name')%}
                 <option class="dropdown-content" value="{{doc.name}}" SELECTED>{{doc.name}}</option>
                 {% endfor %}
-            </select>  <input  class="dropbtn" name="text" type="submit">
+            <br><br><br></select>  <input  class="dropbtn" name="text" type="submit">
           </form>
          </div> 
-      </main>
+     </div>
     </body>
 </html>

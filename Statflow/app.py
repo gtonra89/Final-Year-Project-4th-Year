@@ -93,7 +93,7 @@ def register():
             # Add new user to users collection along with password
             users.insert({'name' : request.form['username'], 'password' : hashpass})
             # Activate a session using that username
-            session['username'] = request.form['username']
+            #session['username'] = request.form['username']
         # Once user is registered.. return login page for them to login
             return redirect(url_for('login'))
         else:
@@ -149,14 +149,34 @@ def get_HistoricData():
     
     return render_template("HistoricData1.html", selection=selection)
 
+@app.route('/services') #connect a webpage. '/' is a root directory.
+def services():
+    return render_template("services.html")
+
+@app.route('/team') #connect a webpage. '/' is a root directory.
+def team():
+    return render_template("team.html")
+
+@app.route('/contact') #connect a webpage. '/' is a root directory.
+def contact():
+    return render_template("contact.html")
+
 
 @app.route('/dashboard') #connect a webpage. '/' is a root directory.
 def dashboard():
     return render_template("dashboard.html")
 
-@app.route('/map') #connect a webpage. '/' is a root directory.
+@app.route('/map', methods=['GET', 'POST']) #connect a webpage. '/' is a root directory.
 def a():
     return render_template("map.html")
+
+@app.route('/machine', methods=['GET', 'POST']) #connect a webpage. '/' is a root directory.
+def machine():
+    return render_template("machineMenu.html")
+
+@app.route('/athenry', methods=['GET', 'POST']) #connect a webpage. '/' is a root directory.
+def athenry():
+    return render_template("MLTemplates/Athenry-Dataset.html")
 
 
 @app.route('/temp', methods=['GET', 'POST'])

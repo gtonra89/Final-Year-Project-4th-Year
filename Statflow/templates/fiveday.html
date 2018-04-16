@@ -1,25 +1,31 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <title>StatFlow</title>
-    <script type="text/javascript" src="leaflet.js"></script>
-	<link rel="stylesheet" type="text/css" href="leaflet-openweathermap.css" />
-	<script type="text/javascript" src="leaflet-openweathermap.js"></script>
     <title>StatFlow</title>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>STATFLOW- Services</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Bootstrap CSS CRN -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    <link href="static/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="static/css/templatemo_misc.css" rel="stylesheet">
+    <link href="static/css/templatemo_style.css" rel="stylesheet">
 
-    <!-- Bootstrap style template -->
-    
-  <body ><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<link id="bs-css" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet"> 
-<link id="bsdp-css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker3.min.css" rel="stylesheet"> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script> 
-<link id="weather-css" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css" rel="stylesheet">
+    <script src="static/js/jquery-1.11.1.min.js"></script>
+    <script src="static/js/jquery.lightbox.js"></script>
+    <script src="static/js/templatemo_custom.js"></script>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link id="weather-css" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css" rel="stylesheet">
+</head>
+
+<body>
+
 
     <style>
         table {
@@ -27,16 +33,18 @@
             border-collapse: collapse;
             width: 100%;
         }
-        
-        td, th {
+
+        td,
+        th {
             border: 1px solid #dddddd;
             text-align: left;
             padding: 8px;
         }
-        
+
         tr:nth-child(even) {
             background-color: #dddddd;
         }
+
         .dropbtn {
             background-color: #3498DB;
             color: white;
@@ -45,16 +53,17 @@
             border: none;
             cursor: pointer;
         }
-        
-        .dropbtn:hover, .dropbtn:focus {
+
+        .dropbtn:hover,
+        .dropbtn:focus {
             background-color: #2980B9;
         }
-        
+
         .dropdown {
             position: relative;
             display: inline-block;
         }
-        
+
         .dropdown-content {
             display: all;
             position: absolute;
@@ -62,105 +71,144 @@
             color: black;
             min-width: 160px;
             overflow: auto;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
             z-index: 1;
         }
-        
+
         .dropdown-content a {
             color: black;
             padding: 12px 16px;
             text-decoration: none;
             display: block;
         }
-        
-        .dropdown a:hover {background-color: #ddd}
-        
-        .show {display:block;}
-        </style>
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-      <a class="navbar-brand" href="/">Statflow</a>
-      <button class="navbar-toggler" 
-              type="button" 
-              data-toggle="collapse" 
-              data-target="#navbarsExampleDefault" 
-              aria-controls="navbarsExampleDefault" 
-              aria-expanded="false" 
-              aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/dashboard">dashboard</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/HistoricData">Historic Data</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/temp">Current City Weather</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/fiveday">five day</a>
-          </li> 
-          <li class="nav-item">
-            <a class="nav-link" href="/map">Interactive Map</a>
-          </li>         
-        </ul>
-      </div>
-    </nav>
 
+        .dropdown a:hover {
+            background-color: #ddd
+        }
 
+        .show {
+            display: block;
+        }
 
-</head>    
-    <main role="main" class="container">
+        #map-canvas {
+            width: 100%;
+            height: 70%;
+            position: relative;
+            top: 350px;
+            right: 110px;
+        }
+       
+        #h1 {
+            font-size: 20px;
+            font-weight: 600;
+            color: white;
+            text-transform: uppercase;
+            width: 100%;
+            height: 70%;
+            position: relative;
+            top: 0px;
+            left: 100px;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="menu">
+                <div class="hexagon_container" id="logo">
+                    <div class="hexagon hexagon2">
+                        <div class="hexagon-in1">
+                            <a href="/">
+                                <div class="hexagon-in2">
+                                    <h2>HOME</h2>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hexagon_container" id="team">
+                    <div class="hexagon hexagon2">
+                        <div class="hexagon-in1">
+                            <a href="/team">
+                                <div class="hexagon-in2">
+                                    <i class="fa fa-user"></i>
+                                    <h2>OUR TEAM</h2>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-    <form align="center" action="{{ url_for('fiveday') }}" method="POST">
-            <select class="dropbtn" name="cityID">
-                {% for cityID in selectionB | sort(attribute='name')%}
-                <option class="dropdown-content" value="{{cityID.name}}" SELECTED>{{cityID.name}}</option>
-                {% endfor %}
-            </select>  <input  class="dropbtn" name="text" type="submit">
-          </form>
-
-    <h2 align=middle >Current 5 Day Forecast for : {{cityname}}</h2>
-
-    {% for j in json_object.list | sort(attribute='dt_txt') %}
-   <div class="col-lg-3">    
-    <div class="row"> 
-        <div class="col-md-12"> <div class="well"> <div class="row"> 
-            <div class="col-xs-12"> 
-                <b>Date&Time: {{j.dt_txt}}</b><br/><br/> 
-                <b>Max Temperature : {{ j.main.temp_max - 273.15}} °C </b><br/> 
-                <b>Min Temperature : {{j.main.temp_min - 273.15}} °C </b><br/> 
-                <b>Summary : {{j.weather.0.description }}</b><br/> 
-                <b>pressure is : {{j.main.pressure}} hPa</b><br/>
-                <b>wind speed is : {{j.wind.speed}} kmh</b><br/>
-                <b>wind degree is : {{j.wind.deg}}</b><br/>
-                <b>sea level is : {{j.main.sea_level}} hPa</b><br/>
-                <b>ground level is : {{j.main.grnd_level}} hPa</b></br>
-                <b>humidity is : {{j.main.humidity}} %</b></br>
+                <div class="hexagon_container" id="services">
+                    <div class="hexagon hexagon2">
+                        <div class="hexagon-in1">
+                            <div class="hexagon-in2 active">
+                                <a href="/services">
+                                    <i class="fa fa-cogs"></i>
+                                    <h2>SERVICES</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hexagon_container" id="contact">
+                    <div class="hexagon hexagon2">
+                        <div class="hexagon-in1">
+                            <a href="/contact">
+                                <div class="hexagon-in2">
+                                    <i class="fa fa-envelope"></i>
+                                    <h2>CONTACT</h2>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-       <div class="col-lg-4"> 
-          <h1>
-          {% if j.weather.0.main == "Clear" %} <i class="wi wi-day-sunny"></i>  
-          {% elif j.weather.0.main == "Rain" %} <i class="wi wi-rain"></i> 
-          {% elif j.weather.0.main == "Snow" %} <i class="wi wi-snow"></i>  
-          {% elif j.weather.0.main == "Wind" %} <i class="wi wi-windy"></i> 
-          {% elif j.weather.0.main == "Fog" %} <i class="wi wi-fog"></i> 
-          {% elif j.weather.0.main == "Clouds" %} <i class="wi wi-cloudy"></i>  
-          {% endif %} </h1> 
-    </div></div></div></div></div></div>
-    {% endfor %}
+
+            <div id="map-canvas">
+                <h2 id="h1">Please Choose a City/Town to see the 5 Day 3 hour forecast weather Status</h2>
+                <form align="center" action="{{ url_for('fiveday') }}" method="POST">
+                    <br>
+                    <br>
+                    <br>
+                    <select class="dropbtn" name="cityID">
+                        {% for cityID in selectionB | sort(attribute='name')%}
+                        <option class="dropdown-content" value="{{cityID.name}}" SELECTED>{{cityID.name}}</option>
+                        {% endfor %}
+                        <br>
+                        <br>
+                        <br>
+                    </select>
+                    <input class="dropbtn" name="text" type="submit">
+                </form>
+            </div>
+            {% for j in json_object.list | sort(attribute='dt_txt') %}
+            <div align="centre" class="w3-card-4">
+                <div class="w3-container w3-black" style="width:100%">
+                    <h5>Weather For {{ cityname }}</h5>
+                    <h5>Date & Time: {{j.dt_txt}}</h5>
+                    <h3 align="middle">
+                             <b>Summary : {{j.weather.0.description }} </b>
+                            {% if j.weather.0.main == "Clear" %} <i class="wi wi-day-sunny-lg"></i>  
+                            {% elif j.weather.0.main == "Rain" %} <i class="wi wi-rain"></i> 
+                            {% elif j.weather.0.main == "Snow" %} <i class="wi wi-snow"></i>  
+                            {% elif j.weather.0.main == "Wind" %} <i class="wi wi-windy"></i> 
+                            {% elif j.weather.0.main == "Fog" %} <i class="wi wi-fog"></i> 
+                            {% elif j.weather.0.main == "Clouds" %} <i class="wi wi-cloudy"></i>  
+                            {% endif %}      
+                     </h3>                    
+                    <hr>
+                            <h5 align="middle">Max Temperature : {{ j.main.temp_max - 273.15}} °C </h5>
+                            <h5 align="middle">pressure is : {{j.main.pressure}} hPa</h5>
+                            <h5 align="middle">wind speed is : {{j.wind.speed}} kmh</h5>
+                            <h5 align="middle">wind degree is : {{j.wind.deg}}</h5>
+                            <h5 align="middle">sea level is : {{j.main.sea_level}} hPa</h5>
+                            <h5 align="middle">ground level is : {{j.main.grnd_level}} hPa</h5>
+                            <h5 align="middle">humidity is : {{j.main.humidity}} %</h5>  
+                </div>
+            </div>
+            <br><br>
+            {% endfor %}
         </div>
-           <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-   
-  </body>
+    </body>
 </html>
+
+

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<head>
+	<title>STATFLOW- Services</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+    <meta name="author" content="">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+	<link href="static/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="static/css/templatemo_misc.css" rel="stylesheet">
+	<link href="static/css/templatemo_style.css" rel="stylesheet">
+
+	<script src="static/js/jquery-1.11.1.min.js"></script> 
+	<script src="static/js/jquery.lightbox.js"></script>
+	<script src="static/js/templatemo_custom.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="menu">
+			<div class="hexagon_container" id="logo">
+				<div class="hexagon hexagon2">
+					<div class="hexagon-in1">
+						<a href="/">
+							<div class="hexagon-in2">
+								<h2>HOME</h2>             	 	
+							</div>
+						</a>
+					</div>
+				</div>					
+			</div>
+			<div class="hexagon_container" id="team">
+				<div class="hexagon hexagon2">
+					<div class="hexagon-in1">
+						<a href="/team">
+							<div class="hexagon-in2">
+								<i class="fa fa-user"></i>
+								<h2>OUR TEAM</h2>             	 	
+							</div>
+						</a>
+					</div>
+				</div>				
+			</div>
+			<div class="hexagon_container" id="services">
+				<div class="hexagon hexagon2">
+					<div class="hexagon-in1">
+						<div class="hexagon-in2 active">
+							<i class="fa fa-cogs"></i>
+							<h2>SERVICES</h2>             	 	
+						</div>
+					</div>
+				</div>
+			</div>		
+			<div class="hexagon_container" id="contact">
+				<div class="hexagon hexagon2">
+					<div class="hexagon-in1">
+						<a href="/contact">
+							<div class="hexagon-in2">
+								<i class="fa fa-envelope"></i>
+								<h2>CONTACT</h2>             	 	
+							</div>
+						</a>
+					</div>
+				</div>						
+			</div>
+		</div>	
+		<div id="services-content">
+			<header>
+			<h1>Our Services</h1>
+			</header>
+			<div class="content services">
+				<div class="hexagon_container">
+					<div class="hexagon hexagon2 services-item">
+						<div class="hexagon-in1">
+						<a href="/HistoricData">	
+                         <div class="hexagon-in2" data-service-description="The Historic Data visulization works with data from 1913 - 2017 for each monthly rainfall as well as the annual rainfall you can check out any year available it will populate an interactive chart that is implemented using highcharts and the data used is from the StatFlow Database that was acquired in the Development Stages of the Project .">
+								<i class="fa fa-archive"></i>
+							</div>
+						</div>
+					</div>
+				<h2>Irish Rainfall Historic Data Visulization</h2> 
+				</div>
+				<div class="hexagon_container">
+					<div class="hexagon hexagon2 services-item">
+						<div class="hexagon-in1">
+                            <a href="/map">
+							<div class="hexagon-in2" 
+                                 data-service-description="An Iteractive Map built with Javascript and Google Maps it uses Open Weather Maps Api and has the weather for every city available possible it is zoomable and even allows gogle street view.">
+								<i class="fa fa-map-marker"></i>
+							</div>
+						</div>
+					</div>
+				<h2>Interactive Map</h2>
+				</div>
+				<div class="hexagon_container">
+					<div class="hexagon hexagon2 services-item">
+						<div class="hexagon-in1">
+                            <a href="/fiveday">
+							<div class="hexagon-in2" 
+                                data-service-description="The Five Day Forcast Uses Again Open Weather Map's API to query and return Json Objects to the User for there Specific city or Town in the Country of Ireland due to constraints with the City ID's in Open Weather Maps API.STATFLOW decided To stay local woith the data and keep the dropdown menu to just Irish Towns and Citys. it Will display up a %day forecast in the Design of Cards with each card to display the deatils for a 3 hour interval  ">
+								<i class="fa fa-support"></i>
+							</div>
+						</div>
+					</div>
+					<h2>5 Day 3 Hour Forecast by City/Town</h2>
+				</div>
+				
+                 <div class="hexagon_container">
+					<div class="hexagon hexagon2 services-item">
+						<div class="hexagon-in1">
+                          <a href="/temp">
+							<div class="hexagon-in2" data-service-description="The Current City/Town Weather works with the Open Weather Map Api by accessing Current weather data from the Api You provide the city/town to search for via a drop down menu that has preloaded cities/towns from the StatFlow Database.StatFlows Database  was loaded with the city List JSON provided by Open Weather Map.">
+								<i class="fa fa-search-plus"></i>
+							</div>
+						</div>
+					</div>
+					<h2>Current City/Town Weather Search</h2>
+				</div>
+				<div class="hexagon_container">
+					<div class="hexagon hexagon2 services-item">
+						<div class="hexagon-in1">
+							<div class="hexagon-in2" data-service-description="Machine Leaarning Provided by Python and The Jyputer Notebook.">
+                                <a href="/machine">								
+                                <i class="fa fa-cog"></i>
+							</div>
+						</div>
+					</div>
+					<h2>Machine Learning</h2>
+				</div>
+				<div class="content-description">
+					<p></p>	
+				</div>			
+			</div>
+		</div>				
+	</div>
+    <div class="templatemo_footer">
+    	Copyright © 2084 Company Name
+    </div>
+	<script type="text/javascript">
+		$("#services-content .hexagon-in2").hover(function() {
+			$('.content-description p').text($(this).data("serviceDescription"));
+			$("#services-content .hexagon-in2").removeClass('active');
+			$(this).addClass('active');
+			
+		});
+	</script>
+</body>
+</html>
