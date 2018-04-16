@@ -4,6 +4,13 @@ from flask import render_template, flash, session, url_for, redirect, g, request
 
 import requests, json
 
+import smtplib
+from email.MIMEMultipart import MIMEMultipart
+from email.MIMEText import MIMEText
+ 
+ 
+
+
 # Using werkzeug library to encrypt user passwords
 from werkzeug.security import generate_password_hash, check_password_hash 
 
@@ -157,8 +164,28 @@ def services():
 def team():
     return render_template("team.html")
 
-@app.route('/contact') #connect a webpage. '/' is a root directory.
+@app.route('/contact', methods=['GET', 'POST']) #connect a webpage. '/' is a root directory.
 def contact():
+    
+    if request.method == 'POST':
+        fromaddr = request.form['email']
+        text1 = request.form['message']
+        toaddr = "statflow18@gmail.com"
+        msg = MIMEMultipart()
+        msg['From'] = fromaddr
+        msg['To'] = toaddr
+        msg['Subject'] = "INFO"
+        body = text1
+        msg.attach(MIMEText(body, 'plain'))
+        server = smtplib.SMTP('smtp.gmail.com', 587)
+        server.starttls()
+        server.login(toaddr, "Statflow2018")
+        text = msg.as_string()
+        server.sendmail(fromaddr, toaddr, text)
+        server.quit()
+        flash('Your email was successfully sent')
+        return render_template("contact.html")
+
     return render_template("contact.html")
 
 

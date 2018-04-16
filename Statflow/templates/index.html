@@ -54,7 +54,7 @@
 						</a>
 					</div>
 				</div>
-			</div>		
+			</div>
 			<div class="hexagon_container" id="contact">
 				<div class="hexagon hexagon2">
 					<div class="hexagon-in1">
@@ -68,7 +68,6 @@
 				</div>						
 			</div>
             <div class="hexagon_container" id="logout">
-				
                  <div class="hexagon hexagon2">
 					<div class="hexagon-in1">
 						<div class="hexagon-in2 active">
@@ -79,6 +78,7 @@
 					</div>
 				</div>		
 			</div>
+
         {% with messages = get_flashed_messages() %}
           {% if messages %}
             {% for message in messages %}
@@ -90,11 +90,12 @@
           {% endif%}
         {% endwith %}
 		</div>
+
      <div id="gallery-content">
 			<header>
-				<h1>IMAGE GALLERY</h1>
+				<h1>STATFLOW</h1>
 			</header>
-			<div class="content gallery" id="page1">
+			<div class="content gallery">
 				<div class="hexagon_container">
 					<div class="hexagon hexagon2 gallery-item">
 						<div class="hexagon-in1">
@@ -208,20 +209,11 @@
 					</div>
 				</div>
 			</div>
-			<div class="pagination">
-				<ul>
-					<li id="page_link_1" class="active">1</li>
-					<li id="page_link_2">2</li>
-					<li id="page_link_3">3</li>
-				</ul>
-			</div>	
 		</div>						
 	</div>
     
-    <main role="main" class="container">{% block body %}{% endblock %}</main>
 	<div class="templatemo_footer">
-    	Copyright © 2084 Company Name<br>
-		Photos by <a rel="nofollow" href="http://unsplash.com">Unsplash</a>
+    	Copyright © 2018 STATFLOW<br>
     </div>
 </body>
 </html>
