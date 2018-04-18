@@ -18,6 +18,7 @@ This repository contains a final year project developed by [Garret Tonra](https:
 ![](https://user-images.githubusercontent.com/22341150/38942940-0f1d4fc0-4328-11e8-944f-ab50de3ed378.PNG)
 
 **Inside the project directory, go into the rethinkdb-2.3.6 folder and enter rethinkdb command to run the server.**
+
 ![](https://user-images.githubusercontent.com/22341150/38948671-1993873e-4338-11e8-90fd-5d78337ba831.PNG)
 
 ### Step 3: Run the flask app
