@@ -6,8 +6,18 @@ This repository contains a final year project developed by [Garret Tonra](https:
 
 
 ### How to run
+1. Click [here](https://github.com/gtonra89/Final-Year-Project-4th-Year/archive/master.zip) to download the project zip.
+2. Extract the project into preferred directory.
+![](https://user-images.githubusercontent.com/22341150/38942771-9f39d048-4327-11e8-829e-496cc89d7c0e.gif)
 
-![](https://user-images.githubusercontent.com/22341150/38940722-c8c71268-4322-11e8-8fe7-0f32412ab27c.gif)
+3. Open up a command terminal and go into the repository.
+![](https://user-images.githubusercontent.com/22341150/38942939-0efd1b4c-4328-11e8-9ebe-0cfd7cdfba72.PNG)
+
+![](https://user-images.githubusercontent.com/22341150/38942940-0f1d4fc0-4328-11e8-944f-ab50de3ed378.PNG)
+
+
+![](https://user-images.githubusercontent.com/22341150/38942942-0f3eada0-4328-11e8-8c6f-0cc70adc5588.PNG)
+![](https://user-images.githubusercontent.com/22341150/38942943-0f5ad0c0-4328-11e8-8c03-38f2ba042eef.PNG)
 
 ### Architecture
 
