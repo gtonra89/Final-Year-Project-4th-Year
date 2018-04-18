@@ -7,6 +7,8 @@ This repository contains a final year project developed by [Garret Tonra](https:
 
 ### How to run
 
+![](https://user-images.githubusercontent.com/22341150/38940722-c8c71268-4322-11e8-8fe7-0f32412ab27c.gif)
+
 ### Architecture
 
 
