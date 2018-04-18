@@ -5,7 +5,7 @@ This repository contains a final year project developed by [Garret Tonra](https:
 ![](https://user-images.githubusercontent.com/22341150/32137635-9c4ee4f6-bc1b-11e7-92ac-1b0d92714ee9.png)
 
 
-### How to run
+## User Guide
 1. **Click [here](https://github.com/gtonra89/Final-Year-Project-4th-Year/archive/master.zip) to download the project zip.**
 2. **Extract the project into preferred directory.**
 
