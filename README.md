@@ -9,20 +9,13 @@ This repository contains a final year project developed by [Garret Tonra](https:
 
 ### Step 1: Download the zip and extract it into preferred directory e.g. Desktop
 **Click [here](https://github.com/gtonra89/Final-Year-Project-4th-Year/archive/master.zip) to download the project zip.**
-**Extract the project into preferred directory.**
 
 ![](https://user-images.githubusercontent.com/22341150/38942771-9f39d048-4327-11e8-829e-496cc89d7c0e.gif)
 
 ### Step 2: Open a command terminal and run RethinkDB server
-3. **Open up a command terminal and go into the repository using cd**
-
-![](https://user-images.githubusercontent.com/22341150/38942939-0efd1b4c-4328-11e8-9ebe-0cfd7cdfba72.PNG)
+Go to the directory of the project:
 
 ![](https://user-images.githubusercontent.com/22341150/38942940-0f1d4fc0-4328-11e8-944f-ab50de3ed378.PNG)
-
-4. **Run the rethinkdb server**
-Go into the rethinkdb-2.3.6 directory:
-![](https://user-images.githubusercontent.com/22341150/38942942-0f3eada0-4328-11e8-8c6f-0cc70adc5588.PNG)
 
 Enter rethinkdb command to run the server.
 ![](https://user-images.githubusercontent.com/22341150/38948671-1993873e-4338-11e8-90fd-5d78337ba831.PNG)
