@@ -6,11 +6,14 @@ This repository contains a final year project developed by [Garret Tonra](https:
 
 
 ## User Guide
-1. **Click [here](https://github.com/gtonra89/Final-Year-Project-4th-Year/archive/master.zip) to download the project zip.**
-2. **Extract the project into preferred directory.**
+
+### Step 1: Download the zip and extract it into preferred directory e.g. Desktop
+**Click [here](https://github.com/gtonra89/Final-Year-Project-4th-Year/archive/master.zip) to download the project zip.**
+**Extract the project into preferred directory.**
 
 ![](https://user-images.githubusercontent.com/22341150/38942771-9f39d048-4327-11e8-829e-496cc89d7c0e.gif)
 
+### Step 2: Open a command terminal and run RethinkDB server
 3. **Open up a command terminal and go into the repository using cd**
 
 ![](https://user-images.githubusercontent.com/22341150/38942939-0efd1b4c-4328-11e8-9ebe-0cfd7cdfba72.PNG)
