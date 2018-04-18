@@ -1,292 +1,1371 @@
-2018-01-23T15:30:22.241175500 0.025553s notice: In recursion: removing file 'C:\\Users\\Iano\\Desktop\\rethinkdb-2.3.6\\rethinkdb_data\\tmp'
-2018-01-23T15:30:22.242176800 0.027192s warn: Trying to delete non-existent file 'C:\\Users\\Iano\\Desktop\\rethinkdb-2.3.6\\rethinkdb_data\\tmp'
-2018-01-23T15:30:22.244179200 0.029276s notice: Initializing directory C:\\Users\\Iano\\Desktop\\rethinkdb-2.3.6\\rethinkdb_data
-2018-01-23T15:30:22.246180800 0.031024s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory 'C:\\Users\\Iano\\Desktop\\rethinkdb-2.3.6\\rethinkdb_data' did not already exist or is empty.)
-2018-01-23T15:30:22.246180801 0.031087s notice: Running rethinkdb 2.3.6-windows (MSC 190024215)...
-2018-01-23T15:30:22.271208100 0.055567s notice: Running on 6.2.9200 (Windows 8, Server 2012)
-2018-01-23T15:30:22.271208101 0.055752s notice: Loading data from directory C:\\Users\\Iano\\Desktop\\rethinkdb-2.3.6\\rethinkdb_data
-2018-01-23T15:30:23.146710700 0.931366s info: Automatically using cache size of 1079 MB
-2018-01-23T15:30:23.150720300 0.935396s notice: Listening for intracluster connections on port 29015
-2018-01-23T15:30:23.191781000 0.976924s notice: Listening for client driver connections on port 28015
-2018-01-23T15:30:23.192782200 0.977228s notice: Listening for administrative HTTP connections on port 8080
-2018-01-23T15:30:23.192782201 0.977232s notice: Listening on cluster address: 127.0.0.1
-2018-01-23T15:30:23.192782202 0.977235s notice: Listening on driver address: 127.0.0.1
-2018-01-23T15:30:23.192782203 0.977237s notice: Listening on http address: 127.0.0.1
-2018-01-23T15:30:23.192782204 0.977240s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
-2018-01-23T15:30:23.192782205 0.977244s notice: Server ready, "DESKTOP_6LEM60P_kxh" 3d871530-0063-4898-9fb6-1f4b554b59d4
-2018-01-23T15:31:01.523779500 39.308947s info: Table b4ec0160-6400-455f-905a-10916cbfa6f4: Starting a new Raft election for term 1.
-2018-01-23T15:31:01.524766300 39.309247s info: Table b4ec0160-6400-455f-905a-10916cbfa6f4: Added replica on this server.
-2018-01-23T15:31:01.567959900 39.352707s info: Table b4ec0160-6400-455f-905a-10916cbfa6f4: This server is Raft leader for term 1. Latest log index is 0.
-2018-01-23T15:45:15.358113300 893.142588s notice: Server got Control-C; shutting down...
-2018-01-23T15:45:15.358113301 893.142748s notice: Shutting down client connections...
-2018-01-23T15:45:15.358113302 893.142855s notice: All client connections closed.
-2018-01-23T15:45:15.358113303 893.142859s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
-2018-01-23T15:45:15.366667200 893.151349s notice: Storage engine shut down.
-2018-01-25T11:27:49.870585800 0.021336s notice: Running rethinkdb 2.3.6-windows (MSC 190024215)...
-2018-01-25T11:27:49.870585801 0.021620s notice: Running on 6.2.9200 (Windows 8, Server 2012)
-2018-01-25T11:27:49.871585700 0.022297s notice: Loading data from directory C:\\Users\\Iano\\Desktop\\rethinkdb-2.3.6\\rethinkdb_data
-2018-01-25T11:27:50.111104200 0.262350s info: Automatically using cache size of 1717 MB
-2018-01-25T11:27:50.115105400 0.265443s notice: Listening for intracluster connections on port 29015
-2018-01-25T11:27:50.141107000 0.291622s notice: Listening for client driver connections on port 28015
-2018-01-25T11:27:50.141107001 0.291936s notice: Listening for administrative HTTP connections on port 8080
-2018-01-25T11:27:50.141107002 0.291939s notice: Listening on cluster address: 127.0.0.1
-2018-01-25T11:27:50.141107003 0.291941s notice: Listening on driver address: 127.0.0.1
-2018-01-25T11:27:50.141107004 0.291943s notice: Listening on http address: 127.0.0.1
-2018-01-25T11:27:50.141107005 0.291965s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
-2018-01-25T11:27:50.141107006 0.291968s notice: Server ready, "DESKTOP_6LEM60P_kxh" 3d871530-0063-4898-9fb6-1f4b554b59d4
-2018-01-25T11:27:53.012563800 3.163424s info: Table b4ec0160-6400-455f-905a-10916cbfa6f4: Starting a new Raft election for term 2.
-2018-01-25T11:27:53.200209700 3.350766s info: Table b4ec0160-6400-455f-905a-10916cbfa6f4: This server is Raft leader for term 2. Latest log index is 3.
-2018-02-28T11:17:33.962771800 0.314712s notice: Running rethinkdb 2.3.6-windows (MSC 190024215)...
-2018-02-28T11:17:34.012296900 0.356477s notice: Running on 6.2.9200 (Windows 8, Server 2012)
-2018-02-28T11:17:34.012296901 0.356748s notice: Loading data from directory C:\\Users\\Iano\\Desktop\\rethinkdb-2.3.6\\rethinkdb_data
-2018-02-28T11:17:34.400590300 0.744861s info: Automatically using cache size of 1282 MB
-2018-02-28T11:17:34.473406000 0.817556s notice: Listening for intracluster connections on port 29015
-2018-02-28T11:17:34.884575100 1.228876s notice: Listening for client driver connections on port 28015
-2018-02-28T11:17:34.884575101 1.229272s notice: Listening for administrative HTTP connections on port 8080
-2018-02-28T11:17:34.884575102 1.229283s notice: Listening on cluster address: 127.0.0.1
-2018-02-28T11:17:34.884575103 1.229285s notice: Listening on driver address: 127.0.0.1
-2018-02-28T11:17:34.884575104 1.229289s notice: Listening on http address: 127.0.0.1
-2018-02-28T11:17:34.884575105 1.229291s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
-2018-02-28T11:17:34.884575106 1.229294s notice: Server ready, "DESKTOP_6LEM60P_kxh" 3d871530-0063-4898-9fb6-1f4b554b59d4
-2018-02-28T11:17:36.652574900 2.996804s info: Table b4ec0160-6400-455f-905a-10916cbfa6f4: Starting a new Raft election for term 3.
-2018-02-28T11:17:36.714574100 3.058657s info: Table b4ec0160-6400-455f-905a-10916cbfa6f4: This server is Raft leader for term 3. Latest log index is 6.
-2018-02-28T15:42:52.438325200 0.359119s notice: Running rethinkdb 2.3.6-windows (MSC 190024215)...
-2018-02-28T15:42:52.465327100 0.378483s notice: Running on 6.2.9200 (Windows 8, Server 2012)
-2018-02-28T15:42:52.465327101 0.378601s notice: Loading data from directory C:\\Users\\Iano\\Desktop\\rethinkdb-2.3.6\\rethinkdb_data
-2018-02-28T15:42:52.754222400 0.667138s info: Automatically using cache size of 1700 MB
-2018-02-28T15:42:52.827221800 0.740271s notice: Listening for intracluster connections on port 29015
-2018-02-28T15:42:53.294983000 1.208004s notice: Listening for client driver connections on port 28015
-2018-02-28T15:42:53.295485000 1.208377s notice: Listening for administrative HTTP connections on port 8080
-2018-02-28T15:42:53.295485001 1.208381s notice: Listening on cluster address: 127.0.0.1
-2018-02-28T15:42:53.295485002 1.208387s notice: Listening on driver address: 127.0.0.1
-2018-02-28T15:42:53.295485003 1.208396s notice: Listening on http address: 127.0.0.1
-2018-02-28T15:42:53.295485004 1.208398s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
-2018-02-28T15:42:53.295485005 1.208401s notice: Server ready, "DESKTOP_6LEM60P_kxh" 3d871530-0063-4898-9fb6-1f4b554b59d4
-2018-02-28T15:42:54.798313400 2.711297s info: Table b4ec0160-6400-455f-905a-10916cbfa6f4: Starting a new Raft election for term 4.
-2018-02-28T15:42:54.889901100 2.803046s info: Table b4ec0160-6400-455f-905a-10916cbfa6f4: This server is Raft leader for term 4. Latest log index is 9.
-2018-03-01T12:56:30.129678700 0.143823s notice: Running rethinkdb 2.3.6-windows (MSC 190024215)...
-2018-03-01T12:56:30.151759600 0.165267s notice: Running on 6.2.9200 (Windows 8, Server 2012)
-2018-03-01T12:56:30.151759601 0.165376s notice: Loading data from directory C:\\Users\\Iano\\Desktop\\rethinkdb-2.3.6\\rethinkdb_data
-2018-03-01T12:56:30.485897300 0.499343s info: Automatically using cache size of 1676 MB
-2018-03-01T12:56:30.518627900 0.532054s notice: Listening for intracluster connections on port 29015
-2018-03-01T12:56:30.940330500 0.953748s notice: Listening for client driver connections on port 28015
-2018-03-01T12:56:30.940330501 0.954167s notice: Listening for administrative HTTP connections on port 8080
-2018-03-01T12:56:30.940330502 0.954201s notice: Listening on cluster address: 127.0.0.1
-2018-03-01T12:56:30.940330503 0.954203s notice: Listening on driver address: 127.0.0.1
-2018-03-01T12:56:30.940330504 0.954205s notice: Listening on http address: 127.0.0.1
-2018-03-01T12:56:30.940330505 0.954208s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
-2018-03-01T12:56:30.940330506 0.954226s notice: Server ready, "DESKTOP_6LEM60P_kxh" 3d871530-0063-4898-9fb6-1f4b554b59d4
-2018-03-01T12:56:32.022576900 2.035969s info: Table b4ec0160-6400-455f-905a-10916cbfa6f4: Starting a new Raft election for term 5.
-2018-03-01T12:56:32.087206500 2.100927s info: Table b4ec0160-6400-455f-905a-10916cbfa6f4: This server is Raft leader for term 5. Latest log index is 12.
-2018-03-07T09:53:52.603837500 0.271183s notice: Running rethinkdb 2.3.6-windows (MSC 190024215)...
-2018-03-07T09:53:52.614129100 0.281610s notice: Running on 6.2.9200 (Windows 8, Server 2012)
-2018-03-07T09:53:52.614129101 0.281716s notice: Loading data from directory C:\\Users\\Iano\\Desktop\\rethinkdb-2.3.6\\rethinkdb_data
-2018-03-07T09:53:52.966774400 0.634431s info: Automatically using cache size of 1649 MB
-2018-03-07T09:53:52.983723300 0.651134s notice: Listening for intracluster connections on port 29015
-2018-03-07T09:53:53.415793100 1.083534s notice: Listening for client driver connections on port 28015
-2018-03-07T09:53:53.416794300 1.083885s notice: Listening for administrative HTTP connections on port 8080
-2018-03-07T09:53:53.416794301 1.083915s notice: Listening on cluster address: 127.0.0.1
-2018-03-07T09:53:53.416794302 1.083917s notice: Listening on driver address: 127.0.0.1
-2018-03-07T09:53:53.416794303 1.083919s notice: Listening on http address: 127.0.0.1
-2018-03-07T09:53:53.416794304 1.083921s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
-2018-03-07T09:53:53.416794305 1.083923s notice: Server ready, "DESKTOP_6LEM60P_kxh" 3d871530-0063-4898-9fb6-1f4b554b59d4
-2018-03-07T09:53:54.945414100 2.612353s info: Table b4ec0160-6400-455f-905a-10916cbfa6f4: Starting a new Raft election for term 6.
-2018-03-07T09:53:55.010026400 2.676945s info: Table b4ec0160-6400-455f-905a-10916cbfa6f4: This server is Raft leader for term 6. Latest log index is 16.
-2018-03-08T11:52:39.389646100 0.059268s notice: Running rethinkdb 2.3.6-windows (MSC 190024215)...
-2018-03-08T11:52:39.411388200 0.080766s notice: Running on 6.2.9200 (Windows 8, Server 2012)
-2018-03-08T11:52:39.411541500 0.080895s notice: Loading data from directory C:\\Users\\Iano\\Desktop\\rethinkdb-2.3.6\\rethinkdb_data
-2018-03-08T11:52:39.631009000 0.301045s info: Automatically using cache size of 1767 MB
-2018-03-08T11:52:39.645019400 0.315035s notice: Listening for intracluster connections on port 29015
-2018-03-08T11:52:39.960633600 0.630307s notice: Listening for client driver connections on port 28015
-2018-03-08T11:52:39.977585800 0.647742s notice: Listening for administrative HTTP connections on port 8080
-2018-03-08T11:52:39.977585801 0.647772s notice: Listening on cluster address: 127.0.0.1
-2018-03-08T11:52:39.977585802 0.647774s notice: Listening on driver address: 127.0.0.1
-2018-03-08T11:52:39.977585803 0.647776s notice: Listening on http address: 127.0.0.1
-2018-03-08T11:52:39.977585804 0.647777s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
-2018-03-08T11:52:39.977585805 0.647779s notice: Server ready, "DESKTOP_6LEM60P_kxh" 3d871530-0063-4898-9fb6-1f4b554b59d4
-2018-03-08T11:52:40.882375000 1.551777s info: Table b4ec0160-6400-455f-905a-10916cbfa6f4: Starting a new Raft election for term 7.
-2018-03-08T11:52:41.004464100 1.674005s info: Table b4ec0160-6400-455f-905a-10916cbfa6f4: This server is Raft leader for term 7. Latest log index is 19.
-2018-03-12T10:30:15.275615000 0.336978s notice: Running rethinkdb 2.3.6-windows (MSC 190024215)...
-2018-03-12T10:30:15.305875600 0.358931s notice: Running on 6.2.9200 (Windows 8, Server 2012)
-2018-03-12T10:30:15.305875601 0.359044s notice: Loading data from directory C:\\Users\\Iano\\Desktop\\rethinkdb-2.3.6\\rethinkdb_data
-2018-03-12T10:30:15.636172900 0.689353s info: Automatically using cache size of 1591 MB
-2018-03-12T10:30:15.708255000 0.761848s notice: Listening for intracluster connections on port 29015
-2018-03-12T10:30:16.105370900 1.158973s notice: Listening for client driver connections on port 28015
-2018-03-12T10:30:16.106323200 1.159391s notice: Listening for administrative HTTP connections on port 8080
-2018-03-12T10:30:16.106323201 1.159394s notice: Listening on cluster address: 127.0.0.1
-2018-03-12T10:30:16.106323202 1.159396s notice: Listening on driver address: 127.0.0.1
-2018-03-12T10:30:16.106323203 1.159398s notice: Listening on http address: 127.0.0.1
-2018-03-12T10:30:16.106323204 1.159414s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
-2018-03-12T10:30:16.106323205 1.159417s notice: Server ready, "DESKTOP_6LEM60P_kxh" 3d871530-0063-4898-9fb6-1f4b554b59d4
-2018-03-12T10:30:16.410475800 1.464054s warn: Problem when checking for new versions of RethinkDB: HTTP request to update.rethinkdb.com failed.
-2018-03-12T10:30:17.290571700 2.343737s info: Table b4ec0160-6400-455f-905a-10916cbfa6f4: Starting a new Raft election for term 8.
-2018-03-12T10:30:17.394290400 2.447531s info: Table b4ec0160-6400-455f-905a-10916cbfa6f4: This server is Raft leader for term 8. Latest log index is 23.
-2018-03-12T11:26:31.885878900 0.023436s notice: Running rethinkdb 2.3.6-windows (MSC 190024215)...
-2018-03-12T11:26:31.885878901 0.023636s notice: Running on 6.2.9200 (Windows 8, Server 2012)
-2018-03-12T11:26:31.886378600 0.023910s notice: Loading data from directory C:\\Users\\Iano\\Desktop\\rethinkdb-2.3.6\\rethinkdb_data
-2018-03-12T11:26:31.946413100 0.084028s info: Automatically using cache size of 1153 MB
-2018-03-12T11:26:31.949419200 0.087033s notice: Listening for intracluster connections on port 29015
-2018-03-12T11:26:31.979444900 0.117317s notice: Listening for client driver connections on port 28015
-2018-03-12T11:26:31.979945500 0.117731s notice: Listening for administrative HTTP connections on port 8080
-2018-03-12T11:26:31.979945501 0.117734s notice: Listening on cluster address: 127.0.0.1
-2018-03-12T11:26:31.979945502 0.117738s notice: Listening on driver address: 127.0.0.1
-2018-03-12T11:26:31.979945503 0.117744s notice: Listening on http address: 127.0.0.1
-2018-03-12T11:26:31.979945504 0.117747s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
-2018-03-12T11:26:31.979945505 0.117751s notice: Server ready, "DESKTOP_6LEM60P_kxh" 3d871530-0063-4898-9fb6-1f4b554b59d4
-2018-03-12T11:26:33.318412100 1.455988s info: Table b4ec0160-6400-455f-905a-10916cbfa6f4: Starting a new Raft election for term 9.
-2018-03-12T11:26:33.385910800 1.523498s info: Table b4ec0160-6400-455f-905a-10916cbfa6f4: This server is Raft leader for term 9. Latest log index is 26.
-2018-03-12T15:07:48.282769700 0.026539s notice: Running rethinkdb 2.3.6-windows (MSC 190024215)...
-2018-03-12T15:07:48.297769700 0.041278s notice: Running on 6.2.9200 (Windows 8, Server 2012)
-2018-03-12T15:07:48.297769701 0.041441s notice: Loading data from directory C:\\Users\\Iano\\Desktop\\rethinkdb-2.3.6\\rethinkdb_data
-2018-03-12T15:07:48.435638900 0.179377s info: Automatically using cache size of 899 MB
-2018-03-12T15:07:48.440137900 0.183861s notice: Listening for intracluster connections on port 29015
-2018-03-12T15:07:48.570298300 0.313819s notice: Listening for client driver connections on port 28015
-2018-03-12T15:07:48.570799400 0.314319s notice: Listening for administrative HTTP connections on port 8080
-2018-03-12T15:07:48.570799401 0.314323s notice: Listening on cluster address: 127.0.0.1
-2018-03-12T15:07:48.570799402 0.314325s notice: Listening on driver address: 127.0.0.1
-2018-03-12T15:07:48.570799403 0.314327s notice: Listening on http address: 127.0.0.1
-2018-03-12T15:07:48.570799404 0.314346s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
-2018-03-12T15:07:48.570799405 0.314349s notice: Server ready, "DESKTOP_6LEM60P_kxh" 3d871530-0063-4898-9fb6-1f4b554b59d4
-2018-03-12T15:07:50.279614900 2.023289s info: Table b4ec0160-6400-455f-905a-10916cbfa6f4: Starting a new Raft election for term 10.
-2018-03-12T15:07:50.522109400 2.265761s info: Table b4ec0160-6400-455f-905a-10916cbfa6f4: This server is Raft leader for term 10. Latest log index is 29.
-2018-03-12T21:20:30.841603300 0.142591s notice: Running rethinkdb 2.3.6-windows (MSC 190024215)...
-2018-03-12T21:20:30.879332600 0.171859s notice: Running on 6.2.9200 (Windows 8, Server 2012)
-2018-03-12T21:20:30.879332601 0.171975s notice: Loading data from directory C:\\Users\\Iano\\Desktop\\rethinkdb-2.3.6\\rethinkdb_data
-2018-03-12T21:20:31.222488500 0.515093s info: Automatically using cache size of 1509 MB
-2018-03-12T21:20:31.277788600 0.570814s notice: Listening for intracluster connections on port 29015
-2018-03-12T21:20:31.743434300 1.036285s notice: Listening for client driver connections on port 28015
-2018-03-12T21:20:31.743434301 1.036768s notice: Listening for administrative HTTP connections on port 8080
-2018-03-12T21:20:31.743434302 1.036772s notice: Listening on cluster address: 127.0.0.1
-2018-03-12T21:20:31.743434303 1.036774s notice: Listening on driver address: 127.0.0.1
-2018-03-12T21:20:31.743434304 1.036792s notice: Listening on http address: 127.0.0.1
-2018-03-12T21:20:31.743434305 1.036794s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
-2018-03-12T21:20:31.743434306 1.036796s notice: Server ready, "DESKTOP_6LEM60P_kxh" 3d871530-0063-4898-9fb6-1f4b554b59d4
-2018-03-12T21:20:32.770871500 2.063519s info: Table b4ec0160-6400-455f-905a-10916cbfa6f4: Starting a new Raft election for term 11.
-2018-03-12T21:20:32.826754300 2.119507s info: Table b4ec0160-6400-455f-905a-10916cbfa6f4: This server is Raft leader for term 11. Latest log index is 32.
-2018-03-13T12:21:05.663620400 0.021318s notice: Running rethinkdb 2.3.6-windows (MSC 190024215)...
-2018-03-13T12:21:05.669640500 0.028069s notice: Running on 6.2.9200 (Windows 8, Server 2012)
-2018-03-13T12:21:05.670620300 0.028177s notice: Loading data from directory C:\\Users\\Iano\\Desktop\\rethinkdb-2.3.6\\rethinkdb_data
-2018-03-13T12:21:05.776908800 0.134405s info: Automatically using cache size of 1102 MB
-2018-03-13T12:21:05.778908500 0.137051s notice: Listening for intracluster connections on port 29015
-2018-03-13T12:21:05.807712900 0.165920s notice: Listening for client driver connections on port 28015
-2018-03-13T12:21:05.808698300 0.166283s notice: Listening for administrative HTTP connections on port 8080
-2018-03-13T12:21:05.808698301 0.166288s notice: Listening on cluster address: 127.0.0.1
-2018-03-13T12:21:05.808698302 0.166290s notice: Listening on driver address: 127.0.0.1
-2018-03-13T12:21:05.808698303 0.166302s notice: Listening on http address: 127.0.0.1
-2018-03-13T12:21:05.808698304 0.166304s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
-2018-03-13T12:21:05.808698305 0.166313s notice: Server ready, "DESKTOP_6LEM60P_kxh" 3d871530-0063-4898-9fb6-1f4b554b59d4
-2018-03-13T12:21:06.960653400 1.318562s info: Table b4ec0160-6400-455f-905a-10916cbfa6f4: Starting a new Raft election for term 12.
-2018-03-13T12:21:07.050279200 1.408488s info: Table b4ec0160-6400-455f-905a-10916cbfa6f4: This server is Raft leader for term 12. Latest log index is 35.
-2018-03-13T16:27:23.073602800 0.019461s notice: Running rethinkdb 2.3.6-windows (MSC 190024215)...
-2018-03-13T16:27:23.073602801 0.019665s notice: Running on 6.2.9200 (Windows 8, Server 2012)
-2018-03-13T16:27:23.074103500 0.020026s notice: Loading data from directory C:\\Users\\Iano\\Desktop\\rethinkdb-2.3.6\\rethinkdb_data
-2018-03-13T16:27:23.175991200 0.121885s info: Automatically using cache size of 1379 MB
-2018-03-13T16:27:23.179492800 0.125219s notice: Listening for intracluster connections on port 29015
-2018-03-13T16:27:23.255165000 0.201057s notice: Listening for client driver connections on port 28015
-2018-03-13T16:27:23.255665600 0.201467s notice: Listening for administrative HTTP connections on port 8080
-2018-03-13T16:27:23.255665601 0.201482s notice: Listening on cluster address: 127.0.0.1
-2018-03-13T16:27:23.255665602 0.201484s notice: Listening on driver address: 127.0.0.1
-2018-03-13T16:27:23.255665603 0.201489s notice: Listening on http address: 127.0.0.1
-2018-03-13T16:27:23.255665604 0.201490s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
-2018-03-13T16:27:23.255665605 0.201494s notice: Server ready, "DESKTOP_6LEM60P_kxh" 3d871530-0063-4898-9fb6-1f4b554b59d4
-2018-03-13T16:27:24.906098100 1.851842s info: Table b4ec0160-6400-455f-905a-10916cbfa6f4: Starting a new Raft election for term 13.
-2018-03-13T16:27:24.951317300 1.897150s info: Table b4ec0160-6400-455f-905a-10916cbfa6f4: This server is Raft leader for term 13. Latest log index is 38.
-2018-03-13T16:31:19.758708800 0.021016s notice: Running rethinkdb 2.3.6-windows (MSC 190024215)...
-2018-03-13T16:31:19.758708801 0.021218s notice: Running on 6.2.9200 (Windows 8, Server 2012)
-2018-03-13T16:31:19.759710500 0.021892s notice: Loading data from directory C:\\Users\\Iano\\Desktop\\rethinkdb-2.3.6\\rethinkdb_data
-2018-03-13T16:31:19.818319600 0.080921s info: Automatically using cache size of 1336 MB
-2018-03-13T16:31:19.821819300 0.083994s notice: Listening for intracluster connections on port 29015
-2018-03-13T16:31:19.841822700 0.104025s notice: Listening for client driver connections on port 28015
-2018-03-13T16:31:19.842819800 0.104954s notice: Listening for administrative HTTP connections on port 8080
-2018-03-13T16:31:19.842819801 0.104961s notice: Listening on cluster address: 127.0.0.1
-2018-03-13T16:31:19.842819802 0.104963s notice: Listening on driver address: 127.0.0.1
-2018-03-13T16:31:19.842819803 0.104981s notice: Listening on http address: 127.0.0.1
-2018-03-13T16:31:19.842819804 0.104983s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
-2018-03-13T16:31:19.842819805 0.105091s notice: Server ready, "DESKTOP_6LEM60P_kxh" 3d871530-0063-4898-9fb6-1f4b554b59d4
-2018-03-13T16:31:21.000478400 1.263090s info: Table b4ec0160-6400-455f-905a-10916cbfa6f4: Starting a new Raft election for term 14.
-2018-03-13T16:31:21.049320300 1.311627s info: Table b4ec0160-6400-455f-905a-10916cbfa6f4: This server is Raft leader for term 14. Latest log index is 41.
-2018-03-14T15:49:00.046474900 0.035541s notice: Running rethinkdb 2.3.6-windows (MSC 190024215)...
-2018-03-14T15:49:00.051473200 0.040415s notice: Running on 6.2.9200 (Windows 8, Server 2012)
-2018-03-14T15:49:00.051473201 0.040578s notice: Loading data from directory C:\\Users\\Iano\\Desktop\\rethinkdb-2.3.6\\rethinkdb_data
-2018-03-14T15:49:00.174154000 0.163059s info: Automatically using cache size of 1345 MB
-2018-03-14T15:49:00.177159600 0.166129s notice: Listening for intracluster connections on port 29015
-2018-03-14T15:49:00.218654800 0.207851s notice: Listening for client driver connections on port 28015
-2018-03-14T15:49:00.219155400 0.208204s notice: Listening for administrative HTTP connections on port 8080
-2018-03-14T15:49:00.219155401 0.208207s notice: Listening on cluster address: 127.0.0.1
-2018-03-14T15:49:00.219155402 0.208220s notice: Listening on driver address: 127.0.0.1
-2018-03-14T15:49:00.219155403 0.208222s notice: Listening on http address: 127.0.0.1
-2018-03-14T15:49:00.219155404 0.208224s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
-2018-03-14T15:49:00.219155405 0.208233s notice: Server ready, "DESKTOP_6LEM60P_kxh" 3d871530-0063-4898-9fb6-1f4b554b59d4
-2018-03-14T15:49:01.564224100 1.553096s info: Table b4ec0160-6400-455f-905a-10916cbfa6f4: Starting a new Raft election for term 15.
-2018-03-14T15:49:01.821224000 1.810071s info: Table b4ec0160-6400-455f-905a-10916cbfa6f4: This server is Raft leader for term 15. Latest log index is 44.
-2018-03-14T16:56:34.893019900 4054.882218s notice: Server got Close (End Task) Event; shutting down...
-2018-03-15T10:50:06.496838300 0.022535s notice: Running rethinkdb 2.3.6-windows (MSC 190024215)...
-2018-03-15T10:50:06.524888900 0.050590s notice: Running on 6.2.9200 (Windows 8, Server 2012)
-2018-03-15T10:50:06.524888901 0.050706s notice: Loading data from directory C:\\Users\\Iano\\Desktop\\rethinkdb-2.3.6\\rethinkdb_data
-2018-03-15T10:50:06.759699200 0.285517s info: Automatically using cache size of 1551 MB
-2018-03-15T10:50:06.762699200 0.288333s notice: Listening for intracluster connections on port 29015
-2018-03-15T10:50:06.802047400 0.328505s notice: Listening for client driver connections on port 28015
-2018-03-15T10:50:06.803046800 0.328866s notice: Listening for administrative HTTP connections on port 8080
-2018-03-15T10:50:06.803046801 0.328870s notice: Listening on cluster address: 127.0.0.1
-2018-03-15T10:50:06.803046802 0.328872s notice: Listening on driver address: 127.0.0.1
-2018-03-15T10:50:06.803046803 0.328884s notice: Listening on http address: 127.0.0.1
-2018-03-15T10:50:06.803046804 0.328886s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
-2018-03-15T10:50:06.803046805 0.328888s notice: Server ready, "DESKTOP_6LEM60P_kxh" 3d871530-0063-4898-9fb6-1f4b554b59d4
-2018-03-15T10:50:08.742517300 2.268150s info: Table b4ec0160-6400-455f-905a-10916cbfa6f4: Starting a new Raft election for term 16.
-2018-03-15T10:50:08.933441100 2.459171s info: Table b4ec0160-6400-455f-905a-10916cbfa6f4: This server is Raft leader for term 16. Latest log index is 47.
-2018-03-15T12:38:56.073327500 0.017040s notice: Running rethinkdb 2.3.6-windows (MSC 190024215)...
-2018-03-15T12:38:56.083374900 0.026694s notice: Running on 6.2.9200 (Windows 8, Server 2012)
-2018-03-15T12:38:56.083374901 0.026891s notice: Loading data from directory C:\\Users\\Iano\\Desktop\\rethinkdb-2.3.6\\rethinkdb_data
-2018-03-15T12:38:56.282388900 0.226226s info: Automatically using cache size of 2091 MB
-2018-03-15T12:38:56.285388900 0.229167s notice: Listening for intracluster connections on port 29015
-2018-03-15T12:38:56.387375400 0.330547s notice: Listening for client driver connections on port 28015
-2018-03-15T12:38:56.387375401 0.330884s notice: Listening for administrative HTTP connections on port 8080
-2018-03-15T12:38:56.387375402 0.330887s notice: Listening on cluster address: 127.0.0.1
-2018-03-15T12:38:56.387375403 0.330889s notice: Listening on driver address: 127.0.0.1
-2018-03-15T12:38:56.387375404 0.330902s notice: Listening on http address: 127.0.0.1
-2018-03-15T12:38:56.387375405 0.330948s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
-2018-03-15T12:38:56.387375406 0.330950s notice: Server ready, "DESKTOP_6LEM60P_kxh" 3d871530-0063-4898-9fb6-1f4b554b59d4
-2018-03-15T12:38:57.513356400 1.456493s info: Table b4ec0160-6400-455f-905a-10916cbfa6f4: Starting a new Raft election for term 17.
-2018-03-15T12:38:57.694755800 1.638483s info: Table b4ec0160-6400-455f-905a-10916cbfa6f4: This server is Raft leader for term 17. Latest log index is 50.
-2018-03-15T13:28:05.235251300 0.018911s notice: Running rethinkdb 2.3.6-windows (MSC 190024215)...
-2018-03-15T13:28:05.250874500 0.034525s notice: Running on 6.2.9200 (Windows 8, Server 2012)
-2018-03-15T13:28:05.250874501 0.034640s notice: Loading data from directory C:\\Users\\Iano\\Desktop\\rethinkdb-2.3.6\\rethinkdb_data
-2018-03-15T13:28:05.329021400 0.101882s info: Automatically using cache size of 2280 MB
-2018-03-15T13:28:05.329021401 0.104811s notice: Listening for intracluster connections on port 29015
-2018-03-15T13:28:05.375876100 0.150738s notice: Listening for client driver connections on port 28015
-2018-03-15T13:28:05.375876101 0.151312s notice: Listening for administrative HTTP connections on port 8080
-2018-03-15T13:28:05.375876102 0.151316s notice: Listening on cluster address: 127.0.0.1
-2018-03-15T13:28:05.375876103 0.151318s notice: Listening on driver address: 127.0.0.1
-2018-03-15T13:28:05.375876104 0.151320s notice: Listening on http address: 127.0.0.1
-2018-03-15T13:28:05.375876105 0.151336s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
-2018-03-15T13:28:05.375876106 0.151338s notice: Server ready, "DESKTOP_6LEM60P_kxh" 3d871530-0063-4898-9fb6-1f4b554b59d4
-2018-03-15T13:28:06.875896600 1.646155s info: Table b4ec0160-6400-455f-905a-10916cbfa6f4: Starting a new Raft election for term 18.
-2018-03-15T13:28:06.922757500 1.698389s info: Table b4ec0160-6400-455f-905a-10916cbfa6f4: This server is Raft leader for term 18. Latest log index is 53.
-2018-04-11T16:44:55.313448600 0.273906s notice: Running rethinkdb 2.3.6-windows (MSC 190024215)...
-2018-04-11T16:44:55.330996000 0.288900s notice: Running on 6.2.9200 (Windows 8, Server 2012)
-2018-04-11T16:44:55.331450000 0.289045s notice: Loading data from directory C:\\Users\\Iano\\Desktop\\rethinkdb-2.3.6\\rethinkdb_data
-2018-04-11T16:44:55.722701900 0.680618s info: Automatically using cache size of 1498 MB
-2018-04-11T16:44:55.791140200 0.749095s notice: Listening for intracluster connections on port 29015
-2018-04-11T16:44:56.227144600 1.184717s notice: Listening for client driver connections on port 28015
-2018-04-11T16:44:56.227144601 1.185112s notice: Listening for administrative HTTP connections on port 8080
-2018-04-11T16:44:56.227144602 1.185138s notice: Listening on cluster address: 127.0.0.1
-2018-04-11T16:44:56.227144603 1.185139s notice: Listening on driver address: 127.0.0.1
-2018-04-11T16:44:56.227144604 1.185141s notice: Listening on http address: 127.0.0.1
-2018-04-11T16:44:56.227144605 1.185142s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
-2018-04-11T16:44:56.227144606 1.185143s notice: Server ready, "DESKTOP_6LEM60P_kxh" 3d871530-0063-4898-9fb6-1f4b554b59d4
-2018-04-11T16:44:57.137793900 2.095327s info: Table b4ec0160-6400-455f-905a-10916cbfa6f4: Starting a new Raft election for term 19.
-2018-04-11T16:44:57.206782300 2.164702s info: Table b4ec0160-6400-455f-905a-10916cbfa6f4: This server is Raft leader for term 19. Latest log index is 56.
-2018-04-13T15:25:10.057066400 0.300757s notice: Running rethinkdb 2.3.6-windows (MSC 190024215)...
-2018-04-13T15:25:10.074725700 0.315699s notice: Running on 6.2.9200 (Windows 8, Server 2012)
-2018-04-13T15:25:10.075209500 0.315930s notice: Loading data from directory C:\\Users\\Iano\\Desktop\\rethinkdb-2.3.6\\rethinkdb_data
-2018-04-13T15:25:10.433081700 0.674049s info: Automatically using cache size of 1355 MB
-2018-04-13T15:25:10.503640000 0.744241s notice: Listening for intracluster connections on port 29015
-2018-04-13T15:25:10.981910300 1.222669s notice: Listening for client driver connections on port 28015
-2018-04-13T15:25:10.982279000 1.223035s notice: Listening for administrative HTTP connections on port 8080
-2018-04-13T15:25:10.982279001 1.223069s notice: Listening on cluster address: 127.0.0.1
-2018-04-13T15:25:10.982279002 1.223071s notice: Listening on driver address: 127.0.0.1
-2018-04-13T15:25:10.982279003 1.223073s notice: Listening on http address: 127.0.0.1
-2018-04-13T15:25:10.982279004 1.223075s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
-2018-04-13T15:25:10.982279005 1.223078s notice: Server ready, "DESKTOP_6LEM60P_kxh" 3d871530-0063-4898-9fb6-1f4b554b59d4
-2018-04-13T15:25:12.034999900 2.275657s info: Table b4ec0160-6400-455f-905a-10916cbfa6f4: Starting a new Raft election for term 20.
-2018-04-13T15:25:12.095047500 2.336019s info: Table b4ec0160-6400-455f-905a-10916cbfa6f4: This server is Raft leader for term 20. Latest log index is 59.
+2018-01-23T15:18:51.527393329 0.153644s notice: Recursively removing directory /home/garret/Desktop/FYP/rethinkdb_data/tmp
+2018-01-23T15:18:51.551236550 0.177486s notice: Initializing directory /home/garret/Desktop/FYP/rethinkdb_data
+2018-01-23T15:18:51.551330463 0.177580s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/home/garret/Desktop/FYP/rethinkdb_data' did not already exist or is empty.)
+2018-01-23T15:18:51.551369037 0.177618s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-01-23T15:18:51.553916126 0.180168s notice: Running on Linux 4.13.0-26-generic x86_64
+2018-01-23T15:18:51.553980760 0.180230s notice: Loading data from directory /home/garret/Desktop/FYP/rethinkdb_data
+2018-01-23T15:18:51.834583006 0.460833s info: Automatically using cache size of 2063 MB
+2018-01-23T15:18:51.835690966 0.461940s notice: Listening for intracluster connections on port 29015
+2018-01-23T15:18:51.837652583 0.463902s notice: Listening for client driver connections on port 28015
+2018-01-23T15:18:51.837893843 0.464143s notice: Listening for administrative HTTP connections on port 8080
+2018-01-23T15:18:51.837899693 0.464149s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-01-23T15:18:51.837907559 0.464157s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-01-23T15:18:51.837913014 0.464162s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-01-23T15:18:51.837920300 0.464169s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-01-23T15:18:51.837928587 0.464178s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-01-23T15:19:19.381460934 28.007711s info: Table 68061b9d-dfb4-4d69-b420-3ba79b1aa807: Starting a new Raft election for term 1.
+2018-01-23T15:19:19.381809064 28.008059s info: Table 68061b9d-dfb4-4d69-b420-3ba79b1aa807: Added replica on this server.
+2018-01-23T15:19:19.432586273 28.058836s info: Table 68061b9d-dfb4-4d69-b420-3ba79b1aa807: This server is Raft leader for term 1. Latest log index is 0.
+2018-01-23T15:23:13.750457668 262.376708s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2018-01-23T15:23:13.750704184 262.376954s notice: Shutting down client connections...
+2018-01-23T15:23:13.750813936 262.377063s notice: All client connections closed.
+2018-01-23T15:23:13.750820989 262.377070s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2018-01-23T15:23:13.754290342 262.380540s notice: Storage engine shut down.
+2018-01-23T15:23:15.328401747 0.266606s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-01-23T15:23:15.332697171 0.270905s notice: Running on Linux 4.13.0-26-generic x86_64
+2018-01-23T15:23:15.332790607 0.270994s notice: Loading data from directory /home/garret/Desktop/FYP/rethinkdb_data
+2018-01-23T15:23:15.405024481 0.343228s info: Automatically using cache size of 1809 MB
+2018-01-23T15:23:15.406329944 0.344534s notice: Listening for intracluster connections on port 29015
+2018-01-23T15:23:15.451305133 0.389509s notice: Listening for client driver connections on port 28015
+2018-01-23T15:23:15.451535167 0.389739s notice: Listening for administrative HTTP connections on port 8080
+2018-01-23T15:23:15.451547480 0.389751s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-01-23T15:23:15.451551890 0.389755s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-01-23T15:23:15.451555468 0.389759s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-01-23T15:23:15.451563151 0.389766s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-01-23T15:23:15.451566922 0.389770s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-01-23T15:23:17.202671046 2.140875s info: Table 68061b9d-dfb4-4d69-b420-3ba79b1aa807: Starting a new Raft election for term 2.
+2018-01-23T15:23:17.268838272 2.207043s info: Table 68061b9d-dfb4-4d69-b420-3ba79b1aa807: This server is Raft leader for term 2. Latest log index is 3.
+2018-01-23T15:32:30.700969534 0.057401s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-01-23T15:32:30.704541504 0.060977s notice: Running on Linux 4.13.0-26-generic x86_64
+2018-01-23T15:32:30.704664241 0.061095s notice: Loading data from directory /home/garret/Desktop/FYP/rethinkdb_data
+2018-01-23T15:32:30.788896372 0.145327s info: Automatically using cache size of 2190 MB
+2018-01-23T15:32:30.789504152 0.145935s notice: Listening for intracluster connections on port 29015
+2018-01-23T15:32:30.819925273 0.176358s notice: Listening for client driver connections on port 28015
+2018-01-23T15:32:30.820082388 0.176513s notice: Listening for administrative HTTP connections on port 8080
+2018-01-23T15:32:30.820087075 0.176517s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-01-23T15:32:30.820096628 0.176527s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-01-23T15:32:30.820100509 0.176531s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-01-23T15:32:30.820104109 0.176534s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-01-23T15:32:30.820115980 0.176546s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-01-23T15:32:31.931576896 1.288008s info: Table 68061b9d-dfb4-4d69-b420-3ba79b1aa807: Starting a new Raft election for term 3.
+2018-01-23T15:32:32.025075067 1.381506s info: Table 68061b9d-dfb4-4d69-b420-3ba79b1aa807: This server is Raft leader for term 3. Latest log index is 6.
+2018-01-23T15:54:01.872917880 0.067688s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-01-23T15:54:01.876944301 0.071719s notice: Running on Linux 4.13.0-26-generic x86_64
+2018-01-23T15:54:01.877057578 0.071827s notice: Loading data from directory /home/garret/Desktop/FYP/rethinkdb_data
+2018-01-23T15:54:01.957337750 0.152108s info: Automatically using cache size of 2374 MB
+2018-01-23T15:54:01.957947936 0.152718s notice: Listening for intracluster connections on port 29015
+2018-01-23T15:54:01.994569522 0.189340s notice: Listening for client driver connections on port 28015
+2018-01-23T15:54:01.994727696 0.189498s notice: Listening for administrative HTTP connections on port 8080
+2018-01-23T15:54:01.994733312 0.189503s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-01-23T15:54:01.994741798 0.189511s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-01-23T15:54:01.994745752 0.189515s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-01-23T15:54:01.994752161 0.189522s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-01-23T15:54:01.994756194 0.189526s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-01-23T15:54:03.767149759 1.961920s info: Table 68061b9d-dfb4-4d69-b420-3ba79b1aa807: Starting a new Raft election for term 4.
+2018-01-23T15:54:03.835441787 2.030212s info: Table 68061b9d-dfb4-4d69-b420-3ba79b1aa807: This server is Raft leader for term 4. Latest log index is 9.
+2018-01-23T16:04:37.494526560 0.060010s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-01-23T16:04:37.496882454 0.062368s notice: Running on Linux 4.13.0-26-generic x86_64
+2018-01-23T16:04:37.496952807 0.062435s notice: Loading data from directory /home/garret/Desktop/FYP/rethinkdb_data
+2018-01-23T16:04:37.579531894 0.145015s info: Automatically using cache size of 2356 MB
+2018-01-23T16:04:37.580089972 0.145573s notice: Listening for intracluster connections on port 29015
+2018-01-23T16:04:37.616967268 0.182450s notice: Listening for client driver connections on port 28015
+2018-01-23T16:04:37.617242922 0.182726s notice: Listening for administrative HTTP connections on port 8080
+2018-01-23T16:04:37.617246817 0.182730s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-01-23T16:04:37.617249882 0.182732s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-01-23T16:04:37.617252285 0.182735s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-01-23T16:04:37.617262411 0.182745s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-01-23T16:04:37.617265175 0.182748s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-01-23T16:04:38.956963202 1.522447s info: Table 68061b9d-dfb4-4d69-b420-3ba79b1aa807: Starting a new Raft election for term 5.
+2018-01-23T16:04:39.025070511 1.590553s info: Table 68061b9d-dfb4-4d69-b420-3ba79b1aa807: This server is Raft leader for term 5. Latest log index is 12.
+2018-01-23T16:21:09.571987007 992.137470s notice: Removing file /home/garret/Desktop/FYP/rethinkdb_data/68061b9d-dfb4-4d69-b420-3ba79b1aa807
+2018-01-23T16:21:09.571996512 992.137479s info: Table 68061b9d-dfb4-4d69-b420-3ba79b1aa807: Deleted the table.
+2018-01-23T16:21:49.959739382 1032.525223s info: Table 88db0774-073a-4ec6-8c76-9c9574afcbcf: Starting a new Raft election for term 1.
+2018-01-23T16:21:49.960093546 1032.525577s info: Table 88db0774-073a-4ec6-8c76-9c9574afcbcf: Added replica on this server.
+2018-01-23T16:21:50.018516500 1032.584000s info: Table 88db0774-073a-4ec6-8c76-9c9574afcbcf: This server is Raft leader for term 1. Latest log index is 0.
+2018-01-23T16:23:56.434836465 1159.000319s notice: Removing file /home/garret/Desktop/FYP/rethinkdb_data/88db0774-073a-4ec6-8c76-9c9574afcbcf
+2018-01-23T16:23:56.434844356 1159.000327s info: Table 88db0774-073a-4ec6-8c76-9c9574afcbcf: Deleted the table.
+2018-01-23T16:24:03.015271454 1165.580754s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 1.
+2018-01-23T16:24:03.015426902 1165.580910s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Added replica on this server.
+2018-01-23T16:24:03.067078877 1165.632562s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 1. Latest log index is 0.
+2018-01-24T11:30:52.500277942 0.107099s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-01-24T11:30:52.503163668 0.109988s notice: Running on Linux 4.13.0-26-generic x86_64
+2018-01-24T11:30:52.503256351 0.110077s notice: Loading data from directory /home/garret/Desktop/FYP/rethinkdb_data
+2018-01-24T11:30:52.554048536 0.160869s info: Automatically using cache size of 2468 MB
+2018-01-24T11:30:52.554669404 0.161490s notice: Listening for intracluster connections on port 29015
+2018-01-24T11:30:52.599552364 0.206374s notice: Listening for client driver connections on port 28015
+2018-01-24T11:30:52.599856050 0.206677s notice: Listening for administrative HTTP connections on port 8080
+2018-01-24T11:30:52.599860474 0.206681s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-01-24T11:30:52.599864180 0.206685s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-01-24T11:30:52.599867296 0.206688s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-01-24T11:30:52.599881398 0.206702s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-01-24T11:30:52.599885075 0.206706s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-01-24T11:30:53.668906942 1.275728s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 2.
+2018-01-24T11:30:53.712842599 1.319664s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 2. Latest log index is 4.
+2018-01-24T11:32:35.472679805 103.079501s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2018-01-24T11:32:35.472898792 103.079720s notice: Shutting down client connections...
+2018-01-24T11:32:35.473059258 103.079880s notice: All client connections closed.
+2018-01-24T11:32:35.473068379 103.079889s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2018-01-24T11:32:35.475363818 103.082185s notice: Storage engine shut down.
+2018-01-24T11:39:42.630165361 0.018787s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-01-24T11:39:42.632666726 0.021291s notice: Running on Linux 4.13.0-26-generic x86_64
+2018-01-24T11:39:42.632758710 0.021380s notice: Loading data from directory /home/garret/Desktop/Final Year Project/rethinkdb_data
+2018-01-24T11:39:42.716574984 0.105196s info: Automatically using cache size of 2457 MB
+2018-01-24T11:39:42.717626347 0.106247s notice: Listening for intracluster connections on port 29015
+2018-01-24T11:39:42.763606532 0.152228s notice: Listening for client driver connections on port 28015
+2018-01-24T11:39:42.763852836 0.152474s notice: Listening for administrative HTTP connections on port 8080
+2018-01-24T11:39:42.763858301 0.152479s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-01-24T11:39:42.763862370 0.152483s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-01-24T11:39:42.763866166 0.152487s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-01-24T11:39:42.763869914 0.152491s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-01-24T11:39:42.763886407 0.152507s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-01-24T11:39:44.106647985 1.495269s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 3.
+2018-01-24T11:39:44.149205354 1.537827s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 3. Latest log index is 7.
+2018-01-24T11:46:26.911686683 0.020098s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-01-24T11:46:26.914041582 0.022466s notice: Running on Linux 4.13.0-26-generic x86_64
+2018-01-24T11:46:26.914108977 0.022520s notice: Loading data from directory /home/garret/Desktop/Final Year Project/rethinkdb_data
+2018-01-24T11:46:26.989262644 0.097674s info: Automatically using cache size of 2378 MB
+2018-01-24T11:46:26.989779333 0.098190s notice: Listening for intracluster connections on port 29015
+2018-01-24T11:46:27.031275309 0.139686s notice: Listening for client driver connections on port 28015
+2018-01-24T11:46:27.031585822 0.139997s notice: Listening for administrative HTTP connections on port 8080
+2018-01-24T11:46:27.031589997 0.140001s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-01-24T11:46:27.031592913 0.140003s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-01-24T11:46:27.031595762 0.140006s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-01-24T11:46:27.031612272 0.140023s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-01-24T11:46:27.031615852 0.140026s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-01-24T11:46:28.957970191 2.066381s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 4.
+2018-01-24T11:46:29.310268552 2.418680s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 4. Latest log index is 11.
+2018-01-24T12:00:47.119543226 0.132398s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-01-24T12:00:47.142249105 0.155118s notice: Running on Linux 4.13.0-26-generic x86_64
+2018-01-24T12:00:47.142391680 0.155247s notice: Loading data from directory /home/garret/Desktop/Final Year Project/rethinkdb_data
+2018-01-24T12:00:47.365377352 0.378232s info: Automatically using cache size of 2769 MB
+2018-01-24T12:00:47.384200106 0.397056s notice: Listening for intracluster connections on port 29015
+2018-01-24T12:00:47.695402007 0.708257s notice: Listening for client driver connections on port 28015
+2018-01-24T12:00:47.695555038 0.708410s notice: Listening for administrative HTTP connections on port 8080
+2018-01-24T12:00:47.695556295 0.708411s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-01-24T12:00:47.695560366 0.708415s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-01-24T12:00:47.695562782 0.708417s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-01-24T12:00:47.695565095 0.708420s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-01-24T12:00:47.695576949 0.708432s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-01-24T12:00:48.918956727 1.931812s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 5.
+2018-01-24T12:00:48.950123099 1.962979s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 5. Latest log index is 14.
+2018-01-25T12:01:02.528683667 0.301742s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-01-25T12:01:02.554722085 0.327784s notice: Running on Linux 4.13.0-26-generic x86_64
+2018-01-25T12:01:02.554804193 0.327863s notice: Loading data from directory /home/garret/Desktop/Final Year Project/rethinkdb_data
+2018-01-25T12:01:02.771269062 0.544328s info: Automatically using cache size of 2204 MB
+2018-01-25T12:01:02.790048125 0.563107s notice: Listening for intracluster connections on port 29015
+2018-01-25T12:01:03.145748383 0.918807s notice: Listening for client driver connections on port 28015
+2018-01-25T12:01:03.145979748 0.919039s notice: Listening for administrative HTTP connections on port 8080
+2018-01-25T12:01:03.145996652 0.919055s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-01-25T12:01:03.146000684 0.919059s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-01-25T12:01:03.146004503 0.919063s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-01-25T12:01:03.146018092 0.919076s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-01-25T12:01:03.146022078 0.919080s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-01-25T12:01:04.598177925 2.371237s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 6.
+2018-01-25T12:01:04.654742331 2.427801s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 6. Latest log index is 17.
+2018-01-25T12:58:38.511725648 2470.499837s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2018-01-25T12:58:38.511903580 2470.500014s notice: Shutting down client connections...
+2018-01-25T12:58:38.512099361 2470.500210s notice: All client connections closed.
+2018-01-25T12:58:38.512105686 2470.500216s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2018-01-25T12:58:38.552777488 2470.540889s notice: Storage engine shut down.
+2018-02-01T15:17:30.529855918 0.136913s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-02-01T15:17:30.544355347 0.151417s notice: Running on Linux 4.13.0-26-generic x86_64
+2018-02-01T15:17:30.544464996 0.151522s notice: Loading data from directory /home/garret/Desktop/Year 4 sem2/Final Year Project/rethinkdb_data
+2018-02-01T15:17:30.680735152 0.287792s info: Automatically using cache size of 2219 MB
+2018-02-01T15:17:30.701437900 0.308495s notice: Listening for intracluster connections on port 29015
+2018-02-01T15:17:30.860944800 0.468002s notice: Listening for client driver connections on port 28015
+2018-02-01T15:17:30.861149162 0.468206s notice: Listening for administrative HTTP connections on port 8080
+2018-02-01T15:17:30.861153699 0.468210s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-01T15:17:30.861157376 0.468214s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-01T15:17:30.861160625 0.468217s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-01T15:17:30.861164280 0.468221s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-02-01T15:17:30.861176376 0.468233s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-02-01T15:17:32.491496802 2.098554s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 7.
+2018-02-01T15:17:32.533234978 2.140292s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 7. Latest log index is 20.
+2018-02-01T15:43:11.993481848 1541.600539s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2018-02-01T15:43:11.993656769 1541.600714s notice: Shutting down client connections...
+2018-02-01T15:43:11.993954378 1541.601011s notice: All client connections closed.
+2018-02-01T15:43:11.993961050 1541.601017s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2018-02-01T15:43:12.032406924 1541.639464s notice: Storage engine shut down.
+2018-02-02T13:16:57.337993790 0.125561s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-02-02T13:16:57.361074839 0.148646s notice: Running on Linux 4.13.0-26-generic x86_64
+2018-02-02T13:16:57.361178097 0.148744s notice: Loading data from directory /home/garret/Desktop/Year 4 sem2/Final Year Project/rethinkdb_data
+2018-02-02T13:16:57.646977947 0.434545s info: Automatically using cache size of 1588 MB
+2018-02-02T13:16:57.664834368 0.452401s notice: Listening for intracluster connections on port 29015
+2018-02-02T13:16:57.920224595 0.707791s notice: Listening for client driver connections on port 28015
+2018-02-02T13:16:57.920457600 0.708024s notice: Listening for administrative HTTP connections on port 8080
+2018-02-02T13:16:57.920464795 0.708031s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-02T13:16:57.920467134 0.708033s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-02T13:16:57.920469980 0.708036s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-02T13:16:57.920474833 0.708041s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-02-02T13:16:57.920477320 0.708043s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-02-02T13:16:59.409904916 2.197472s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 8.
+2018-02-02T13:16:59.441255242 2.228822s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 8. Latest log index is 23.
+2018-02-05T12:49:14.990003724 0.052679s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-02-05T12:49:14.993377692 0.056057s notice: Running on Linux 4.13.0-26-generic x86_64
+2018-02-05T12:49:14.993446085 0.056121s notice: Loading data from directory /home/garret/Desktop/Year 4 sem2/Final Year Project/rethinkdb_data
+2018-02-05T12:49:15.047930919 0.110606s info: Automatically using cache size of 1888 MB
+2018-02-05T12:49:15.048546024 0.111221s notice: Listening for intracluster connections on port 29015
+2018-02-05T12:49:15.087480496 0.150156s notice: Listening for client driver connections on port 28015
+2018-02-05T12:49:15.087661295 0.150336s notice: Listening for administrative HTTP connections on port 8080
+2018-02-05T12:49:15.087678565 0.150353s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-05T12:49:15.087682748 0.150358s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-05T12:49:15.087686281 0.150361s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-05T12:49:15.087689760 0.150365s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-02-05T12:49:15.087706634 0.150381s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-02-05T12:49:16.403099417 1.465775s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 9.
+2018-02-05T12:49:16.428129593 1.490805s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 9. Latest log index is 26.
+2018-02-06T11:35:43.334468067 0.467233s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-02-06T11:35:43.355722320 0.488504s notice: Running on Linux 4.13.0-26-generic x86_64
+2018-02-06T11:35:43.355819227 0.488584s notice: Loading data from directory /home/garret/Desktop/Year 4 sem2/Final Year Project/rethinkdb_data
+2018-02-06T11:35:43.633122921 0.765888s info: Automatically using cache size of 2494 MB
+2018-02-06T11:35:43.651595794 0.784361s notice: Listening for intracluster connections on port 29015
+2018-02-06T11:35:43.963206121 1.095971s notice: Listening for client driver connections on port 28015
+2018-02-06T11:35:43.963569454 1.096334s notice: Listening for administrative HTTP connections on port 8080
+2018-02-06T11:35:43.963576678 1.096341s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-06T11:35:43.963596677 1.096361s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-06T11:35:43.963601691 1.096366s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-06T11:35:43.963608871 1.096373s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-02-06T11:35:43.963613917 1.096378s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-02-06T11:35:44.973418858 2.106183s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 10.
+2018-02-06T11:35:44.995900649 2.128665s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 10. Latest log index is 29.
+2018-02-06T11:43:03.047933507 0.418601s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-02-06T11:43:03.054894584 0.425566s notice: Running on Linux 4.13.0-26-generic x86_64
+2018-02-06T11:43:03.055024652 0.425692s notice: Loading data from directory /home/garret/Desktop/Year 4 sem2/Final Year Project/rethinkdb_data
+2018-02-06T11:43:03.105576833 0.476244s info: Automatically using cache size of 2217 MB
+2018-02-06T11:43:03.106550648 0.477218s notice: Listening for intracluster connections on port 29015
+2018-02-06T11:43:03.149289490 0.519957s notice: Listening for client driver connections on port 28015
+2018-02-06T11:43:03.149477863 0.520145s notice: Listening for administrative HTTP connections on port 8080
+2018-02-06T11:43:03.149482654 0.520150s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-06T11:43:03.149486836 0.520154s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-06T11:43:03.149496744 0.520164s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-06T11:43:03.149500082 0.520167s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-02-06T11:43:03.149503334 0.520170s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-02-06T11:43:04.646531656 2.017199s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 11.
+2018-02-06T11:43:04.660801982 2.031470s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 11. Latest log index is 32.
+2018-02-08T11:24:02.482023685 0.258481s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-02-08T11:24:02.502652810 0.279115s notice: Running on Linux 4.13.0-26-generic x86_64
+2018-02-08T11:24:02.502759493 0.279216s notice: Loading data from directory /home/garret/Desktop/Year 4 sem2/Final Year Project/rethinkdb_data
+2018-02-08T11:24:02.779121284 0.555579s info: Automatically using cache size of 2641 MB
+2018-02-08T11:24:02.797597366 0.574054s notice: Listening for intracluster connections on port 29015
+2018-02-08T11:24:03.097514082 0.873971s notice: Listening for client driver connections on port 28015
+2018-02-08T11:24:03.097799319 0.874256s notice: Listening for administrative HTTP connections on port 8080
+2018-02-08T11:24:03.097803581 0.874260s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-08T11:24:03.097819332 0.874276s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-08T11:24:03.097824031 0.874280s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-08T11:24:03.097827614 0.874284s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-02-08T11:24:03.097831333 0.874288s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-02-08T11:24:04.177309895 1.953766s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 12.
+2018-02-08T11:24:04.219665116 1.996122s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 12. Latest log index is 35.
+2018-02-09T16:47:46.587182760 0.218893s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-02-09T16:47:46.614726988 0.246443s notice: Running on Linux 4.13.0-26-generic x86_64
+2018-02-09T16:47:46.614864875 0.246574s notice: Loading data from directory /home/garret/Desktop/Year 4 sem2/Final Year Project/rethinkdb_data
+2018-02-09T16:47:46.868696689 0.500406s info: Automatically using cache size of 1697 MB
+2018-02-09T16:47:46.887050343 0.518760s notice: Listening for intracluster connections on port 29015
+2018-02-09T16:47:47.220920498 0.852630s notice: Listening for client driver connections on port 28015
+2018-02-09T16:47:47.221237313 0.852947s notice: Listening for administrative HTTP connections on port 8080
+2018-02-09T16:47:47.221239557 0.852949s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-09T16:47:47.221240679 0.852950s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-09T16:47:47.221259400 0.852969s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-09T16:47:47.221266375 0.852975s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-02-09T16:47:47.221290145 0.852999s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-02-09T16:47:48.701128269 2.332838s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 13.
+2018-02-09T16:47:48.763034541 2.394744s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 13. Latest log index is 38.
+2018-02-09T22:45:00.399635134 0.054123s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-02-09T22:45:00.402021322 0.056511s notice: Running on Linux 4.13.0-26-generic x86_64
+2018-02-09T22:45:00.402078061 0.056566s notice: Loading data from directory /home/garret/Desktop/Year 4 sem2/Final Year Project/rethinkdb_data
+2018-02-09T22:45:00.456754369 0.111242s info: Automatically using cache size of 2029 MB
+2018-02-09T22:45:00.457370031 0.111858s notice: Listening for intracluster connections on port 29015
+2018-02-09T22:45:00.499736124 0.154224s notice: Listening for client driver connections on port 28015
+2018-02-09T22:45:00.499876720 0.154364s notice: Listening for administrative HTTP connections on port 8080
+2018-02-09T22:45:00.499887293 0.154375s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-09T22:45:00.499890400 0.154378s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-09T22:45:00.499892535 0.154380s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-09T22:45:00.499897588 0.154385s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-02-09T22:45:00.499899895 0.154387s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-02-09T22:45:00.506621702 0.161110s warn: Problem when checking for new versions of RethinkDB: HTTP request to update.rethinkdb.com failed.
+2018-02-09T22:45:02.441077987 2.095566s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 14.
+2018-02-09T22:45:02.489821262 2.144309s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 14. Latest log index is 41.
+2018-02-09T22:45:26.473510886 0.053686s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-02-09T22:45:26.476995734 0.057175s notice: Running on Linux 4.13.0-26-generic x86_64
+2018-02-09T22:45:26.477063632 0.057238s notice: Loading data from directory /home/garret/Desktop/Year 4 sem2/Final Year Project/rethinkdb_data
+2018-02-09T22:45:26.526246715 0.106421s info: Automatically using cache size of 2029 MB
+2018-02-09T22:45:26.526821870 0.106996s notice: Listening for intracluster connections on port 29015
+2018-02-09T22:45:26.561282041 0.141457s notice: Listening for client driver connections on port 28015
+2018-02-09T22:45:26.561434476 0.141609s notice: Listening for administrative HTTP connections on port 8080
+2018-02-09T22:45:26.561437616 0.141612s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-09T22:45:26.561445035 0.141619s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-09T22:45:26.561448334 0.141623s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-09T22:45:26.561451022 0.141625s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-02-09T22:45:26.561459817 0.141634s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-02-09T22:45:26.568828123 0.149003s warn: Problem when checking for new versions of RethinkDB: HTTP request to update.rethinkdb.com failed.
+2018-02-09T22:45:27.947764783 1.527940s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 15.
+2018-02-09T22:45:27.995102836 1.575278s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 15. Latest log index is 44.
+2018-02-09T22:46:55.534983540 0.044532s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-02-09T22:46:55.538551115 0.048103s notice: Running on Linux 4.13.0-26-generic x86_64
+2018-02-09T22:46:55.538621697 0.048169s notice: Loading data from directory /home/garret/Desktop/Year 4 sem2/Final Year Project/rethinkdb_data
+2018-02-09T22:46:55.585025604 0.094574s info: Automatically using cache size of 2017 MB
+2018-02-09T22:46:55.585610128 0.095158s notice: Listening for intracluster connections on port 29015
+2018-02-09T22:46:55.623219144 0.132767s notice: Listening for client driver connections on port 28015
+2018-02-09T22:46:55.623489046 0.133037s notice: Listening for administrative HTTP connections on port 8080
+2018-02-09T22:46:55.623492513 0.133040s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-09T22:46:55.623494785 0.133042s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-09T22:46:55.623497292 0.133045s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-09T22:46:55.623509543 0.133057s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-02-09T22:46:55.623512567 0.133060s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-02-09T22:46:55.630625078 0.140173s warn: Problem when checking for new versions of RethinkDB: HTTP request to update.rethinkdb.com failed.
+2018-02-09T22:46:57.108458663 1.618007s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 16.
+2018-02-09T22:46:57.153174852 1.662723s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 16. Latest log index is 47.
+2018-02-09T22:47:14.224077393 18.733626s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2018-02-09T22:47:14.224251018 18.733799s notice: Shutting down client connections...
+2018-02-09T22:47:14.224404180 18.733952s notice: All client connections closed.
+2018-02-09T22:47:14.224409244 18.733957s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2018-02-09T22:47:14.227391129 18.736939s notice: Storage engine shut down.
+2018-02-09T22:48:08.183653556 0.056463s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-02-09T22:48:08.187667189 0.060491s notice: Running on Linux 4.13.0-26-generic x86_64
+2018-02-09T22:48:08.187774285 0.060583s notice: Loading data from directory /home/garret/Desktop/Year 4 sem2/Final Year Project/rethinkdb_data
+2018-02-09T22:48:08.259704390 0.132513s info: Automatically using cache size of 2014 MB
+2018-02-09T22:48:08.260321338 0.133130s notice: Listening for intracluster connections on port 29015
+2018-02-09T22:48:08.304576603 0.177385s notice: Listening for client driver connections on port 28015
+2018-02-09T22:48:08.304771127 0.177580s notice: Listening for administrative HTTP connections on port 8080
+2018-02-09T22:48:08.304775932 0.177584s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-09T22:48:08.304784373 0.177593s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-09T22:48:08.304791228 0.177599s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-09T22:48:08.304809221 0.177617s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-02-09T22:48:08.304815849 0.177624s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-02-09T22:48:08.311582200 0.184391s warn: Problem when checking for new versions of RethinkDB: HTTP request to update.rethinkdb.com failed.
+2018-02-09T22:48:09.748766382 1.621575s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 17.
+2018-02-09T22:48:09.772860469 1.645669s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 17. Latest log index is 50.
+2018-02-09T22:49:11.189297461 0.045527s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-02-09T22:49:11.191464914 0.047697s notice: Running on Linux 4.13.0-26-generic x86_64
+2018-02-09T22:49:11.191524643 0.047754s notice: Loading data from directory /home/garret/Desktop/Year 4 sem2/Final Year Project/rethinkdb_data
+2018-02-09T22:49:11.259494550 0.115725s info: Automatically using cache size of 1999 MB
+2018-02-09T22:49:11.260060068 0.116290s notice: Listening for intracluster connections on port 29015
+2018-02-09T22:49:11.302425932 0.158656s notice: Listening for client driver connections on port 28015
+2018-02-09T22:49:11.302711430 0.158941s notice: Listening for administrative HTTP connections on port 8080
+2018-02-09T22:49:11.302714933 0.158944s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-09T22:49:11.302717104 0.158947s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-09T22:49:11.302719695 0.158949s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-09T22:49:11.302733525 0.158963s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-02-09T22:49:11.302737329 0.158967s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-02-09T22:49:11.309278835 0.165509s warn: Problem when checking for new versions of RethinkDB: HTTP request to update.rethinkdb.com failed.
+2018-02-09T22:49:12.472501772 1.328732s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 18.
+2018-02-09T22:49:12.550762461 1.406993s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 18. Latest log index is 53.
+2018-02-09T22:54:33.730249711 0.103154s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-02-09T22:54:33.760990496 0.133897s notice: Running on Linux 4.13.0-32-generic x86_64
+2018-02-09T22:54:33.761070708 0.133974s notice: Loading data from directory /home/garret/Desktop/Year 4 sem2/Final Year Project/rethinkdb_data
+2018-02-09T22:54:34.049902850 0.422807s info: Automatically using cache size of 3046 MB
+2018-02-09T22:54:34.068331942 0.441236s notice: Listening for intracluster connections on port 29015
+2018-02-09T22:54:34.346554230 0.719458s notice: Listening for client driver connections on port 28015
+2018-02-09T22:54:34.346818936 0.719723s notice: Listening for administrative HTTP connections on port 8080
+2018-02-09T22:54:34.346822437 0.719726s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-09T22:54:34.346835854 0.719739s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-09T22:54:34.346838718 0.719742s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-09T22:54:34.346841524 0.719745s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-02-09T22:54:34.346844755 0.719748s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-02-09T22:54:34.485626212 0.858530s warn: Problem when checking for new versions of RethinkDB: HTTP request to update.rethinkdb.com failed.
+2018-02-09T22:54:36.010984490 2.383889s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 19.
+2018-02-09T22:54:36.088241968 2.461146s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 19. Latest log index is 56.
+2018-02-12T11:06:08.838072892 0.257953s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-02-12T11:06:08.862412962 0.282294s notice: Running on Linux 4.13.0-32-generic x86_64
+2018-02-12T11:06:08.862474098 0.282353s notice: Loading data from directory /home/garret/Desktop/Year 4 sem2/Final Year Project/rethinkdb_data
+2018-02-12T11:06:09.201913369 0.621793s info: Automatically using cache size of 2868 MB
+2018-02-12T11:06:09.220704777 0.640584s notice: Listening for intracluster connections on port 29015
+2018-02-12T11:06:09.564908321 0.984787s notice: Listening for client driver connections on port 28015
+2018-02-12T11:06:09.565081748 0.984961s notice: Listening for administrative HTTP connections on port 8080
+2018-02-12T11:06:09.565085045 0.984964s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-12T11:06:09.565087499 0.984966s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-12T11:06:09.565100656 0.984979s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-12T11:06:09.565103340 0.984982s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-02-12T11:06:09.565106407 0.984985s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-02-12T11:06:11.453671914 2.873551s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 20.
+2018-02-12T11:06:11.517201626 2.937081s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 20. Latest log index is 59.
+2018-02-12T14:43:27.523614488 0.146759s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-02-12T14:43:27.548968220 0.172114s notice: Running on Linux 4.13.0-32-generic x86_64
+2018-02-12T14:43:27.549032608 0.172176s notice: Loading data from directory /home/garret/Desktop/Year 4 sem2/Final Year Project/rethinkdb_data
+2018-02-12T14:43:27.821237728 0.444381s info: Automatically using cache size of 2567 MB
+2018-02-12T14:43:27.840162861 0.463307s notice: Listening for intracluster connections on port 29015
+2018-02-12T14:43:28.151352336 0.774496s notice: Listening for client driver connections on port 28015
+2018-02-12T14:43:28.151500585 0.774644s notice: Listening for administrative HTTP connections on port 8080
+2018-02-12T14:43:28.151507432 0.774651s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-12T14:43:28.151510172 0.774653s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-12T14:43:28.151520298 0.774663s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-12T14:43:28.151522936 0.774666s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-02-12T14:43:28.151525333 0.774668s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-02-12T14:43:29.253993669 1.877137s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 21.
+2018-02-12T14:43:29.328682047 1.951826s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 21. Latest log index is 62.
+2018-02-12T15:21:27.153638049 0.039838s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-02-12T15:21:27.156871894 0.043072s notice: Running on Linux 4.13.0-32-generic x86_64
+2018-02-12T15:21:27.156932077 0.043130s notice: Loading data from directory /home/garret/Desktop/Year 4 sem2/statflow/rethinkdb_data
+2018-02-12T15:21:27.232528343 0.118726s info: Automatically using cache size of 1782 MB
+2018-02-12T15:21:27.233292850 0.119491s notice: Listening for intracluster connections on port 29015
+2018-02-12T15:21:27.279801149 0.165999s notice: Listening for client driver connections on port 28015
+2018-02-12T15:21:27.280177084 0.166375s notice: Listening for administrative HTTP connections on port 8080
+2018-02-12T15:21:27.280181353 0.166379s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-12T15:21:27.280184576 0.166382s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-12T15:21:27.280188207 0.166386s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-12T15:21:27.280200859 0.166398s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-02-12T15:21:27.280204315 0.166402s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-02-12T15:21:28.401772158 1.287970s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 22.
+2018-02-12T15:21:28.458126062 1.344325s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 22. Latest log index is 65.
+2018-02-12T17:44:34.684078184 0.124458s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-02-12T17:44:34.686295082 0.126677s notice: Running on Linux 4.13.0-32-generic x86_64
+2018-02-12T17:44:34.686350371 0.126730s notice: Loading data from directory /home/garret/Desktop/Year 4 sem2/statflow/rethinkdb_data
+2018-02-12T17:44:34.768428689 0.208808s info: Automatically using cache size of 1560 MB
+2018-02-12T17:44:34.769033601 0.209413s notice: Listening for intracluster connections on port 29015
+2018-02-12T17:44:34.809030523 0.249410s notice: Listening for client driver connections on port 28015
+2018-02-12T17:44:34.809171723 0.249551s notice: Listening for administrative HTTP connections on port 8080
+2018-02-12T17:44:34.809186630 0.249566s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-12T17:44:34.809189294 0.249568s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-12T17:44:34.809192769 0.249572s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-12T17:44:34.809195555 0.249575s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-02-12T17:44:34.809204831 0.249584s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-02-12T17:44:36.521990106 1.962369s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 23.
+2018-02-12T17:44:36.569006002 2.009386s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 23. Latest log index is 68.
+2018-02-15T15:13:17.065143870 0.066494s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-02-15T15:13:17.068664378 0.070021s notice: Running on Linux 4.13.0-32-generic x86_64
+2018-02-15T15:13:17.068787201 0.070137s notice: Loading data from directory /home/garret/Desktop/Year 4 sem2/statflow/rethinkdb_data
+2018-02-15T15:13:17.160546297 0.161897s info: Automatically using cache size of 1770 MB
+2018-02-15T15:13:17.161216587 0.162567s notice: Listening for intracluster connections on port 29015
+2018-02-15T15:13:17.221451541 0.222802s notice: Listening for client driver connections on port 28015
+2018-02-15T15:13:17.221622936 0.222973s notice: Listening for administrative HTTP connections on port 8080
+2018-02-15T15:13:17.221627396 0.222978s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-15T15:13:17.221631327 0.222981s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-15T15:13:17.221639208 0.222989s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-15T15:13:17.221642228 0.222992s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-02-15T15:13:17.221647702 0.222998s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-02-15T15:13:19.159717068 2.161068s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 24.
+2018-02-15T15:13:19.237986652 2.239338s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 24. Latest log index is 71.
+2018-02-15T15:15:14.147664704 117.149016s info: Table 827322c6-abc8-48d2-af8c-619e07d46947: Starting a new Raft election for term 1.
+2018-02-15T15:15:14.148205961 117.149558s info: Table 827322c6-abc8-48d2-af8c-619e07d46947: Added replica on this server.
+2018-02-15T15:15:14.243989677 117.245341s info: Table 827322c6-abc8-48d2-af8c-619e07d46947: This server is Raft leader for term 1. Latest log index is 0.
+2018-02-15T15:15:51.459065367 154.460416s notice: Removing file /home/garret/Desktop/Year 4 sem2/statflow/rethinkdb_data/827322c6-abc8-48d2-af8c-619e07d46947
+2018-02-15T15:15:51.459077853 154.460428s info: Table 827322c6-abc8-48d2-af8c-619e07d46947: Deleted the table.
+2018-02-15T15:16:17.230467853 180.231819s info: Table b2cb492e-df70-411d-9dd0-886f7ddb7c58: Starting a new Raft election for term 1.
+2018-02-15T15:16:17.230883308 180.232235s info: Table b2cb492e-df70-411d-9dd0-886f7ddb7c58: Added replica on this server.
+2018-02-15T15:16:17.287939752 180.289291s info: Table b2cb492e-df70-411d-9dd0-886f7ddb7c58: This server is Raft leader for term 1. Latest log index is 0.
+2018-02-15T15:20:28.611675124 431.613026s info: Table 2ed9299d-5c0c-42cc-93dc-5f8681b08017: Added replica on this server.
+2018-02-15T15:20:28.611697885 431.613048s info: Table 2ed9299d-5c0c-42cc-93dc-5f8681b08017: Starting a new Raft election for term 1.
+2018-02-15T15:20:28.676772426 431.678123s info: Table 2ed9299d-5c0c-42cc-93dc-5f8681b08017: This server is Raft leader for term 1. Latest log index is 0.
+2018-02-15T15:22:59.226912153 582.228263s notice: Removing file /home/garret/Desktop/Year 4 sem2/statflow/rethinkdb_data/b2cb492e-df70-411d-9dd0-886f7ddb7c58
+2018-02-15T15:22:59.226921314 582.228271s info: Table b2cb492e-df70-411d-9dd0-886f7ddb7c58: Deleted the table.
+2018-02-15T15:23:02.957179978 585.958530s notice: Removing file /home/garret/Desktop/Year 4 sem2/statflow/rethinkdb_data/2ed9299d-5c0c-42cc-93dc-5f8681b08017
+2018-02-15T15:23:02.957191113 585.958541s info: Table 2ed9299d-5c0c-42cc-93dc-5f8681b08017: Deleted the table.
+2018-02-15T15:23:14.540028474 597.541380s info: Table 5a67458d-0c25-47e2-b447-93b44eae9f18: Starting a new Raft election for term 1.
+2018-02-15T15:23:14.540513924 597.541865s info: Table 5a67458d-0c25-47e2-b447-93b44eae9f18: Added replica on this server.
+2018-02-15T15:23:14.594057369 597.595408s info: Table 5a67458d-0c25-47e2-b447-93b44eae9f18: This server is Raft leader for term 1. Latest log index is 0.
+2018-02-15T15:30:17.101236022 1020.102587s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: Starting a new Raft election for term 1.
+2018-02-15T15:30:17.101520896 1020.102872s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: Added replica on this server.
+2018-02-15T15:30:17.157956152 1020.159307s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: This server is Raft leader for term 1. Latest log index is 0.
+2018-02-15T15:30:30.303905661 1033.305256s notice: Removing file /home/garret/Desktop/Year 4 sem2/statflow/rethinkdb_data/5a67458d-0c25-47e2-b447-93b44eae9f18
+2018-02-15T15:30:30.303916441 1033.305267s info: Table 5a67458d-0c25-47e2-b447-93b44eae9f18: Deleted the table.
+2018-02-19T12:29:21.710964360 0.180426s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-02-19T12:29:21.753096869 0.222561s notice: Running on Linux 4.13.0-32-generic x86_64
+2018-02-19T12:29:21.753163717 0.222625s notice: Loading data from directory /home/garret/Desktop/Year 4 sem2/statflow/rethinkdb_data
+2018-02-19T12:29:22.042200872 0.511663s info: Automatically using cache size of 2252 MB
+2018-02-19T12:29:22.060226756 0.529688s notice: Listening for intracluster connections on port 29015
+2018-02-19T12:29:22.459617126 0.929079s notice: Listening for client driver connections on port 28015
+2018-02-19T12:29:22.459950486 0.929412s notice: Listening for administrative HTTP connections on port 8080
+2018-02-19T12:29:22.459954395 0.929416s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-19T12:29:22.459974439 0.929436s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-19T12:29:22.459978117 0.929439s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-19T12:29:22.459981112 0.929442s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-02-19T12:29:22.459984341 0.929446s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-02-19T12:29:24.059893427 2.529356s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 25.
+2018-02-19T12:29:24.113412794 2.582875s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 25. Latest log index is 74.
+2018-02-19T12:29:24.293921307 2.763384s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: Starting a new Raft election for term 2.
+2018-02-19T12:29:24.390359511 2.859822s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: This server is Raft leader for term 2. Latest log index is 4.
+2018-02-19T14:46:51.030238483 0.072665s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-02-19T14:46:51.034408655 0.076839s notice: Running on Linux 4.13.0-32-generic x86_64
+2018-02-19T14:46:51.034515606 0.076942s notice: Loading data from directory /home/garret/Desktop/Year 4 sem2/statflow/rethinkdb_data
+2018-02-19T14:46:51.134421054 0.176847s info: Automatically using cache size of 1908 MB
+2018-02-19T14:46:51.135090095 0.177516s notice: Listening for intracluster connections on port 29015
+2018-02-19T14:46:51.190624862 0.233051s notice: Listening for client driver connections on port 28015
+2018-02-19T14:46:51.190824914 0.233251s notice: Listening for administrative HTTP connections on port 8080
+2018-02-19T14:46:51.190828459 0.233254s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-19T14:46:51.190830846 0.233257s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-19T14:46:51.190833335 0.233259s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-19T14:46:51.190844049 0.233270s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-02-19T14:46:51.190846827 0.233273s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-02-19T14:46:52.306999737 1.349426s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: Starting a new Raft election for term 3.
+2018-02-19T14:46:52.391431112 1.433858s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: This server is Raft leader for term 3. Latest log index is 7.
+2018-02-19T14:46:52.875534884 1.917961s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 26.
+2018-02-19T14:46:52.967115575 2.009542s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 26. Latest log index is 77.
+2018-02-20T15:23:55.577182221 0.107631s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-02-20T15:23:55.581896869 0.112350s notice: Running on Linux 4.13.0-32-generic x86_64
+2018-02-20T15:23:55.582014215 0.112462s notice: Loading data from directory /home/garret/Desktop/Year 4 sem2/statflow/rethinkdb_data
+2018-02-20T15:23:55.671463056 0.201911s info: Automatically using cache size of 1879 MB
+2018-02-20T15:23:55.672016711 0.202464s notice: Listening for intracluster connections on port 29015
+2018-02-20T15:23:55.724685575 0.255133s notice: Listening for client driver connections on port 28015
+2018-02-20T15:23:55.724832397 0.255280s notice: Listening for administrative HTTP connections on port 8080
+2018-02-20T15:23:55.724836018 0.255283s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-20T15:23:55.724838348 0.255286s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-20T15:23:55.724840642 0.255288s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-20T15:23:55.724842792 0.255290s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-02-20T15:23:55.724853900 0.255301s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-02-20T15:23:56.847746615 1.378195s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 27.
+2018-02-20T15:23:56.929403244 1.459851s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 27. Latest log index is 80.
+2018-02-20T15:23:57.200506887 1.730955s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: Starting a new Raft election for term 4.
+2018-02-20T15:23:57.441090757 1.971539s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: This server is Raft leader for term 4. Latest log index is 10.
+2018-02-21T11:01:38.746954037 0.213673s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-02-21T11:01:38.780570235 0.247294s notice: Running on Linux 4.13.0-32-generic x86_64
+2018-02-21T11:01:38.780687278 0.247406s notice: Loading data from directory /home/garret/Desktop/Year 4 sem2/statflow/rethinkdb_data
+2018-02-21T11:01:39.088988483 0.555708s info: Automatically using cache size of 1967 MB
+2018-02-21T11:01:39.107317021 0.574036s notice: Listening for intracluster connections on port 29015
+2018-02-21T11:01:39.661223478 1.127943s notice: Listening for client driver connections on port 28015
+2018-02-21T11:01:39.661384559 1.128103s notice: Listening for administrative HTTP connections on port 8080
+2018-02-21T11:01:39.661387982 1.128107s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-21T11:01:39.661390259 1.128109s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-21T11:01:39.661392878 1.128111s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-21T11:01:39.661404501 1.128123s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-02-21T11:01:39.661406949 1.128126s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-02-21T11:01:40.862907041 2.329626s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: Starting a new Raft election for term 5.
+2018-02-21T11:01:40.927984669 2.394704s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: This server is Raft leader for term 5. Latest log index is 13.
+2018-02-21T11:01:41.297407676 2.764127s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 28.
+2018-02-21T11:01:41.425996130 2.892715s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 28. Latest log index is 83.
+2018-02-21T16:31:34.514364698 10245.970874s warn: Some RethinkDB data on this server has been placed into swap memory. This may impact performance.
+2018-02-22T12:08:27.093724423 0.168333s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-02-22T12:08:27.128082213 0.202694s notice: Running on Linux 4.13.0-32-generic x86_64
+2018-02-22T12:08:27.128157007 0.202766s notice: Loading data from directory /home/garret/Desktop/Year 4 sem2/statflow/rethinkdb_data
+2018-02-22T12:08:27.403540901 0.478150s info: Automatically using cache size of 1032 MB
+2018-02-22T12:08:27.421914017 0.496523s notice: Listening for intracluster connections on port 29015
+2018-02-22T12:08:27.953786518 1.028395s notice: Listening for client driver connections on port 28015
+2018-02-22T12:08:27.953933479 1.028542s notice: Listening for administrative HTTP connections on port 8080
+2018-02-22T12:08:27.953936469 1.028545s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-22T12:08:27.953938554 1.028547s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-22T12:08:27.953940296 1.028549s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-22T12:08:27.953953037 1.028561s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-02-22T12:08:27.953955172 1.028564s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-02-22T12:08:29.057739151 2.132348s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: Starting a new Raft election for term 6.
+2018-02-22T12:08:29.131815364 2.206424s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: This server is Raft leader for term 6. Latest log index is 16.
+2018-02-22T12:08:29.710261437 2.784870s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 29.
+2018-02-22T12:08:29.762744641 2.837353s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 29. Latest log index is 86.
+2018-02-23T17:38:20.575809206 0.437622s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-02-23T17:38:20.619877836 0.481695s notice: Running on Linux 4.13.0-32-generic x86_64
+2018-02-23T17:38:20.619989229 0.481802s notice: Loading data from directory /home/garret/Desktop/Year 4 sem2/statflow/rethinkdb_data
+2018-02-23T17:38:20.792261806 0.654074s info: Automatically using cache size of 1581 MB
+2018-02-23T17:38:20.811873554 0.673686s notice: Listening for intracluster connections on port 29015
+2018-02-23T17:38:21.190685756 1.052498s notice: Listening for client driver connections on port 28015
+2018-02-23T17:38:21.190975679 1.052788s notice: Listening for administrative HTTP connections on port 8080
+2018-02-23T17:38:21.191006970 1.052819s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-23T17:38:21.191012706 1.052825s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-23T17:38:21.191017297 1.052829s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-23T17:38:21.191022508 1.052834s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-02-23T17:38:21.191027717 1.052840s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-02-23T17:38:22.555077012 2.416891s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 30.
+2018-02-23T17:38:22.610530489 2.472343s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 30. Latest log index is 89.
+2018-02-23T17:38:22.731379958 2.593193s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: Starting a new Raft election for term 7.
+2018-02-23T17:38:22.743256355 2.605069s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: This server is Raft leader for term 7. Latest log index is 19.
+2018-02-26T12:26:47.235620750 0.139654s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-02-26T12:26:47.277090407 0.181126s notice: Running on Linux 4.13.0-32-generic x86_64
+2018-02-26T12:26:47.277481770 0.181515s notice: Loading data from directory /home/garret/Desktop/Year 4 sem2/statflow/rethinkdb_data
+2018-02-26T12:26:47.417088488 0.321122s info: Automatically using cache size of 1078 MB
+2018-02-26T12:26:47.437629121 0.341662s notice: Listening for intracluster connections on port 29015
+2018-02-26T12:26:47.760365108 0.664398s notice: Listening for client driver connections on port 28015
+2018-02-26T12:26:47.760618779 0.664652s notice: Listening for administrative HTTP connections on port 8080
+2018-02-26T12:26:47.760624337 0.664657s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-26T12:26:47.760880321 0.664913s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-26T12:26:47.760884874 0.664917s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-26T12:26:47.760888630 0.664921s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-02-26T12:26:47.760893311 0.664926s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-02-26T12:26:48.781142096 1.685175s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 31.
+2018-02-26T12:26:48.804339162 1.708372s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 31. Latest log index is 92.
+2018-02-26T12:26:49.683510644 2.587544s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: Starting a new Raft election for term 8.
+2018-02-26T12:26:49.700996246 2.605029s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: This server is Raft leader for term 8. Latest log index is 22.
+2018-02-26T15:47:21.640280098 0.179868s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-02-26T15:47:21.685338528 0.224929s notice: Running on Linux 4.13.0-32-generic x86_64
+2018-02-26T15:47:21.685495819 0.225083s notice: Loading data from directory /home/garret/Desktop/Year 4 sem2/statflow/rethinkdb_data
+2018-02-26T15:47:21.812836495 0.352424s info: Automatically using cache size of 1646 MB
+2018-02-26T15:47:21.835231348 0.374819s notice: Listening for intracluster connections on port 29015
+2018-02-26T15:47:22.202605836 0.742193s notice: Listening for client driver connections on port 28015
+2018-02-26T15:47:22.202873735 0.742461s notice: Listening for administrative HTTP connections on port 8080
+2018-02-26T15:47:22.202879975 0.742467s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-26T15:47:22.202903257 0.742490s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-26T15:47:22.202908224 0.742495s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-26T15:47:22.202912961 0.742500s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-02-26T15:47:22.202917532 0.742505s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-02-26T15:47:23.352210804 1.891798s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 32.
+2018-02-26T15:47:23.389884998 1.929472s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 32. Latest log index is 96.
+2018-02-26T15:47:24.079377350 2.618965s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: Starting a new Raft election for term 9.
+2018-02-26T15:47:24.087474523 2.627062s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: This server is Raft leader for term 9. Latest log index is 25.
+2018-02-26T18:03:36.176642079 8174.716230s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: Starting a new Raft election for term 1.
+2018-02-26T18:03:36.177006648 8174.716595s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: Added replica on this server.
+2018-02-26T18:03:36.202868176 8174.742456s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: This server is Raft leader for term 1. Latest log index is 0.
+2018-02-26T18:05:34.487399227 8293.026987s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: Starting a new Raft election for term 1.
+2018-02-26T18:05:34.487864380 8293.027452s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: Added replica on this server.
+2018-02-26T18:05:34.518503148 8293.058091s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: This server is Raft leader for term 1. Latest log index is 0.
+2018-02-27T16:10:49.217902874 34396.590965s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2018-02-27T16:10:49.218092308 34396.591155s notice: Shutting down client connections...
+2018-02-27T16:10:49.218263233 34396.591325s notice: All client connections closed.
+2018-02-27T16:10:49.218271228 34396.591333s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2018-02-27T16:10:49.318195409 34396.691258s notice: Storage engine shut down.
+2018-02-27T16:26:15.410015910 0.075558s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-02-27T16:26:15.432660894 0.098219s notice: Running on Linux 4.13.0-32-generic x86_64
+2018-02-27T16:26:15.432833297 0.098375s notice: Loading data from directory /home/garret/Desktop/fyp/rethinkdb_data
+2018-02-27T16:26:15.488855292 0.154397s info: Automatically using cache size of 1168 MB
+2018-02-27T16:26:15.489517308 0.155059s notice: Listening for intracluster connections on port 29015
+2018-02-27T16:26:15.588959069 0.254501s notice: Listening for client driver connections on port 28015
+2018-02-27T16:26:15.589077133 0.254619s notice: Listening for administrative HTTP connections on port 8080
+2018-02-27T16:26:15.589103062 0.254645s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-27T16:26:15.589107173 0.254649s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-27T16:26:15.589110550 0.254652s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-27T16:26:15.589113485 0.254655s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-02-27T16:26:15.589117352 0.254659s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-02-27T16:26:16.671591275 1.337133s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: Starting a new Raft election for term 2.
+2018-02-27T16:26:16.691543792 1.357086s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: This server is Raft leader for term 2. Latest log index is 4.
+2018-02-27T16:26:16.917886397 1.583428s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: Starting a new Raft election for term 2.
+2018-02-27T16:26:16.945859421 1.611401s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: Starting a new Raft election for term 10.
+2018-02-27T16:26:16.980400526 1.645942s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: This server is Raft leader for term 2. Latest log index is 4.
+2018-02-27T16:26:16.980456495 1.645998s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: This server is Raft leader for term 10. Latest log index is 28.
+2018-02-27T16:26:17.235301272 1.900843s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 33.
+2018-02-27T16:26:17.255999817 1.921542s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 33. Latest log index is 99.
+2018-02-27T16:28:59.266452231 163.931994s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2018-02-27T16:28:59.266631007 163.932173s notice: Shutting down client connections...
+2018-02-27T16:28:59.266784880 163.932327s notice: All client connections closed.
+2018-02-27T16:28:59.266797154 163.932339s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2018-02-27T16:28:59.324461685 163.990004s notice: Storage engine shut down.
+2018-02-27T20:01:44.312764399 0.127618s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-02-27T20:01:44.317199655 0.132057s notice: Running on Linux 4.13.0-32-generic x86_64
+2018-02-27T20:01:44.317327813 0.132181s notice: Loading data from directory /home/garret/Desktop/fyp/rethinkdb_data
+2018-02-27T20:01:44.418844853 0.233698s info: Automatically using cache size of 1130 MB
+2018-02-27T20:01:44.419493096 0.234346s notice: Listening for intracluster connections on port 29015
+2018-02-27T20:01:44.529322725 0.344177s notice: Listening for client driver connections on port 28015
+2018-02-27T20:01:44.529551803 0.344405s notice: Listening for administrative HTTP connections on port 8080
+2018-02-27T20:01:44.529553131 0.344406s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-27T20:01:44.529754124 0.344607s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-27T20:01:44.529755287 0.344608s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-02-27T20:01:44.529763272 0.344617s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-02-27T20:01:44.529767897 0.344621s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-02-27T20:01:46.136036953 1.950891s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: Starting a new Raft election for term 3.
+2018-02-27T20:01:46.162403706 1.977258s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 34.
+2018-02-27T20:01:46.202522371 2.017376s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: Starting a new Raft election for term 3.
+2018-02-27T20:01:46.212942092 2.027796s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: This server is Raft leader for term 3. Latest log index is 7.
+2018-02-27T20:01:46.268519369 2.083373s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 34. Latest log index is 102.
+2018-02-27T20:01:46.268637888 2.083492s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: This server is Raft leader for term 3. Latest log index is 7.
+2018-02-27T20:01:46.467519857 2.282374s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: Starting a new Raft election for term 11.
+2018-02-27T20:01:46.562320094 2.377175s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: This server is Raft leader for term 11. Latest log index is 31.
+2018-02-27T20:15:29.593875933 821.729164s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2018-02-27T20:15:29.594069197 821.729357s notice: Shutting down client connections...
+2018-02-27T20:15:29.594245590 821.729533s notice: All client connections closed.
+2018-02-27T20:15:29.594252807 821.729540s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2018-02-27T20:15:29.635464687 821.770752s notice: Storage engine shut down.
+2018-03-12T09:47:41.821451385 0.159681s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-03-12T09:47:41.841923515 0.180156s notice: Running on Linux 4.13.0-36-generic x86_64
+2018-03-12T09:47:41.841999028 0.180229s notice: Loading data from directory /home/garret/Desktop/fyp/rethinkdb_data
+2018-03-12T09:47:41.969491213 0.307721s info: Automatically using cache size of 2864 MB
+2018-03-12T09:47:41.992237087 0.330467s notice: Listening for intracluster connections on port 29015
+2018-03-12T09:47:42.226976033 0.565206s notice: Listening for client driver connections on port 28015
+2018-03-12T09:47:42.227197498 0.565428s notice: Listening for administrative HTTP connections on port 8080
+2018-03-12T09:47:42.227203755 0.565433s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-03-12T09:47:42.227207749 0.565437s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-03-12T09:47:42.227236898 0.565467s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-03-12T09:47:42.227241128 0.565471s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-03-12T09:47:42.227245144 0.565475s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-03-12T09:47:43.174391149 1.512621s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: Starting a new Raft election for term 12.
+2018-03-12T09:47:43.215898061 1.554128s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: This server is Raft leader for term 12. Latest log index is 34.
+2018-03-12T09:47:43.457048135 1.795278s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: Starting a new Raft election for term 4.
+2018-03-12T09:47:43.481594070 1.819824s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: This server is Raft leader for term 4. Latest log index is 10.
+2018-03-12T09:47:43.870350346 2.208580s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 35.
+2018-03-12T09:47:43.891227310 2.229457s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 35. Latest log index is 105.
+2018-03-12T09:47:43.935097976 2.273328s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: Starting a new Raft election for term 4.
+2018-03-12T09:47:43.957556960 2.295787s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: This server is Raft leader for term 4. Latest log index is 10.
+2018-03-12T14:56:46.407180388 0.073888s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-03-12T14:56:46.411285791 0.077996s notice: Running on Linux 4.13.0-36-generic x86_64
+2018-03-12T14:56:46.411379120 0.078086s notice: Loading data from directory /home/garret/Desktop/fyp/rethinkdb_data
+2018-03-12T14:56:46.466395673 0.133102s info: Automatically using cache size of 2164 MB
+2018-03-12T14:56:46.467062246 0.133769s notice: Listening for intracluster connections on port 29015
+2018-03-12T14:56:46.559841170 0.226548s notice: Listening for client driver connections on port 28015
+2018-03-12T14:56:46.560003554 0.226710s notice: Listening for administrative HTTP connections on port 8080
+2018-03-12T14:56:46.560012365 0.226719s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-03-12T14:56:46.560013456 0.226720s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-03-12T14:56:46.560017469 0.226724s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-03-12T14:56:46.560018326 0.226724s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-03-12T14:56:46.560021575 0.226728s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-03-12T14:56:47.734750874 1.401458s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 36.
+2018-03-12T14:56:47.753766216 1.420473s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: Starting a new Raft election for term 5.
+2018-03-12T14:56:47.757781317 1.424488s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 36. Latest log index is 108.
+2018-03-12T14:56:47.781992352 1.448699s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: This server is Raft leader for term 5. Latest log index is 13.
+2018-03-12T14:56:48.189257240 1.855964s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: Starting a new Raft election for term 13.
+2018-03-12T14:56:48.256756970 1.923464s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: This server is Raft leader for term 13. Latest log index is 37.
+2018-03-12T14:56:48.329378015 1.996085s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: Starting a new Raft election for term 5.
+2018-03-12T14:56:48.348030704 2.014737s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: This server is Raft leader for term 5. Latest log index is 13.
+2018-03-12T15:27:19.382998753 0.071120s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-03-12T15:27:19.387255918 0.075381s notice: Running on Linux 4.13.0-36-generic x86_64
+2018-03-12T15:27:19.387387440 0.075508s notice: Loading data from directory /home/garret/Desktop/fyp/rethinkdb_data
+2018-03-12T15:27:19.452225694 0.140346s info: Automatically using cache size of 2011 MB
+2018-03-12T15:27:19.453390102 0.141511s notice: Listening for intracluster connections on port 29015
+2018-03-12T15:27:19.544160299 0.232281s notice: Listening for client driver connections on port 28015
+2018-03-12T15:27:19.544309874 0.232430s notice: Listening for administrative HTTP connections on port 8080
+2018-03-12T15:27:19.544314224 0.232434s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-03-12T15:27:19.544314762 0.232435s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-03-12T15:27:19.544315226 0.232435s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-03-12T15:27:19.544318058 0.232438s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-03-12T15:27:19.544318631 0.232439s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-03-12T15:27:20.526576174 1.214697s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: Starting a new Raft election for term 6.
+2018-03-12T15:27:20.544423546 1.232544s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: This server is Raft leader for term 6. Latest log index is 16.
+2018-03-12T15:27:20.808297564 1.496418s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: Starting a new Raft election for term 14.
+2018-03-12T15:27:20.900829740 1.588951s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: This server is Raft leader for term 14. Latest log index is 40.
+2018-03-12T15:27:21.030444900 1.718566s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 37.
+2018-03-12T15:27:21.142474934 1.830597s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 37. Latest log index is 112.
+2018-03-12T15:27:21.451263587 2.139384s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: Starting a new Raft election for term 6.
+2018-03-12T15:27:21.669761801 2.357883s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: This server is Raft leader for term 6. Latest log index is 16.
+2018-03-12T15:35:40.168750584 500.856872s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2018-03-12T15:35:40.168953969 500.857075s notice: Shutting down client connections...
+2018-03-12T15:35:40.169164494 500.857285s notice: All client connections closed.
+2018-03-12T15:35:40.169180945 500.857301s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2018-03-12T15:35:40.228998412 500.917119s notice: Storage engine shut down.
+2018-03-12T15:35:50.503971998 0.036950s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-03-12T15:35:50.507999778 0.040981s notice: Running on Linux 4.13.0-36-generic x86_64
+2018-03-12T15:35:50.508104209 0.041081s notice: Loading data from directory /home/garret/Desktop/fyp/rethinkdb_data
+2018-03-12T15:35:50.597532413 0.130509s info: Automatically using cache size of 1823 MB
+2018-03-12T15:35:50.598139746 0.131117s notice: Listening for intracluster connections on port 29015
+2018-03-12T15:35:50.697544649 0.230522s notice: Listening for client driver connections on port 28015
+2018-03-12T15:35:50.697739732 0.230717s notice: Listening for administrative HTTP connections on port 8080
+2018-03-12T15:35:50.697774227 0.230751s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-03-12T15:35:50.697777897 0.230755s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-03-12T15:35:50.697781014 0.230758s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-03-12T15:35:50.697783909 0.230761s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-03-12T15:35:50.697787200 0.230764s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-03-12T15:35:51.848637702 1.381615s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 38.
+2018-03-12T15:35:51.848743608 1.381720s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: Starting a new Raft election for term 15.
+2018-03-12T15:35:51.888488273 1.421466s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 38. Latest log index is 115.
+2018-03-12T15:35:51.899511795 1.432489s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: This server is Raft leader for term 15. Latest log index is 43.
+2018-03-12T15:35:52.032600275 1.565577s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: Starting a new Raft election for term 7.
+2018-03-12T15:35:52.087560206 1.620537s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: This server is Raft leader for term 7. Latest log index is 19.
+2018-03-12T15:35:52.298740526 1.831718s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: Starting a new Raft election for term 7.
+2018-03-12T15:35:52.443451860 1.976429s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: This server is Raft leader for term 7. Latest log index is 19.
+2018-03-12T15:46:23.516325945 633.049304s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2018-03-12T15:46:23.516516692 633.049494s notice: Shutting down client connections...
+2018-03-12T15:46:23.516706246 633.049683s notice: All client connections closed.
+2018-03-12T15:46:23.516713158 633.049690s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2018-03-12T15:46:23.575095545 633.108073s notice: Storage engine shut down.
+2018-03-12T15:48:14.410815038 0.042859s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-03-12T15:48:14.413132645 0.045190s notice: Running on Linux 4.13.0-36-generic x86_64
+2018-03-12T15:48:14.413209924 0.045253s notice: Loading data from directory /home/garret/Desktop/fyp/rethinkdb_data
+2018-03-12T15:48:14.477203389 0.109247s info: Automatically using cache size of 1716 MB
+2018-03-12T15:48:14.477820239 0.109864s notice: Listening for intracluster connections on port 29015
+2018-03-12T15:48:14.561961051 0.194005s notice: Listening for client driver connections on port 28015
+2018-03-12T15:48:14.562335061 0.194379s notice: Listening for administrative HTTP connections on port 8080
+2018-03-12T15:48:14.562339213 0.194382s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-03-12T15:48:14.562341844 0.194385s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-03-12T15:48:14.562344341 0.194387s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-03-12T15:48:14.562347214 0.194390s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-03-12T15:48:14.562349865 0.194393s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-03-12T15:48:15.726837438 1.358881s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: Starting a new Raft election for term 8.
+2018-03-12T15:48:15.779522065 1.411566s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: This server is Raft leader for term 8. Latest log index is 22.
+2018-03-12T15:48:15.794857942 1.426902s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: Starting a new Raft election for term 16.
+2018-03-12T15:48:15.859162186 1.491206s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: Starting a new Raft election for term 8.
+2018-03-12T15:48:15.868429162 1.500473s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: This server is Raft leader for term 16. Latest log index is 46.
+2018-03-12T15:48:15.940529088 1.572573s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: This server is Raft leader for term 8. Latest log index is 22.
+2018-03-12T15:48:16.101400894 1.733445s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 39.
+2018-03-12T15:48:16.197490058 1.829534s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 39. Latest log index is 118.
+2018-03-12T16:47:01.037766742 3526.669811s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2018-03-12T16:47:01.037964622 3526.670008s notice: Shutting down client connections...
+2018-03-12T16:47:01.038116260 3526.670160s notice: All client connections closed.
+2018-03-12T16:47:01.038124870 3526.670168s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2018-03-12T16:47:01.077599435 3526.709643s notice: Storage engine shut down.
+2018-03-13T13:26:21.403947967 0.141214s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-03-13T13:26:21.423207419 0.160479s notice: Running on Linux 4.13.0-36-generic x86_64
+2018-03-13T13:26:21.423349257 0.160615s notice: Loading data from directory /home/garret/Desktop/fyp/rethinkdb_data
+2018-03-13T13:26:21.526350409 0.263616s info: Automatically using cache size of 1860 MB
+2018-03-13T13:26:21.527282806 0.264548s notice: Listening for intracluster connections on port 29015
+2018-03-13T13:26:21.649001540 0.386267s notice: Listening for client driver connections on port 28015
+2018-03-13T13:26:21.649181148 0.386447s notice: Listening for administrative HTTP connections on port 8080
+2018-03-13T13:26:21.649207400 0.386473s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-03-13T13:26:21.649210583 0.386476s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-03-13T13:26:21.649213412 0.386479s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-03-13T13:26:21.649216267 0.386481s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-03-13T13:26:21.649219397 0.386485s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-03-13T13:26:22.598031686 1.335298s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: Starting a new Raft election for term 17.
+2018-03-13T13:26:22.683017615 1.420284s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: This server is Raft leader for term 17. Latest log index is 49.
+2018-03-13T13:26:22.763387537 1.500653s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 40.
+2018-03-13T13:26:22.893325841 1.630592s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 40. Latest log index is 121.
+2018-03-13T13:26:23.446127516 2.183394s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: Starting a new Raft election for term 9.
+2018-03-13T13:26:23.457122186 2.194388s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: Starting a new Raft election for term 9.
+2018-03-13T13:26:23.690604689 2.427871s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: This server is Raft leader for term 9. Latest log index is 25.
+2018-03-13T13:26:23.691002526 2.428269s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: This server is Raft leader for term 9. Latest log index is 25.
+2018-03-13T15:22:01.319156690 0.633460s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-03-13T15:22:01.322581582 0.636888s notice: Running on Linux 4.13.0-36-generic x86_64
+2018-03-13T15:22:01.322682748 0.636986s notice: Loading data from directory /home/garret/Desktop/fyp/rethinkdb_data
+2018-03-13T15:22:01.403455706 0.717759s info: Automatically using cache size of 1854 MB
+2018-03-13T15:22:01.404304087 0.718607s notice: Listening for intracluster connections on port 29015
+2018-03-13T15:22:01.497346637 0.811650s notice: Listening for client driver connections on port 28015
+2018-03-13T15:22:01.497493778 0.811797s notice: Listening for administrative HTTP connections on port 8080
+2018-03-13T15:22:01.497524518 0.811827s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-03-13T15:22:01.497526098 0.811829s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-03-13T15:22:01.497526924 0.811829s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-03-13T15:22:01.497527761 0.811830s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-03-13T15:22:01.497534741 0.811837s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-03-13T15:22:02.781822175 2.096126s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: Starting a new Raft election for term 18.
+2018-03-13T15:22:02.838011065 2.152314s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: This server is Raft leader for term 18. Latest log index is 52.
+2018-03-13T15:22:02.939046130 2.253349s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: Starting a new Raft election for term 10.
+2018-03-13T15:22:02.977392984 2.291696s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: Starting a new Raft election for term 10.
+2018-03-13T15:22:03.035235283 2.349538s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: This server is Raft leader for term 10. Latest log index is 28.
+2018-03-13T15:22:03.048316378 2.362619s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: This server is Raft leader for term 10. Latest log index is 28.
+2018-03-13T15:22:03.087818324 2.402121s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 41.
+2018-03-13T15:22:03.148055784 2.462359s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 41. Latest log index is 124.
+2018-03-13T16:14:52.622323652 0.518653s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-03-13T16:14:52.637069454 0.533402s notice: Running on Linux 4.13.0-36-generic x86_64
+2018-03-13T16:14:52.637171470 0.533500s notice: Loading data from directory /home/garret/Desktop/fyp/rethinkdb_data
+2018-03-13T16:14:52.946550588 0.842879s info: Automatically using cache size of 2689 MB
+2018-03-13T16:14:52.965482931 0.861811s notice: Listening for intracluster connections on port 29015
+2018-03-13T16:14:53.742615481 1.638944s notice: Listening for client driver connections on port 28015
+2018-03-13T16:14:53.742810260 1.639139s notice: Listening for administrative HTTP connections on port 8080
+2018-03-13T16:14:53.742818769 1.639147s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-03-13T16:14:53.742858943 1.639187s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-03-13T16:14:53.742863772 1.639192s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-03-13T16:14:53.742868021 1.639196s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-03-13T16:14:53.742873033 1.639201s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-03-13T16:14:54.721010789 2.617340s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: Starting a new Raft election for term 11.
+2018-03-13T16:14:54.776657011 2.672986s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: This server is Raft leader for term 11. Latest log index is 31.
+2018-03-13T16:14:54.905644210 2.801973s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 42.
+2018-03-13T16:14:54.942889126 2.839218s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 42. Latest log index is 127.
+2018-03-13T16:14:55.124627051 3.020956s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: Starting a new Raft election for term 11.
+2018-03-13T16:14:55.139687936 3.036017s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: Starting a new Raft election for term 19.
+2018-03-13T16:14:55.235103131 3.131432s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: This server is Raft leader for term 11. Latest log index is 31.
+2018-03-13T16:14:55.324065538 3.220394s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: This server is Raft leader for term 19. Latest log index is 55.
+2018-03-13T16:15:31.747834567 39.644163s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2018-03-13T16:15:31.747938105 39.644266s notice: Shutting down client connections...
+2018-03-13T16:15:31.748000824 39.644329s notice: All client connections closed.
+2018-03-13T16:15:31.748003926 39.644332s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2018-03-13T16:15:31.782729644 39.679059s notice: Storage engine shut down.
+2018-03-13T16:31:43.624434713 0.496344s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-03-13T16:31:43.626564153 0.498476s notice: Running on Linux 4.13.0-36-generic x86_64
+2018-03-13T16:31:43.626622452 0.498532s notice: Loading data from directory /home/garret/Desktop/fyp/rethinkdb_data
+2018-03-13T16:31:43.710611731 0.582521s info: Automatically using cache size of 2501 MB
+2018-03-13T16:31:43.711305201 0.583215s notice: Listening for intracluster connections on port 29015
+2018-03-13T16:31:43.823691440 0.695601s notice: Listening for client driver connections on port 28015
+2018-03-13T16:31:43.823872930 0.695800s notice: Listening for administrative HTTP connections on port 8080
+2018-03-13T16:31:43.823897685 0.695807s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-03-13T16:31:43.823902095 0.695811s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-03-13T16:31:43.823930515 0.695840s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-03-13T16:31:43.823935250 0.695844s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-03-13T16:31:43.823939796 0.695849s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-03-13T16:31:44.760843451 1.632753s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: Starting a new Raft election for term 20.
+2018-03-13T16:31:44.813550877 1.685461s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: This server is Raft leader for term 20. Latest log index is 58.
+2018-03-13T16:31:45.032700748 1.904611s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: Starting a new Raft election for term 12.
+2018-03-13T16:31:45.101316967 1.973227s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: This server is Raft leader for term 12. Latest log index is 34.
+2018-03-13T16:31:45.361928579 2.233838s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: Starting a new Raft election for term 12.
+2018-03-13T16:31:45.521731430 2.393641s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: This server is Raft leader for term 12. Latest log index is 34.
+2018-03-13T16:31:45.605656091 2.477566s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 43.
+2018-03-13T16:31:45.689183520 2.561093s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 43. Latest log index is 130.
+2018-03-13T16:41:08.830698996 565.702609s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2018-03-13T16:41:08.830895342 565.702805s notice: Shutting down client connections...
+2018-03-13T16:41:08.831123878 565.703033s notice: All client connections closed.
+2018-03-13T16:41:08.831140510 565.703050s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2018-03-13T16:41:08.845585802 565.717496s notice: Storage engine shut down.
+2018-04-09T15:47:43.639343335 0.130625s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-04-09T15:47:43.660920071 0.152205s notice: Running on Linux 4.13.0-37-generic x86_64
+2018-04-09T15:47:43.660991189 0.152273s notice: Loading data from directory /home/garret/Desktop/fyp/rethinkdb_data
+2018-04-09T15:47:43.875629819 0.366912s info: Automatically using cache size of 2274 MB
+2018-04-09T15:47:43.894692291 0.385974s notice: Listening for intracluster connections on port 29015
+2018-04-09T15:47:44.550059651 1.041341s notice: Listening for client driver connections on port 28015
+2018-04-09T15:47:44.550248095 1.041530s notice: Listening for administrative HTTP connections on port 8080
+2018-04-09T15:47:44.550253361 1.041535s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-09T15:47:44.550257041 1.041538s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-09T15:47:44.550260338 1.041542s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-09T15:47:44.550263773 1.041545s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-04-09T15:47:44.550267280 1.041549s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-04-09T15:47:45.414360061 1.905642s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: Starting a new Raft election for term 21.
+2018-04-09T15:47:45.462330057 1.953612s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: This server is Raft leader for term 21. Latest log index is 61.
+2018-04-09T15:47:45.781200985 2.272483s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: Starting a new Raft election for term 13.
+2018-04-09T15:47:45.833851384 2.325133s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: This server is Raft leader for term 13. Latest log index is 37.
+2018-04-09T15:47:46.305625994 2.796908s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: Starting a new Raft election for term 13.
+2018-04-09T15:47:46.391183159 2.882465s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 44.
+2018-04-09T15:47:46.613681742 3.104964s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: This server is Raft leader for term 13. Latest log index is 37.
+2018-04-09T15:47:46.665642355 3.156924s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 44. Latest log index is 133.
+2018-04-09T18:53:48.757301077 0.142685s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-04-09T18:53:48.779799859 0.165189s notice: Running on Linux 4.13.0-37-generic x86_64
+2018-04-09T18:53:48.779934354 0.165318s notice: Loading data from directory /home/garret/Desktop/fyp/rethinkdb_data
+2018-04-09T18:53:49.049002317 0.434387s info: Automatically using cache size of 2701 MB
+2018-04-09T18:53:49.066852204 0.452236s notice: Listening for intracluster connections on port 29015
+2018-04-09T18:53:49.832299973 1.217684s notice: Listening for client driver connections on port 28015
+2018-04-09T18:53:49.832696478 1.218080s notice: Listening for administrative HTTP connections on port 8080
+2018-04-09T18:53:49.832700132 1.218084s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-09T18:53:49.832702955 1.218086s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-09T18:53:49.832705455 1.218089s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-09T18:53:49.832707978 1.218091s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-04-09T18:53:49.832727246 1.218111s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-04-09T18:53:50.580675597 1.966060s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: Starting a new Raft election for term 14.
+2018-04-09T18:53:50.612519550 1.997904s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: This server is Raft leader for term 14. Latest log index is 40.
+2018-04-09T18:53:50.982105865 2.367490s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: Starting a new Raft election for term 22.
+2018-04-09T18:53:51.044548337 2.429933s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: This server is Raft leader for term 22. Latest log index is 64.
+2018-04-09T18:53:51.608057717 2.993442s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: Starting a new Raft election for term 14.
+2018-04-09T18:53:51.630767331 3.016151s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: This server is Raft leader for term 14. Latest log index is 40.
+2018-04-09T18:53:51.802647836 3.188032s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 45.
+2018-04-09T18:53:51.819029051 3.204413s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 45. Latest log index is 136.
+2018-04-10T09:00:10.285142959 0.065498s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-04-10T09:00:10.287763629 0.068122s notice: Running on Linux 4.13.0-37-generic x86_64
+2018-04-10T09:00:10.287891815 0.068247s notice: Loading data from directory /home/garret/Desktop/fyp/rethinkdb_data
+2018-04-10T09:00:10.338039712 0.118395s info: Automatically using cache size of 2074 MB
+2018-04-10T09:00:10.338816996 0.119172s notice: Listening for intracluster connections on port 29015
+2018-04-10T09:00:10.430534873 0.210890s notice: Listening for client driver connections on port 28015
+2018-04-10T09:00:10.430678880 0.211034s notice: Listening for administrative HTTP connections on port 8080
+2018-04-10T09:00:10.430766638 0.211122s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-10T09:00:10.430780109 0.211135s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-10T09:00:10.430784522 0.211139s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-10T09:00:10.430788566 0.211143s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-04-10T09:00:10.430795036 0.211150s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-04-10T09:00:11.732442432 1.512798s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: Starting a new Raft election for term 15.
+2018-04-10T09:00:11.784109160 1.564464s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: This server is Raft leader for term 15. Latest log index is 43.
+2018-04-10T09:00:11.977059751 1.757415s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: Starting a new Raft election for term 15.
+2018-04-10T09:00:12.141069505 1.921425s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: This server is Raft leader for term 15. Latest log index is 43.
+2018-04-10T09:00:12.201242560 1.981598s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 46.
+2018-04-10T09:00:12.241396926 2.021752s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 46. Latest log index is 139.
+2018-04-10T09:00:12.362594716 2.142950s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: Starting a new Raft election for term 23.
+2018-04-10T09:00:12.434127644 2.214483s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: This server is Raft leader for term 23. Latest log index is 67.
+2018-04-10T10:54:27.658411978 0.241074s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-04-10T10:54:27.680138946 0.262803s notice: Running on Linux 4.13.0-37-generic x86_64
+2018-04-10T10:54:27.680215759 0.262877s notice: Loading data from directory /home/garret/Desktop/fyp/rethinkdb_data
+2018-04-10T10:54:28.160495599 0.743157s info: Automatically using cache size of 2393 MB
+2018-04-10T10:54:28.179521066 0.762183s notice: Listening for intracluster connections on port 29015
+2018-04-10T10:54:30.161858567 2.744520s notice: Listening for client driver connections on port 28015
+2018-04-10T10:54:30.161984481 2.744646s notice: Listening for administrative HTTP connections on port 8080
+2018-04-10T10:54:30.161988368 2.744650s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-10T10:54:30.162016941 2.744679s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-10T10:54:30.162020322 2.744682s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-10T10:54:30.162023778 2.744685s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-04-10T10:54:30.162026752 2.744688s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-04-10T10:54:30.203008912 2.785671s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: Starting a new Raft election for term 24.
+2018-04-10T10:54:30.311793410 2.894455s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: This server is Raft leader for term 24. Latest log index is 70.
+2018-04-10T10:54:30.798229862 3.380892s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: Starting a new Raft election for term 16.
+2018-04-10T10:54:30.891260195 3.473922s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: This server is Raft leader for term 16. Latest log index is 46.
+2018-04-10T10:54:30.918062334 3.500724s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: Starting a new Raft election for term 16.
+2018-04-10T10:54:31.097118428 3.679780s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 47.
+2018-04-10T10:54:31.119991225 3.702653s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: This server is Raft leader for term 16. Latest log index is 47.
+2018-04-10T10:54:31.416297729 3.998960s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 47. Latest log index is 142.
+2018-04-10T17:07:23.732021908 0.061750s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-04-10T17:07:23.734511335 0.064242s notice: Running on Linux 4.13.0-37-generic x86_64
+2018-04-10T17:07:23.734592963 0.064321s notice: Loading data from directory /home/garret/Desktop/fyp/rethinkdb_data
+2018-04-10T17:07:23.785933358 0.115662s info: Automatically using cache size of 2092 MB
+2018-04-10T17:07:23.786520779 0.116249s notice: Listening for intracluster connections on port 29015
+2018-04-10T17:07:23.874247768 0.203976s notice: Listening for client driver connections on port 28015
+2018-04-10T17:07:23.874418207 0.204146s notice: Listening for administrative HTTP connections on port 8080
+2018-04-10T17:07:23.874422455 0.204150s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-10T17:07:23.874425647 0.204153s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-10T17:07:23.874449690 0.204178s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-10T17:07:23.874453280 0.204181s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-04-10T17:07:23.874456603 0.204184s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-04-10T17:07:25.318144753 1.647873s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: Starting a new Raft election for term 17.
+2018-04-10T17:07:25.331153125 1.660882s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: Starting a new Raft election for term 17.
+2018-04-10T17:07:25.342875586 1.672605s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: This server is Raft leader for term 17. Latest log index is 50.
+2018-04-10T17:07:25.376186405 1.705915s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: This server is Raft leader for term 17. Latest log index is 49.
+2018-04-10T17:07:25.506053317 1.835782s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: Starting a new Raft election for term 25.
+2018-04-10T17:07:25.530658560 1.860387s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: This server is Raft leader for term 25. Latest log index is 73.
+2018-04-10T17:07:25.816882338 2.146611s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 48.
+2018-04-10T17:07:25.907226762 2.236955s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 48. Latest log index is 146.
+2018-04-11T10:21:09.501127988 0.147092s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-04-11T10:21:09.517485388 0.163452s notice: Running on Linux 4.13.0-37-generic x86_64
+2018-04-11T10:21:09.517549976 0.163514s notice: Loading data from directory /home/garret/Desktop/fyp/rethinkdb_data
+2018-04-11T10:21:09.765424019 0.411388s info: Automatically using cache size of 2126 MB
+2018-04-11T10:21:09.784300054 0.430264s notice: Listening for intracluster connections on port 29015
+2018-04-11T10:21:10.593104413 1.239069s notice: Listening for client driver connections on port 28015
+2018-04-11T10:21:10.593231274 1.239195s notice: Listening for administrative HTTP connections on port 8080
+2018-04-11T10:21:10.593235039 1.239199s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-11T10:21:10.593267678 1.239232s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-11T10:21:10.593270919 1.239235s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-11T10:21:10.593273353 1.239237s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-04-11T10:21:10.593276271 1.239240s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-04-11T10:21:11.589185682 2.235150s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: Starting a new Raft election for term 26.
+2018-04-11T10:21:11.606543384 2.252508s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: This server is Raft leader for term 26. Latest log index is 76.
+2018-04-11T10:21:11.876931477 2.522896s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: Starting a new Raft election for term 18.
+2018-04-11T10:21:11.962309939 2.608274s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: This server is Raft leader for term 18. Latest log index is 53.
+2018-04-11T10:21:12.296353645 2.942318s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 49.
+2018-04-11T10:21:12.322407959 2.968373s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: Starting a new Raft election for term 18.
+2018-04-11T10:21:12.358113195 3.004077s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 49. Latest log index is 149.
+2018-04-11T10:21:12.448053554 3.094018s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: This server is Raft leader for term 18. Latest log index is 52.
+2018-04-11T11:29:41.016463727 0.024407s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-04-11T11:29:41.020520573 0.028467s notice: Running on Linux 4.13.0-37-generic x86_64
+2018-04-11T11:29:41.020642034 0.028585s notice: Loading data from directory /home/garret/Desktop/fyp/rethinkdb_data
+2018-04-11T11:29:41.144868607 0.152812s info: Automatically using cache size of 1494 MB
+2018-04-11T11:29:41.145844895 0.153788s notice: Listening for intracluster connections on port 29015
+2018-04-11T11:29:41.247072967 0.255016s notice: Listening for client driver connections on port 28015
+2018-04-11T11:29:41.247267523 0.255210s notice: Listening for administrative HTTP connections on port 8080
+2018-04-11T11:29:41.247271982 0.255214s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-11T11:29:41.247303574 0.255246s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-11T11:29:41.247307011 0.255250s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-11T11:29:41.247310341 0.255253s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-04-11T11:29:41.247313469 0.255256s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-04-11T11:29:42.599645645 1.607589s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: Starting a new Raft election for term 27.
+2018-04-11T11:29:42.654250847 1.662194s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: This server is Raft leader for term 27. Latest log index is 79.
+2018-04-11T11:29:42.891584436 1.899527s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: Starting a new Raft election for term 19.
+2018-04-11T11:29:43.003632167 2.011575s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: This server is Raft leader for term 19. Latest log index is 57.
+2018-04-11T11:29:43.082188270 2.090131s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: Starting a new Raft election for term 19.
+2018-04-11T11:29:43.163549821 2.171493s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: This server is Raft leader for term 19. Latest log index is 55.
+2018-04-11T11:29:43.208479271 2.216422s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 50.
+2018-04-11T11:29:43.393609802 2.401553s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 50. Latest log index is 152.
+2018-04-11T13:34:14.386524986 0.208828s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-04-11T13:34:14.406761435 0.229069s notice: Running on Linux 4.13.0-37-generic x86_64
+2018-04-11T13:34:14.406901797 0.229204s notice: Loading data from directory /home/garret/Desktop/fyp/rethinkdb_data
+2018-04-11T13:34:14.586938037 0.409240s info: Automatically using cache size of 2457 MB
+2018-04-11T13:34:14.607997515 0.430300s notice: Listening for intracluster connections on port 29015
+2018-04-11T13:34:14.851892823 0.674195s notice: Listening for client driver connections on port 28015
+2018-04-11T13:34:14.852044427 0.674346s notice: Listening for administrative HTTP connections on port 8080
+2018-04-11T13:34:14.852049774 0.674351s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-11T13:34:14.852053757 0.674355s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-11T13:34:14.852077579 0.674379s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-11T13:34:14.852082407 0.674384s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-04-11T13:34:14.852087032 0.674389s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-04-11T13:34:16.295041066 2.117343s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: Starting a new Raft election for term 28.
+2018-04-11T13:34:16.341560832 2.163863s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: This server is Raft leader for term 28. Latest log index is 82.
+2018-04-11T13:34:16.372876268 2.195178s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: Starting a new Raft election for term 20.
+2018-04-11T13:34:16.478228035 2.300530s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: This server is Raft leader for term 20. Latest log index is 60.
+2018-04-11T13:34:16.618706888 2.441009s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 51.
+2018-04-11T13:34:16.673585993 2.495888s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 51. Latest log index is 155.
+2018-04-11T13:34:16.775481093 2.597783s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: Starting a new Raft election for term 20.
+2018-04-11T13:34:16.873221837 2.695524s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: This server is Raft leader for term 20. Latest log index is 58.
+2018-04-11T15:09:51.359766233 0.083099s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-04-11T15:09:51.363638586 0.086973s notice: Running on Linux 4.13.0-37-generic x86_64
+2018-04-11T15:09:51.363744157 0.087076s notice: Loading data from directory /home/garret/Desktop/fyp/rethinkdb_data
+2018-04-11T15:09:51.449891469 0.173224s info: Automatically using cache size of 1979 MB
+2018-04-11T15:09:51.450570269 0.173902s notice: Listening for intracluster connections on port 29015
+2018-04-11T15:09:51.572693545 0.296026s notice: Listening for client driver connections on port 28015
+2018-04-11T15:09:51.572889826 0.296222s notice: Listening for administrative HTTP connections on port 8080
+2018-04-11T15:09:51.572920838 0.296253s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-11T15:09:51.572924579 0.296256s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-11T15:09:51.572927440 0.296259s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-11T15:09:51.572930886 0.296262s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-04-11T15:09:51.572933711 0.296265s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-04-11T15:09:52.852325186 1.575659s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 52.
+2018-04-11T15:09:52.884904413 1.608237s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 52. Latest log index is 158.
+2018-04-11T15:09:53.112567637 1.835900s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: Starting a new Raft election for term 21.
+2018-04-11T15:09:53.112642687 1.835975s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: Starting a new Raft election for term 29.
+2018-04-11T15:09:53.116351890 1.839684s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: Starting a new Raft election for term 21.
+2018-04-11T15:09:53.216736944 1.940069s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: This server is Raft leader for term 21. Latest log index is 61.
+2018-04-11T15:09:53.216785419 1.940117s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: This server is Raft leader for term 29. Latest log index is 85.
+2018-04-11T15:09:53.216820522 1.940152s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: This server is Raft leader for term 21. Latest log index is 63.
+2018-04-13T12:52:00.728975772 0.145931s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-04-13T12:52:00.748943199 0.165902s notice: Running on Linux 4.13.0-37-generic x86_64
+2018-04-13T12:52:00.749050594 0.166005s notice: Loading data from directory /home/garret/Desktop/fyp/rethinkdb_data
+2018-04-13T12:52:01.039666235 0.456622s info: Automatically using cache size of 2120 MB
+2018-04-13T12:52:01.057591010 0.474547s notice: Listening for intracluster connections on port 29015
+2018-04-13T12:52:01.712011369 1.128966s notice: Listening for client driver connections on port 28015
+2018-04-13T12:52:01.712154697 1.129109s notice: Listening for administrative HTTP connections on port 8080
+2018-04-13T12:52:01.712158750 1.129113s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-13T12:52:01.712162060 1.129116s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-13T12:52:01.712164949 1.129119s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-13T12:52:01.712167382 1.129122s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-04-13T12:52:01.712185846 1.129140s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-04-13T12:52:02.616308819 2.033264s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: Starting a new Raft election for term 22.
+2018-04-13T12:52:02.691774450 2.108730s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: This server is Raft leader for term 22. Latest log index is 65.
+2018-04-13T12:52:02.939136883 2.356092s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: Starting a new Raft election for term 30.
+2018-04-13T12:52:03.023735853 2.440691s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: This server is Raft leader for term 30. Latest log index is 88.
+2018-04-13T12:52:03.181747827 2.598703s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: Starting a new Raft election for term 22.
+2018-04-13T12:52:03.347975267 2.764931s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: This server is Raft leader for term 22. Latest log index is 66.
+2018-04-13T12:52:03.659045654 3.076001s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 53.
+2018-04-13T12:52:03.765227898 3.182183s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 53. Latest log index is 161.
+2018-04-13T13:01:43.248196850 582.665152s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2018-04-13T13:01:43.248375696 582.665331s notice: Shutting down client connections...
+2018-04-13T13:01:43.248497956 582.665453s notice: All client connections closed.
+2018-04-13T13:01:43.248504037 582.665459s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2018-04-13T13:01:43.312040244 582.728995s notice: Storage engine shut down.
+2018-04-13T13:27:25.455071655 0.063604s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-04-13T13:27:25.459012632 0.067548s notice: Running on Linux 4.13.0-37-generic x86_64
+2018-04-13T13:27:25.459122588 0.067654s notice: Loading data from directory /home/garret/Desktop/fyp/rethinkdb_data
+2018-04-13T13:27:25.531135489 0.139667s info: Automatically using cache size of 1814 MB
+2018-04-13T13:27:25.531826405 0.140358s notice: Listening for intracluster connections on port 29015
+2018-04-13T13:27:25.623362195 0.231894s notice: Listening for client driver connections on port 28015
+2018-04-13T13:27:25.623521346 0.232053s notice: Listening for administrative HTTP connections on port 8080
+2018-04-13T13:27:25.623525325 0.232057s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-13T13:27:25.623526175 0.232058s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-13T13:27:25.623529944 0.232061s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-13T13:27:25.623531069 0.232062s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-04-13T13:27:25.623535413 0.232067s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-04-13T13:27:26.772294579 1.380827s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: Starting a new Raft election for term 23.
+2018-04-13T13:27:26.844760794 1.453293s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: This server is Raft leader for term 23. Latest log index is 68.
+2018-04-13T13:27:26.969535352 1.578067s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 54.
+2018-04-13T13:27:27.021534696 1.630067s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 54. Latest log index is 164.
+2018-04-13T13:27:27.491126410 2.099658s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: Starting a new Raft election for term 23.
+2018-04-13T13:27:27.548151268 2.156683s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: Starting a new Raft election for term 31.
+2018-04-13T13:27:27.697659088 2.306191s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: This server is Raft leader for term 23. Latest log index is 69.
+2018-04-13T13:27:27.697726578 2.306258s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: This server is Raft leader for term 31. Latest log index is 91.
+2018-04-13T14:36:48.840755832 65.098073s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-04-13T14:36:48.862192791 65.119513s notice: Running on Linux 4.13.0-37-generic x86_64
+2018-04-13T14:36:48.862295356 65.119612s notice: Loading data from directory /home/garret/Desktop/fyp/rethinkdb_data
+2018-04-13T14:36:48.959909948 65.217226s info: Automatically using cache size of 1170 MB
+2018-04-13T14:36:48.960553720 65.217870s notice: Listening for intracluster connections on port 29015
+2018-04-13T14:36:49.067779784 65.325096s notice: Listening for client driver connections on port 28015
+2018-04-13T14:36:49.067944476 65.325261s notice: Listening for administrative HTTP connections on port 8080
+2018-04-13T14:36:49.067950170 65.325266s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-13T14:36:49.067951214 65.325267s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-13T14:36:49.067952088 65.325268s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-13T14:36:49.067956120 65.325272s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-04-13T14:36:49.067957143 65.325273s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-04-13T14:36:49.160641117 65.417957s warn: Problem when checking for new versions of RethinkDB: HTTP request to update.rethinkdb.com failed.
+2018-04-13T14:36:50.274259312 66.531576s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: Starting a new Raft election for term 32.
+2018-04-13T14:36:50.316284963 66.573601s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: Starting a new Raft election for term 24.
+2018-04-13T14:36:50.358733799 66.616050s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: This server is Raft leader for term 32. Latest log index is 94.
+2018-04-13T14:36:50.372414239 66.629730s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: This server is Raft leader for term 24. Latest log index is 72.
+2018-04-13T14:36:50.546934989 66.804251s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: Starting a new Raft election for term 24.
+2018-04-13T14:36:50.781849931 67.039166s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: This server is Raft leader for term 24. Latest log index is 72.
+2018-04-13T14:36:51.054709493 67.312026s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 55.
+2018-04-13T14:36:51.216578470 67.473895s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 55. Latest log index is 167.
+2018-04-13T14:36:52.894204110 69.151521s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2018-04-13T14:36:52.894434098 69.151750s notice: Shutting down client connections...
+2018-04-13T14:36:52.894570297 69.151886s notice: All client connections closed.
+2018-04-13T14:36:52.894578345 69.151894s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2018-04-13T14:36:52.940063909 69.197381s notice: Storage engine shut down.
+2018-04-13T14:36:58.855528755 0.083272s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-04-13T14:36:58.859493732 0.087241s notice: Running on Linux 4.13.0-37-generic x86_64
+2018-04-13T14:36:58.859603925 0.087347s notice: Loading data from directory /home/garret/Desktop/fyp/rethinkdb_data
+2018-04-13T14:36:58.956128671 0.183872s info: Automatically using cache size of 1169 MB
+2018-04-13T14:36:58.956866091 0.184609s notice: Listening for intracluster connections on port 29015
+2018-04-13T14:36:59.062683686 0.290427s notice: Listening for client driver connections on port 28015
+2018-04-13T14:36:59.062909635 0.290653s notice: Listening for administrative HTTP connections on port 8080
+2018-04-13T14:36:59.062924058 0.290667s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-13T14:36:59.062931142 0.290674s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-13T14:36:59.062959203 0.290702s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-13T14:36:59.062964623 0.290707s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-04-13T14:36:59.062969150 0.290712s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-04-13T14:37:00.218320822 1.446064s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: Starting a new Raft election for term 25.
+2018-04-13T14:37:00.328818408 1.556561s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: This server is Raft leader for term 25. Latest log index is 75.
+2018-04-13T14:37:00.421011558 1.648755s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: Starting a new Raft election for term 33.
+2018-04-13T14:37:00.553310703 1.781054s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 56.
+2018-04-13T14:37:00.641843560 1.869586s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: This server is Raft leader for term 33. Latest log index is 97.
+2018-04-13T14:37:00.838942683 2.066687s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 56. Latest log index is 170.
+2018-04-13T14:37:01.013178883 2.240922s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: Starting a new Raft election for term 25.
+2018-04-13T14:37:01.169864750 2.397608s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: This server is Raft leader for term 25. Latest log index is 75.
+2018-04-13T14:41:19.577094727 260.804838s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2018-04-13T14:41:19.577358365 260.805102s notice: Shutting down client connections...
+2018-04-13T14:41:19.577572240 260.805315s notice: All client connections closed.
+2018-04-13T14:41:19.577580538 260.805323s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2018-04-13T14:41:19.626415345 260.854158s notice: Storage engine shut down.
+2018-04-13T15:11:43.528730508 0.081217s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-04-13T15:11:43.532644654 0.085134s notice: Running on Linux 4.13.0-37-generic x86_64
+2018-04-13T15:11:43.532746675 0.085233s notice: Loading data from directory /home/garret/Desktop/fyp/rethinkdb_data
+2018-04-13T15:11:43.580287826 0.132774s info: Automatically using cache size of 1965 MB
+2018-04-13T15:11:43.580998419 0.133484s notice: Listening for intracluster connections on port 29015
+2018-04-13T15:11:43.676545110 0.229031s notice: Listening for client driver connections on port 28015
+2018-04-13T15:11:43.676702484 0.229188s notice: Listening for administrative HTTP connections on port 8080
+2018-04-13T15:11:43.676706762 0.229192s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-13T15:11:43.676737962 0.229224s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-13T15:11:43.676742048 0.229228s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-13T15:11:43.676745204 0.229231s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-04-13T15:11:43.676748576 0.229234s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-04-13T15:11:44.796119784 1.348606s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 57.
+2018-04-13T15:11:44.837990008 1.390476s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 57. Latest log index is 173.
+2018-04-13T15:11:45.123314645 1.675801s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: Starting a new Raft election for term 26.
+2018-04-13T15:11:45.166319507 1.718806s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: Starting a new Raft election for term 34.
+2018-04-13T15:11:45.171150671 1.723637s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: This server is Raft leader for term 26. Latest log index is 78.
+2018-04-13T15:11:45.258714941 1.811201s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: This server is Raft leader for term 34. Latest log index is 100.
+2018-04-13T15:11:45.366311892 1.918798s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: Starting a new Raft election for term 26.
+2018-04-13T15:11:45.391430862 1.943917s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: This server is Raft leader for term 26. Latest log index is 78.
+2018-04-13T15:56:46.620773069 2703.173259s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2018-04-13T15:56:46.620947415 2703.173433s notice: Shutting down client connections...
+2018-04-13T15:56:46.621263218 2703.173749s notice: All client connections closed.
+2018-04-13T15:56:46.621279689 2703.173765s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2018-04-13T15:56:46.789892129 2703.342378s notice: Storage engine shut down.
+2018-04-13T17:14:07.581122514 0.241828s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-04-13T17:14:07.649367281 0.310075s notice: Running on Linux 4.13.0-38-generic x86_64
+2018-04-13T17:14:07.649445714 0.310151s notice: Loading data from directory /home/garret/Desktop/fyp/rethinkdb_data
+2018-04-13T17:14:07.883822187 0.544527s info: Automatically using cache size of 3034 MB
+2018-04-13T17:14:07.957766681 0.618472s notice: Listening for intracluster connections on port 29015
+2018-04-13T17:14:08.689345594 1.350051s notice: Listening for client driver connections on port 28015
+2018-04-13T17:14:08.689492811 1.350198s notice: Listening for administrative HTTP connections on port 8080
+2018-04-13T17:14:08.689496421 1.350201s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-13T17:14:08.689521177 1.350226s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-13T17:14:08.689524141 1.350229s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-13T17:14:08.689526777 1.350232s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-04-13T17:14:08.689529383 1.350234s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-04-13T17:14:09.298642991 1.959348s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: Starting a new Raft election for term 35.
+2018-04-13T17:14:09.348464062 2.009170s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: This server is Raft leader for term 35. Latest log index is 103.
+2018-04-13T17:14:10.098360984 2.759067s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 58.
+2018-04-13T17:14:10.123595513 2.784301s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 58. Latest log index is 176.
+2018-04-13T17:14:10.142378553 2.803084s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: Starting a new Raft election for term 27.
+2018-04-13T17:14:10.151189116 2.811896s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: Starting a new Raft election for term 27.
+2018-04-13T17:14:10.169674893 2.830380s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: This server is Raft leader for term 27. Latest log index is 81.
+2018-04-13T17:14:10.246852617 2.907558s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: This server is Raft leader for term 27. Latest log index is 81.
+2018-04-13T17:21:44.501547200 457.162253s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2018-04-13T17:21:44.501722554 457.162428s notice: Shutting down client connections...
+2018-04-13T17:21:44.502155779 457.162861s notice: All client connections closed.
+2018-04-13T17:21:44.502170399 457.162875s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2018-04-13T17:21:44.574354896 457.235060s notice: Storage engine shut down.
+2018-04-14T08:39:20.468574657 0.607523s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-04-14T08:39:20.472734717 0.611686s notice: Running on Linux 4.13.0-38-generic x86_64
+2018-04-14T08:39:20.472806496 0.611754s notice: Loading data from directory /home/garret/Desktop/fyp/rethinkdb_data
+2018-04-14T08:39:20.544143336 0.683092s info: Automatically using cache size of 2708 MB
+2018-04-14T08:39:20.544768467 0.683716s notice: Listening for intracluster connections on port 29015
+2018-04-14T08:39:20.640346814 0.779295s notice: Listening for client driver connections on port 28015
+2018-04-14T08:39:20.640524947 0.779473s notice: Listening for administrative HTTP connections on port 8080
+2018-04-14T08:39:20.640545506 0.779493s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-14T08:39:20.640549069 0.779497s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-14T08:39:20.640552521 0.779500s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-14T08:39:20.640555677 0.779503s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-04-14T08:39:20.640559100 0.779507s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-04-14T08:39:21.656810579 1.795759s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: Starting a new Raft election for term 28.
+2018-04-14T08:39:21.696663780 1.835612s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 59.
+2018-04-14T08:39:21.702381237 1.841330s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: This server is Raft leader for term 28. Latest log index is 84.
+2018-04-14T08:39:21.720824990 1.859773s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: Starting a new Raft election for term 28.
+2018-04-14T08:39:21.751724412 1.890674s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 59. Latest log index is 179.
+2018-04-14T08:39:21.768927249 1.907876s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: This server is Raft leader for term 28. Latest log index is 84.
+2018-04-14T08:39:22.305029596 2.443978s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: Starting a new Raft election for term 36.
+2018-04-14T08:39:22.402897079 2.541846s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: This server is Raft leader for term 36. Latest log index is 106.
+2018-04-14T08:58:03.377581233 1123.516530s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2018-04-14T08:58:03.377762203 1123.516710s notice: Shutting down client connections...
+2018-04-14T08:58:03.377995425 1123.516944s notice: All client connections closed.
+2018-04-14T08:58:03.378004372 1123.516952s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2018-04-14T08:58:03.444981579 1123.583930s notice: Storage engine shut down.
+2018-04-14T09:01:40.150376253 0.559856s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-04-14T09:01:40.154374663 0.563856s notice: Running on Linux 4.13.0-38-generic x86_64
+2018-04-14T09:01:40.154493216 0.563973s notice: Loading data from directory /home/garret/Desktop/fyp/rethinkdb_data
+2018-04-14T09:01:40.232318545 0.641799s info: Automatically using cache size of 2566 MB
+2018-04-14T09:01:40.233454623 0.642934s notice: Listening for intracluster connections on port 29015
+2018-04-14T09:01:40.333894890 0.743375s notice: Listening for client driver connections on port 28015
+2018-04-14T09:01:40.334092692 0.743572s notice: Listening for administrative HTTP connections on port 8080
+2018-04-14T09:01:40.334097633 0.743577s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-14T09:01:40.334101230 0.743580s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-14T09:01:40.334120158 0.743599s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-14T09:01:40.334123592 0.743603s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-04-14T09:01:40.334126890 0.743606s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-04-14T09:01:41.506215139 1.915695s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: Starting a new Raft election for term 29.
+2018-04-14T09:01:41.553221946 1.962702s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: This server is Raft leader for term 29. Latest log index is 87.
+2018-04-14T09:01:41.566588158 1.976068s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: Starting a new Raft election for term 29.
+2018-04-14T09:01:41.569251042 1.978731s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 60.
+2018-04-14T09:01:41.597338217 2.006818s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: This server is Raft leader for term 29. Latest log index is 87.
+2018-04-14T09:01:41.619621641 2.029101s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 60. Latest log index is 183.
+2018-04-14T09:01:42.262051452 2.671531s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: Starting a new Raft election for term 37.
+2018-04-14T09:01:42.316891963 2.726372s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: This server is Raft leader for term 37. Latest log index is 109.
+2018-04-14T09:57:18.197684618 3338.607165s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2018-04-14T09:57:18.197851060 3338.607331s notice: Shutting down client connections...
+2018-04-14T09:57:18.198015699 3338.607495s notice: All client connections closed.
+2018-04-14T09:57:18.198023115 3338.607502s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2018-04-14T09:57:18.239032993 3338.648513s notice: Storage engine shut down.
+2018-04-16T16:06:06.385766357 0.170165s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-04-16T16:06:06.405828642 0.190232s notice: Running on Linux 4.13.0-38-generic x86_64
+2018-04-16T16:06:06.405944481 0.190343s notice: Loading data from directory /home/garret/Desktop/fyp/rethinkdb_data
+2018-04-16T16:06:06.521081778 0.305480s info: Automatically using cache size of 2098 MB
+2018-04-16T16:06:06.542260735 0.326659s error: TCP socket creation failed for port 29015: Address already in use.
+2018-04-16T16:06:23.238720436 0.164148s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-04-16T16:06:23.241940283 0.167369s notice: Running on Linux 4.13.0-38-generic x86_64
+2018-04-16T16:06:23.242074429 0.167502s notice: Loading data from directory /home/garret/Desktop/fyp/rethinkdb_data
+2018-04-16T16:06:23.303957499 0.229385s info: Automatically using cache size of 2172 MB
+2018-04-16T16:06:23.305095288 0.230522s notice: Listening for intracluster connections on port 29015
+2018-04-16T16:06:23.815118274 0.740546s notice: Listening for client driver connections on port 28015
+2018-04-16T16:06:23.815324369 0.740751s notice: Listening for administrative HTTP connections on port 8080
+2018-04-16T16:06:23.815372783 0.740799s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-16T16:06:23.815379370 0.740806s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-16T16:06:23.815384873 0.740811s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-16T16:06:23.815391681 0.740818s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-04-16T16:06:23.815398677 0.740825s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-04-16T16:06:24.801814077 1.727242s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: Starting a new Raft election for term 30.
+2018-04-16T16:06:24.857118796 1.782546s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: This server is Raft leader for term 30. Latest log index is 90.
+2018-04-16T16:06:24.865517116 1.790944s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: Starting a new Raft election for term 38.
+2018-04-16T16:06:24.892284012 1.817711s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: This server is Raft leader for term 38. Latest log index is 113.
+2018-04-16T16:06:25.002936741 1.928364s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: Starting a new Raft election for term 30.
+2018-04-16T16:06:25.390613836 2.316041s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: This server is Raft leader for term 30. Latest log index is 90.
+2018-04-16T16:06:25.616549386 2.541976s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 61.
+2018-04-16T16:06:25.690537040 2.615965s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 61. Latest log index is 186.
+2018-04-16T16:09:55.402887303 212.328315s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2018-04-16T16:09:55.403064969 212.328492s notice: Shutting down client connections...
+2018-04-16T16:09:55.403232272 212.328659s notice: All client connections closed.
+2018-04-16T16:09:55.403240551 212.328667s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2018-04-16T16:09:55.442657625 212.368085s notice: Storage engine shut down.
+2018-04-16T16:12:50.294719289 0.091030s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-04-16T16:12:50.297914682 0.094229s notice: Running on Linux 4.13.0-38-generic x86_64
+2018-04-16T16:12:50.298001666 0.094312s notice: Loading data from directory /home/garret/Desktop/fyp/rethinkdb_data
+2018-04-16T16:12:50.338706080 0.135017s info: Automatically using cache size of 2087 MB
+2018-04-16T16:12:50.339284122 0.135595s notice: Listening for intracluster connections on port 29015
+2018-04-16T16:12:50.430755730 0.227067s notice: Listening for client driver connections on port 28015
+2018-04-16T16:12:50.430923353 0.227234s notice: Listening for administrative HTTP connections on port 8080
+2018-04-16T16:12:50.430929469 0.227240s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-16T16:12:50.430960290 0.227271s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-16T16:12:50.430963960 0.227274s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-16T16:12:50.430967201 0.227278s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-04-16T16:12:50.430970722 0.227281s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-04-16T16:12:51.866257307 1.662569s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 62.
+2018-04-16T16:12:51.906944065 1.703255s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 62. Latest log index is 189.
+2018-04-16T16:12:52.089787846 1.886099s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: Starting a new Raft election for term 31.
+2018-04-16T16:12:52.105935701 1.902247s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: This server is Raft leader for term 31. Latest log index is 93.
+2018-04-16T16:12:52.109790651 1.906101s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: Starting a new Raft election for term 31.
+2018-04-16T16:12:52.134014993 1.930326s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: This server is Raft leader for term 31. Latest log index is 93.
+2018-04-16T16:12:52.239789638 2.036100s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: Starting a new Raft election for term 39.
+2018-04-16T16:12:52.306511715 2.102823s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: This server is Raft leader for term 39. Latest log index is 116.
+2018-04-16T16:58:27.171062413 0.218737s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-04-16T16:58:27.174573303 0.222250s notice: Running on Linux 4.13.0-38-generic x86_64
+2018-04-16T16:58:27.174692484 0.222366s notice: Loading data from directory /home/garret/Desktop/fyp/rethinkdb_data
+2018-04-16T16:58:27.275525403 0.323199s info: Automatically using cache size of 1975 MB
+2018-04-16T16:58:27.276184586 0.323858s notice: Listening for intracluster connections on port 29015
+2018-04-16T16:58:27.467330608 0.515005s notice: Listening for client driver connections on port 28015
+2018-04-16T16:58:27.467598437 0.515272s notice: Listening for administrative HTTP connections on port 8080
+2018-04-16T16:58:27.467604561 0.515278s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-16T16:58:27.467609517 0.515283s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-16T16:58:27.467614228 0.515288s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-16T16:58:27.467620432 0.515294s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-04-16T16:58:27.467625774 0.515299s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-04-16T16:58:28.466799278 1.514474s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: Starting a new Raft election for term 32.
+2018-04-16T16:58:28.533032835 1.580707s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: This server is Raft leader for term 32. Latest log index is 96.
+2018-04-16T16:58:29.096432981 2.144107s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: Starting a new Raft election for term 40.
+2018-04-16T16:58:29.141483216 2.189157s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: This server is Raft leader for term 40. Latest log index is 119.
+2018-04-16T16:58:29.142884953 2.190559s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: Starting a new Raft election for term 32.
+2018-04-16T16:58:29.219302779 2.266977s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: This server is Raft leader for term 32. Latest log index is 96.
+2018-04-16T16:58:29.410882161 2.458556s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 63.
+2018-04-16T16:58:29.484834794 2.532509s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 63. Latest log index is 192.
+2018-04-16T17:16:11.394919739 0.111844s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-04-16T17:16:11.414443580 0.131372s notice: Running on Linux 4.13.0-38-generic x86_64
+2018-04-16T17:16:11.414554879 0.131479s notice: Loading data from directory /home/garret/Desktop/fyp/rethinkdb_data
+2018-04-16T17:16:11.707200368 0.424124s info: Automatically using cache size of 3007 MB
+2018-04-16T17:16:11.726128362 0.443052s notice: Listening for intracluster connections on port 29015
+2018-04-16T17:16:12.469090927 1.186015s notice: Listening for client driver connections on port 28015
+2018-04-16T17:16:12.469257667 1.186182s notice: Listening for administrative HTTP connections on port 8080
+2018-04-16T17:16:12.469261634 1.186185s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-16T17:16:12.469264290 1.186188s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-16T17:16:12.469266772 1.186190s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-16T17:16:12.469269791 1.186193s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-04-16T17:16:12.469272630 1.186196s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-04-16T17:16:13.739382450 2.456307s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: Starting a new Raft election for term 33.
+2018-04-16T17:16:13.803391990 2.520317s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: This server is Raft leader for term 33. Latest log index is 99.
+2018-04-16T17:16:13.896254304 2.613179s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: Starting a new Raft election for term 41.
+2018-04-16T17:16:13.947102504 2.664027s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: This server is Raft leader for term 41. Latest log index is 122.
+2018-04-16T17:16:14.242455633 2.959380s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 64.
+2018-04-16T17:16:14.249062913 2.965987s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: Starting a new Raft election for term 33.
+2018-04-16T17:16:14.423324530 3.140249s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 64. Latest log index is 195.
+2018-04-16T17:16:14.423364726 3.140288s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: This server is Raft leader for term 33. Latest log index is 99.
+2018-04-16T18:25:57.266120460 4185.983045s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2018-04-16T18:25:57.266303114 4185.983228s notice: Shutting down client connections...
+2018-04-16T18:25:57.266510802 4185.983435s notice: All client connections closed.
+2018-04-16T18:25:57.266520363 4185.983444s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2018-04-16T18:25:57.301560462 4186.018485s notice: Storage engine shut down.
+2018-04-16T18:26:20.964977117 0.162020s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2018-04-16T18:26:20.967410778 0.164468s notice: Running on Linux 4.13.0-38-generic x86_64
+2018-04-16T18:26:20.967484318 0.164527s notice: Loading data from directory /home/garret/Desktop/fyp/rethinkdb_data
+2018-04-16T18:26:21.041106683 0.238150s info: Automatically using cache size of 2155 MB
+2018-04-16T18:26:21.041696346 0.238739s notice: Listening for intracluster connections on port 29015
+2018-04-16T18:26:21.144581087 0.341625s notice: Listening for client driver connections on port 28015
+2018-04-16T18:26:21.144837798 0.341881s notice: Listening for administrative HTTP connections on port 8080
+2018-04-16T18:26:21.144843577 0.341886s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-16T18:26:21.145325476 0.342369s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-16T18:26:21.145330801 0.342374s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2018-04-16T18:26:21.145336343 0.342379s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-04-16T18:26:21.145340415 0.342383s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-04-16T18:26:22.166095414 1.363139s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: Starting a new Raft election for term 42.
+2018-04-16T18:26:22.209437801 1.406481s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: Starting a new Raft election for term 34.
+2018-04-16T18:26:22.221190800 1.418234s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: This server is Raft leader for term 42. Latest log index is 125.
+2018-04-16T18:26:22.315197554 1.512241s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: This server is Raft leader for term 34. Latest log index is 102.
+2018-04-16T18:26:22.906720559 2.103764s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: Starting a new Raft election for term 34.
+2018-04-16T18:26:22.971219425 2.168263s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 65.
+2018-04-16T18:26:23.050512937 2.247556s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: This server is Raft leader for term 34. Latest log index is 102.
+2018-04-16T18:26:23.106093785 2.303137s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 65. Latest log index is 198.
+2018-04-16T18:28:26.123633821 125.320679s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2018-04-16T18:28:26.123896747 125.320940s notice: Shutting down client connections...
+2018-04-16T18:28:26.124072185 125.321116s notice: All client connections closed.
+2018-04-16T18:28:26.124081225 125.321124s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2018-04-16T18:28:26.131786142 125.328830s notice: Storage engine shut down.
+2018-04-17T19:03:33.304258500 0.039747s notice: Running rethinkdb 2.3.6-windows (MSC 190024215)...
+2018-04-17T19:03:33.304258501 0.039985s notice: Running on 6.2.9200 (Windows 8, Server 2012)
+2018-04-17T19:03:33.304258502 0.040275s notice: Loading data from directory C:\\Users\\Iano\\Desktop\\rethinkdb-2.3.6\\rethinkdb_data
+2018-04-17T19:03:33.383274600 0.118867s info: Automatically using cache size of 1219 MB
+2018-04-17T19:03:33.387273500 0.122877s notice: Listening for intracluster connections on port 29015
+2018-04-17T19:03:33.732378300 0.467900s notice: Listening for client driver connections on port 28015
+2018-04-17T19:03:33.732378301 0.468248s notice: Listening for administrative HTTP connections on port 8080
+2018-04-17T19:03:33.732378302 0.468252s notice: Listening on cluster address: 127.0.0.1
+2018-04-17T19:03:33.732378303 0.468253s notice: Listening on driver address: 127.0.0.1
+2018-04-17T19:03:33.732378304 0.468342s notice: Listening on http address: 127.0.0.1
+2018-04-17T19:03:33.732378305 0.468345s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-04-17T19:03:33.732378306 0.468347s notice: Server ready, "garret_TravelMate_P253_jjo" 5f098cf2-342b-4f9b-ae80-451d88a8da9d
+2018-04-17T19:03:34.552547100 1.288101s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: Starting a new Raft election for term 43.
+2018-04-17T19:03:34.613058000 1.348837s info: Table 4bdf3180-640d-4627-9dfe-da01a29879fc: This server is Raft leader for term 43. Latest log index is 128.
+2018-04-17T19:03:35.264680500 2.000151s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: Starting a new Raft election for term 35.
+2018-04-17T19:03:35.343160100 2.078708s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: Starting a new Raft election for term 66.
+2018-04-17T19:03:35.358203900 2.093872s info: Table c8e503d3-f2c0-40ae-983a-fb3c4688bc19: This server is Raft leader for term 35. Latest log index is 105.
+2018-04-17T19:03:35.413754700 2.149410s info: Table e95ac62a-4453-4f9b-a690-23bfec51fca9: This server is Raft leader for term 66. Latest log index is 201.
+2018-04-17T19:03:35.614748100 2.350627s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: Starting a new Raft election for term 35.
+2018-04-17T19:03:35.724704000 2.460860s info: Table dddabeef-c393-4750-8b9b-c9ba17e76b58: This server is Raft leader for term 35. Latest log index is 105.
