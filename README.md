@@ -19,11 +19,13 @@ This repository contains a final year project developed by [Garret Tonra](https:
 4. **Run the rethinkdb server**
 
 ![](https://user-images.githubusercontent.com/22341150/38942942-0f3eada0-4328-11e8-8c6f-0cc70adc5588.PNG)
-![](https://user-images.githubusercontent.com/22341150/38942943-0f5ad0c0-4328-11e8-8c03-38f2ba042eef.PNG)
+
 ![](https://user-images.githubusercontent.com/22341150/38948671-1993873e-4338-11e8-90fd-5d78337ba831.PNG)
 
 5. **Run the Flask app**
+
 ![](https://user-images.githubusercontent.com/22341150/38948672-19af991a-4338-11e8-9e91-93e326d44d29.PNG)
+
 ![](https://user-images.githubusercontent.com/22341150/38948670-1972c2b0-4338-11e8-9913-bafedd4f3c85.PNG)
 
 
