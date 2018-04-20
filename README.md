@@ -30,6 +30,9 @@ This repository contains a final year project developed by [Garret Tonra](https:
 ![](https://user-images.githubusercontent.com/22341150/38948670-1972c2b0-4338-11e8-9913-bafedd4f3c85.PNG)
 
 
+![](https://user-images.githubusercontent.com/22341150/39053632-6ea46656-44a7-11e8-9aa5-c175dff4e32b.gif)
+
+
 > Project Details and wiki details are in the link    
 > [Projects](https://github.com/gtonra89/Final-Year-Project-4th-Year/projects/1)
 > [Wiki](https://github.com/gtonra89/Final-Year-Project-4th-Year/wiki)
