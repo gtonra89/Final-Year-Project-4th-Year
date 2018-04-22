@@ -167,6 +167,7 @@ def contact():
    
     if request.method == 'POST':
         fromaddr = request.form['email']
+        print(fromaddr)
         text1 = request.form['message']
         toaddr = "statflow18@gmail.com"
         msg = MIMEMultipart()
