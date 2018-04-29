@@ -7,8 +7,7 @@ This repository contains a final year project developed by [Garret Tonra](https:
 ### Video Demo 
 https://youtu.be/dpb8kCHuoag
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/dpb8kCHuoag
-/0.jpg)](https://youtu.be/dpb8kCHuoag)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/dpb8kCHuoag/0.jpg)](https://youtu.be/dpb8kCHuoag)
 
 ## User Guide
 
