@@ -1,10 +1,6 @@
-gunicorn==19.7.1
 requests==2.9.1
 Flask_PyMongo==0.5.1
 Flask==0.12.2
 rethinkdb==2.3.0.post6
 Werkzeug==0.14.1
 pytemperature==1.0
-Flask-Login==0.4.0
-Flask-WTF==0.14.2
-

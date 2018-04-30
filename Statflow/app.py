@@ -7,6 +7,7 @@ import requests, json
 import smtplib
 from email.MIMEMultipart import MIMEMultipart
 from email.MIMEText import MIMEText
+
  
 
 # Using werkzeug library to encrypt user passwords
@@ -200,9 +201,13 @@ def a():
 def machine():
     return render_template("machineMenu.html")
 
-@app.route('/athenry', methods=['GET', 'POST']) #connect a webpage. '/' is a root directory.
-def athenry():
-    return render_template("MLTemplates/Athenry-Dataset.html")
+@app.route('/Data_analysis', methods=['GET', 'POST']) #connect a webpage. '/' is a root directory.
+def DataAnalysis():
+    return render_template("MLTemplates/Data_analysis.html")
+
+@app.route('/Weather-Predict', methods=['GET', 'POST']) #connect a webpage. '/' is a root directory.
+def WeatherPredict():
+    return render_template("MLTemplates/Weather-Predict-1.html")
 
 
 @app.route('/temp', methods=['GET', 'POST'])
