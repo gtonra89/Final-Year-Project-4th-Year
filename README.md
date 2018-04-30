@@ -4,6 +4,11 @@ This repository contains a final year project developed by [Garret Tonra](https:
 
 ![](https://user-images.githubusercontent.com/22341150/38953257-0fc19aee-4346-11e8-9e82-bc04e78daedc.PNG)
 
+### Video Demo 
+https://youtu.be/dpb8kCHuoag
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/dpb8kCHuoag/0.jpg)](https://youtu.be/dpb8kCHuoag)
+
 ## User Guide
 
 ### Step 1: Download the zip and extract it into preferred directory e.g. Desktop
